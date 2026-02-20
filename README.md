@@ -11,6 +11,6 @@ Podobnie jak przy naszym spolszczeniu do remastera Soul Reaver 1&2, skupiliśmy 
 Postęp zadań możesz sprawdzić na [Roadmapie](https://github.com/orgs/Grupa-Polonizacyjna-Nosgothica/projects/2)
 
 ## Wspieraj nasze projekty
-Jeśli nas wesprzeć finansowo, [postaw nam kawę na Ko-fi](https://ko-fi.com/veritaware).
+Jeśli chcesz nas wesprzeć finansowo, [postaw nam kawę na Ko-fi](https://ko-fi.com/veritaware).
 
 Aby dyskutować nad postępami prac i wprowadzanymi decyzjami, oraz śledzić nasze przyszłe projekty, dołącz do nas na naszym [serwerze Discord](https://discord.gg/bJKCtJcaDg).
