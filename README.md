@@ -6,7 +6,7 @@ Nieoficjalne spolszczenie napisów w grze `Legacy of Kain: Defiance Remastered` 
 Podobnie jak przy naszym spolszczeniu do remastera Soul Reaver 1&2, skupiliśmy się przede wszystkim, aby było ono jak najbardziej przystępne dla polskiego odbiorcy, było możliwie dokładne, ale także zachowywało brzmienie godne dzieła z gatunku Dark Fantasy, unikając anachronizmów, nowoczesnych kolokwializmów czy kalek z języka angielskiego, które po polsku brzmią niezbyt naturalnie.
 
 ## Status tłumaczenia
-![18%](https://progress-bar.xyz/18?width=256&title=Dialogi)
+![27%](https://progress-bar.xyz/27?width=256&title=Dialogi)
 
 Postęp zadań możesz sprawdzić na [Roadmapie](https://github.com/orgs/Grupa-Polonizacyjna-Nosgothica/projects/2)
 
