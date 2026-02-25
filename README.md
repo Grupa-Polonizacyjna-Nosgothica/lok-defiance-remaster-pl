@@ -8,6 +8,10 @@ Podobnie jak przy naszym spolszczeniu do remastera Soul Reaver 1&2, skupiliśmy 
 ## Status tłumaczenia
 ![100%](https://progress-bar.xyz/100?width=256&title=Dialogi)
 
+**Portowanie tłumaczenia do gry:** _oczekiwanie na premierę_<br>
+**Tłumaczenie interfejsu i menu:** _oczekiwanie na premierę_<br>
+**Bonusy i Mroczna Kronika:** _TBA_
+
 Postęp zadań możesz sprawdzić na [Roadmapie](https://github.com/orgs/Grupa-Polonizacyjna-Nosgothica/projects/2)
 
 ## Wspieraj nasze projekty
