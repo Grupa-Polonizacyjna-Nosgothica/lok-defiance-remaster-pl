@@ -1,20 +1,29 @@
 # LoK: Defiance Remastered PL
+## Status tłumaczenia: **Odwołane**
+Z przykrością musimy was zawiadomić, że spolszczona wersja gry Defiance Remastered się nie pojawi.
+
+Studio odpowiedzialne za Remaster wykonało go w taki sposób, że nie da się łatwo edytować plików gry,
+co skutecznie uniemożliwia nam wprowadzenie jakichkolwiek zmian, w tym tłumaczenia dialogów.
+
+Nie zapowiada się, by sytuacja miała się zmienić, a my na tę chwilę nie mamy zasobów ani wiedzy,
+by stworzyć własne narzędzia do edycji tych plików metodą inżynierii wstecznej, więc projekt musimy niestety odwołać.
+
+Chciałbym podziękować Barniemu za pomoc przez te dwa tygodnie prac tłumaczeniowych przed premierą. Szkoda tylko, że nasza praca poszła na marne.
+
+Jeśli mimo to podoba Wam się to, co robimy i chcecie wesprzeć naszą grupę, rozważcie postawienie nam wirtualnej kawy:
+
 [![Ko-fi](ko-fi_btn.png)](https://ko-fi.com/veritaware)
 
-Nieoficjalne spolszczenie napisów w grze `Legacy of Kain: Defiance Remastered` autorstwa Grupy polonizacyjnej Nosgothica. Jest to nasze **autorskie** tłumaczenie, niepowiązane z popularnym polskim tłumaczeniem Mrocznej Kroniki LoK: Defiance autorstwa _LoK:Archives_.
 
-Podobnie jak przy naszym spolszczeniu do remastera Soul Reaver 1&2, skupiliśmy się przede wszystkim, aby było ono jak najbardziej przystępne dla polskiego odbiorcy, było możliwie dokładne, ale także zachowywało brzmienie godne dzieła z gatunku Dark Fantasy, unikając anachronizmów, nowoczesnych kolokwializmów czy kalek z języka angielskiego, które po polsku brzmią niezbyt naturalnie.
+## Translation status: **Cancelled**
+We regret to inform you that a Polish localization of Defiance Remastered will not be released.
 
-## Status tłumaczenia
-![100%](https://progress-bar.xyz/100?width=256&title=Dialogi)
+The studio responsible for the remaster developed it in such a way that the game files cannot be easily edited, effectively preventing us from making any modifications, including translating the dialogue.
 
-**Portowanie tłumaczenia do gry:** _oczekiwanie na premierę_<br>
-**Tłumaczenie interfejsu i menu:** _oczekiwanie na premierę_<br>
-**Bonusy i Mroczna Kronika:** _TBA_
+It does not appear that this situation will change, and at this time we lack both the resources and the technical expertise required to create our own file-editing tools through reverse engineering. Therefore, we are unfortunately forced to cancel the project.
 
-Postęp zadań możesz sprawdzić na [Roadmapie](https://github.com/orgs/Grupa-Polonizacyjna-Nosgothica/projects/2)
+I would like to thank Barney for his help during the two weeks of translation work leading up to the release. It’s a shame that our efforts ultimately went to waste.
 
-## Wspieraj nasze projekty
-Jeśli chcesz nas wesprzeć finansowo, [postaw nam kawę na Ko-fi](https://ko-fi.com/veritaware).
+If you still appreciate what we do and would like to support our group, please consider buying us a virtual coffee:
 
-Aby dyskutować nad postępami prac i wprowadzanymi decyzjami, oraz śledzić nasze przyszłe projekty, dołącz do nas na naszym [serwerze Discord](https://discord.gg/bJKCtJcaDg).
+[![Ko-fi](ko-fi_btn_en.png)](https://ko-fi.com/veritaware)
