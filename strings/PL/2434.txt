@@ -1,0 +1,5 @@
+This specter once presided over the principles of change and upheaval as the original Vampire Guardian of Conflict.
+
+Call Shadows: This is a summoning spell where the Guardian will call forth Shades for assistance. As the Guardian takes damage, the number of Shades he creates will increase.
+
+Discord Bolt: The Guardian is invulnerable when casting these single seeking projectiles.

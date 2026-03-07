@@ -1,0 +1,1 @@
+Insufficient free space on memory card (PS2) in MEMORY CARD slot 1. Insert a memory card (PS2) with at least 170KB of free space or, create some more space using the console's internal browser.

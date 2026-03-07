@@ -1,0 +1,1 @@
+Blood hunger causes Health Gauge to drain slowly over time

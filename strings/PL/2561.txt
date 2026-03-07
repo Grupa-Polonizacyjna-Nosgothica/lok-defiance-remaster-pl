@@ -1,0 +1,5 @@
+"Aligning the Reaver with immutable Earth, its unique reign of influence allows me the ability to walk beneath the waves, or to call out to the surrounding stone, summoning earthquakes that rock and tumble the very ground."
+
+Reaver Charge: Attacks have a mirrored effect on enemies close by.
+
+Seismic Impulse (Reaver Spell): A ground shattering earthquake that damages close-by opponents.

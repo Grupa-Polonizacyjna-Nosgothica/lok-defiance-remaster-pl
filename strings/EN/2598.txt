@@ -1,0 +1,5 @@
+Kain can fly rapidly between distant locations by transforming into a swarm of bats. He must first concentrate his energy and mentally project himself toward his destination, visible on the horizon. For this reason, he can only employ bat flight from specific sites indicated by animated markers.
+
+· While standing on a bat-flight marker, hold down  to gather Kain's energy.
+· Release  to transform into a flock of bats.
+· Kain also disperses into bats when his health is depleted, coalescing again at the last checkpoint he passed.

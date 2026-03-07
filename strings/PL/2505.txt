@@ -1,0 +1,18 @@
+Introduced: Legacy of Kain: Defiance (2003)
+
+These cross-realm creatures are among the many extraplanar beings that have slowly found their way into Nosgoth as the Pillars have decayed. Normally, they reside within the Spectral Realm, but the weakened boundaries between dimensions have allowed them to enter into the material world. Typically resting hidden beneath the ground, they wait patiently for helpless victims to wander by, unaware of their presence.
+
+CLASS STATISTICS
+
+Fatalized: No
+Thrown: No
+TK Throw: No
+TK Slow: No
+Burnable: No
+Possessable: No
+Encountered By: Raziel
+Plane: Material/Spectral
+
+ABILITIES
+
+Tentacle Grab: Tentacles are capable of wrapping their limb-like forms around Raziel or Kain, and using their massive strength to hold them vulnerable in place. These grasping arms can slowly drain one's health.

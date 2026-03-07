@@ -1,0 +1,14 @@
+Introduced: Blood Omen: Legacy of Kain (1996)
+
+In the days of Moebius's genocidal reign over Nosgoth, freelance Vampire Hunters replaced the Sarafan as the scourge of the blood-sucking menace. Sleazy, vicious and driven by greed rather than ideology, these lone wolves wander the land in small packs, bringing brutal ends to the lives of any unfortunate vampires they happen across. They typically claim grisly trophies as proof of their success. They consider all unusual and unfamiliar people guilty until proven innocent, and are not reluctant to murder social deviants on the slight chance of terminating another night-stalker. Vampire Hunters are enthusiastic and skilled fighters, but undisciplined. They never fight in the tight strategic formations of their Sarafan predecessors, preferring small groups with little organizational structure.
+
+CLASS STATISTICS
+
+Fatalized: Yes
+Thrown: Yes
+TK Throw: Yes
+TK Slow: No
+Burnable: Yes
+Possessable: Yes
+Encountered By: Raziel
+Plane: Material

@@ -1,0 +1,7 @@
+Free will is an illusion in the Land of Nosgoth - the hand of fate steers Kain and Raziel in their explorations. The Foresight ability represents the unseen pull guiding them towards their destined paths.
+
+Foresight is used to highlight points of the correct route toward an objective. It is especially useful in large areas, multi-level chambers, or any location where the path may branch or loop.
+
+· Hold  to activate Foresight.
+· While held, the camera will turn toward the next navigation point and a Foresight icon will appear above it.
+· Releasing the button returns the camera to normal control.

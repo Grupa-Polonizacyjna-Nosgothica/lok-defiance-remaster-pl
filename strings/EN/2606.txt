@@ -1,0 +1,5 @@
+In some areas, Kain can use his vampiric strength to leap across wide gaps.
+
+· Animated markers indicate ledges that Kain can use as jump-off points.
+· While standing on a leap marker, hold down  to charge the jump.
+· Release  to launch Kain across the gap.

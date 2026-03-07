@@ -1,0 +1,14 @@
+Introduced: Soul Reaver 2 (2001)
+
+Shades are malignant undead creatures formed from the shattered remnants of cruel and malicious souls that coalesce and shift through the spectral wastes. Shades are insubstantial beings, bearing little physical form other than dark clouds of mist or vapor, and brightly glowing eyes. Normal weaponry does little to their shadow-bound forms. However, they are easily harmed by the attacks of magical artifacts such as the Reavers, magical spells and telekinetic forces, which can easily disperse their bodies. Shades hide in shadow, lurking in darkened corners and shady patches on walls, floors and ceilings. They seek to ambush Kain and Raziel, dragging themselves forth from their hiding places on spindly limbs. Due to the weakening of the dimensional barriers, Shades can now more easily shift between the Material and Spectral Realms.
+
+CLASS STATISTICS
+
+Fatalized: No
+Thrown: No
+TK Throw: No
+TK Slow: Yes
+Burnable: No
+Possessable: No
+Encountered By: Kain/Raziel
+Plane: Material/Spectral

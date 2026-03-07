@@ -1,0 +1,14 @@
+Introduced: Legacy of Kain: Defiance (2003)
+
+The Cenobites make their home within the Cathedral of the city of Avernus. They typically dress themselves in opulent robes, and all members of their order wear sinister-looking tragedy masks. On the surface, the Cenobites are a benevolent priestly order. Outwardly, they care for the people of Avernus by providing basic law enforcement, health care and political representation. However, appearances can be deceiving. Below the surface halls of their kind, philanthropic Cathedral lie miles of secret enclaves dedicated to their long-hidden blood deity. Their depravity runs as deep as these secret Catacombs, conducting forbidden dark arts and kidnapping hapless travelers to feed the monster they call god.
+
+CLASS STATISTICS
+
+Fatalized: Yes
+Thrown: Yes
+TK Throw: Yes
+TK Slow: No
+Burnable: Yes
+Possessable: No
+Encountered By: Kain/Raziel
+Plane: Material

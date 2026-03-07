@@ -1,0 +1,9 @@
+This door would only open when fitted with 
+72 0
+an appropriate artifact. 
+144 0
+But to use such an object, 
+213 0
+I would first have to find a way back 
+288 0
+into the Material Realm.

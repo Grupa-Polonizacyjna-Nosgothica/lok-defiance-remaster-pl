@@ -1,0 +1,4 @@
+There are many objects to interact with in this world. By pressing  you can grab onto objects and move them by dragging them or rotate certain columns. Using objects is one of the key methods to solving puzzles and allowing you to progress in the game.
+
+· Press  to pick up objects and interact with them. Some objects can be shoved; others rotated; still others can be broken.
+· You can also grab () onto moveable objects and drag them using .

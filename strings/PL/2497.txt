@@ -1,0 +1,18 @@
+Introduced: Legacy of Kain: Soul Reaver (1999)
+
+Sluagh are at the bottom of the spectral food chain. Like hyenas, they will attack ferociously in groups, but flee when confronted one on one.
+
+CLASS STATISTICS
+
+Fatalized: No
+Thrown: Yes
+TK Throw: No
+TK Slow: Yes
+Burnable: No
+Possessable: No
+Encountered By: Raziel
+Plane: Spectral
+
+ABILITIES
+
+Devouring Souls: Sluagh can devour souls to reform their spectral bodies when critically hurt.

@@ -1,0 +1,14 @@
+Introduced: Blood Omen: Legacy of Kain (1996)
+
+After the corruption of the Pillars of Nosgoth, the barriers between dimensions began to weaken. Slowly, Nosgoth began to become overrun by dark creatures from outside the bounds of normal reality. These massive creatures are a prime example of the type of beings that now roam and stalk the face of Nosgoth. Appearing in two major varieties, these highly-aggressive behemoths can easily move from the Spectral to Material Realm at will, because of the weakening of the boundaries between the planes themselves.
+
+CLASS STATISTICS
+
+Fatalized: Yes
+Thrown: No
+TK Throw: No
+TK Slow: Yes
+Burnable: No
+Possessable: No
+Encountered By: Kain/Raziel
+Plane: Material/Spectral

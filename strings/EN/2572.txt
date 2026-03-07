@@ -1,0 +1,16 @@
+SINGLE AND COMBINATION ATTACKS
+
+Use ,  and  to perform single attacks. Create combos by linking different button presses in sequence.
+
+SLASHING ATTACKS
+
+Use  for slashing attacks, which you can link in sequence to execute a three-attack combo on the ground or in mid-air.
+
+LIFT AND SLAM ATTACKS
+
+Use  for lift attacks from the ground.
+
+· Tap  to lift an enemy into the air.
+· Hold down  to lift the enemy and jump up to follow it.
+· While in mid-air, press  again for a powerful downward slam.
+· Use lift attacks to set enemies up for a TK blast () or mid-air slashing combos ().

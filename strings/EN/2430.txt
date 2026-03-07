@@ -1,0 +1,14 @@
+Introduced: Legacy of Kain: Defiance (2003)
+
+Archons are the spectral envoys of the Elder God. These highly-intelligent hunters swim through the currents of the Spectral Realm in search of souls to devour for the God they are symbiotically connected to (much like Raziel). The Archons' appearance and movement are highly cephalopod and crustacean in design. Their more predominant features include a large gaping maw, which they use with sinister aggressiveness to devour souls, and an alien bioluminescent glow, which plays along their sinuous form during feeding.
+
+CLASS STATISTICS
+
+Fatalized: No
+Thrown: No
+TK Throw: No
+TK Slow: Yes
+Burnable: No
+Possessable: No
+Encountered By: Raziel
+Plane: Spectral

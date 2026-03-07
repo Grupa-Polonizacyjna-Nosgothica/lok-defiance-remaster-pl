@@ -1,0 +1,5 @@
+"The Soul Reaver, an ethereal symbiotic weapon, feeds upon the souls of my enemies, increasing its own influence and power. The soul energy it collects within the confines of its blade may be charged and then released in a formidable torrent of energy."
+
+Reaver Charge: More damage.
+
+Torrent of Energy (Reaver Spell): Splash damage to surrounding enemies.

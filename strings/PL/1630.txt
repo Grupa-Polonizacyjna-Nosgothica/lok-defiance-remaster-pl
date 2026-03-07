@@ -1,0 +1,1 @@
+Hold  to grab object then move in a direction to drag it

@@ -1,0 +1,29 @@
+Raziel is a denizen of the Spectral Realm, a shadowy underworld populated by nightmarish creatures and lost souls. To escape the spirit world, he must first find a host creature. Early in the game, he discovers spirit gases rising from burial sites, and learns that he can employ the corpses within as conduits to enter the Material Realm.
+
+Once in the physical world, Raziel transforms the host's flesh into his own image, but his energy is continuously depleted to maintain this physical manifestation. To restore his energy and remain in the Material Realm, Raziel must feed on the souls of his victims. When his energy is exhausted, Raziel loses his physical form and is swept back into the Spectral Realm, to his last checkpoint.
+
+By shifting between realms, Raziel can take advantage of the unique properties of each realm.
+
+· Raziel must be in the Material Realm to open doors, pick up or use artifacts, move objects, or break barriers. In the spirit world, physical objects are like shadows, and cannot be manipulated.
+· In the Spectral Realm, Raziel can dematerialize to pass through gated barriers, which are impassable in the physical world.
+· Some climbable wall surfaces appear only in either the Spectral or Material Realm, requiring Raziel to shift before he can use them.
+· The Spectral Realm is a darker, more twisted version of the physical world. In some instances, the distortion of the terrain may open a path that is not accessible in the Material Realm.
+· Water in the spirit world has no buoyancy. To swim, Raziel must enter the Material Realm.
+
+Shifting from Spectral to Material
+
+In the Spectral Realm, spirit gases indicate where a corpse is buried, which Raziel can use as a conduit to enter the physical world.
+
+To shift from the Spectral Realm into the material world,
+
+· Stand on or near a site where spirit gases are rising. Press  to display the Material Icon (the Reaver symbol). If no host is available, the symbol will not be displayed.
+· Press  to confirm your intention. Raziel will project his energy into the buried corpse, rise and transform the flesh into his own image as he enters the Material Realm.
+
+Shifting from Material to Spectral
+
+Raziel can abandon his physical manifestation at any time and return to the Spectral Realm.
+
+To shift from the Material Realm back to the spirit world:
+
+· Press and hold  to display the Spectral Icon.
+· Press  to confirm your intention and shift into the Spectral Realm.

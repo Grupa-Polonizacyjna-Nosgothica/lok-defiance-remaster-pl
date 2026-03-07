@@ -1,0 +1,3 @@
+When an enemy has been reduced to a vulnerable state (stunned or otherwise incapacitated), Kain and Raziel can feed to recover their health, or finish the victim with the Reaver to enhance the blade's combat function.
+
+· To drink the victim's blood or devour its soul, hold down  while near a vulnerable enemy.

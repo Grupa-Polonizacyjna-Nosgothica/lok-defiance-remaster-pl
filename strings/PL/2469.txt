@@ -1,0 +1,20 @@
+Introduced: Legacy of Kain: Defiance (2003)
+
+Feral Humans belong to a wild and uncivilized tribe of human beings who have remained tameless over the centuries. They reside within the crumbled Vampire Citadel, which they hold as an extremely holy and revered place. Feral Humans worship Vampires, and therefore try to primitively emulate their abilities and behavior.
+
+CLASS STATISTICS
+
+Fatalized: Yes
+Thrown: Yes
+TK Throw: Yes
+TK Slow: No
+Burnable: Yes
+Possessable: No
+Encountered By: Kain
+Plane: Material
+
+ABILITIES
+
+Charge and Leap: The Feral Humans, though not trained in combat, are still vicious opponents who hold little regard for their own safety. If a moderate range from their victim, the Ferals will attempt to corner their target with a long, powerful leap which will close the distance in the blink of an eye. If this leap connects, the Ferals will then attempt to ram their long, powerful bone claws into their prey's body, causing considerable damage. On the other hand, if a Feral is already at close quarters, they can instead sprint forward and ram their bodies into the target. One must be sure to keep all Feral Humans within range of sight, as they are wont to sneak up behind their opponents and interrupt their assaults with a quick leap or charge.
+
+Bone Rain: The Ferals also have one more trick up their sleeves. If unable to close the distance to their target when too many of their brethren in the way, they are also able to reach behind their backs and pull from their thick, ornamental back plates a wicked, curved bone blade. The Feral can lob this projectile high up into the air. The long, high arc of this projectile makes it very difficult to predict and dodge, as it will probably leave the field of view for a moment as it arcs into the air.

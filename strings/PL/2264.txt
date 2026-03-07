@@ -1,0 +1,1 @@
+Your Xbox doesn't have enough free blocks to save games. You need to free %d more blocks. Press  to continue without saving or  to free more blocks.

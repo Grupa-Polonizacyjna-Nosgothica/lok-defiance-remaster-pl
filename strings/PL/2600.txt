@@ -1,0 +1,3 @@
+Kain's ceaseless blood-hunger causes his Health Gauge to drain slowly over time, requiring him to feed frequently to sustain his energy and heal his wounds. When an enemy is vulnerable (either stunned or otherwise incapacitated), Kain can consume its blood to restore his health.
+
+· Hold  near a vulnerable enemy to bite into the victim or drain its blood from a distance. The longer  is held, the greater the health benefit.

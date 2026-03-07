@@ -1,0 +1,5 @@
+"Imbued with the very essence of the sun, the Reaver's blade is transformed into a shaft of purest searing light. If wielded properly, this celestial ray will blast and scorch my adversaries' vision, leaving them temporarily blind and vulnerable."
+
+Reaver Charge: Shades take extra damage; short stun on human targets.
+
+Morning Star (Reaver Spell): Shades take extra damage. Long stun on humans.

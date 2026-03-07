@@ -1,0 +1,7 @@
+In the spirit world water has no buoyancy, but in the Material Realm, Raziel can swim through flooded areas to reach otherwise inaccessible goals.
+
+· To swim at the surface, use  to orient and propel Raziel.
+· Press  to dive beneath the surface.
+· While underwater, use  to orientate Raziel, and press or hold  to propel him through the water.
+· To exit the water, either swim toward a low ledge, or press  to jump up from the water's surface.
+· Raziel cannot engage in combat, manipulate objects, or use TK while swimming.

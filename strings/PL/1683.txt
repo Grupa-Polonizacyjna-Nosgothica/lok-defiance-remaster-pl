@@ -1,0 +1,1 @@
+Move in a direction and   to jump in combat mode

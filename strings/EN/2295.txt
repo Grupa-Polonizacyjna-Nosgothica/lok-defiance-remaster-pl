@@ -1,0 +1,1 @@
+Select an action you would like to map a button to. Press Backspace to clean the buttons mapped to the selected action.

@@ -1,0 +1,5 @@
+"The most powerful Reaver, Spirit is filled with the calm purity bestowed by the souls of all previous Balance Guardians. This weapon strikes down the impure with cleansing flame, delivering their souls with its searing, sophic light."
+
+Reaver Charge: Major damage increase.
+
+Liberate Souls (Reaver Spell): Splash damage to enemies in the area; can kill some foes.

@@ -1,0 +1,5 @@
+"The conflagration is a deadly weapon whose will to consume nearly matches that of the Reaver itself. Whether briefly uncoiling to light a simple sconce, or rupturing to devour flesh and bone, the flame's infernal hunger is ever-ravenous."
+
+Reaver Charge: Enemies set on fire.
+
+Consuming Blaze (Reaver Spell): Fire explosion that sends enemies running in flames.

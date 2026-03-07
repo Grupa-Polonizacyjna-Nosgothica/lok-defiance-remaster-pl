@@ -1,0 +1,4 @@
+Jumping is useful in and out of combat. Some of the best uses for jumping are to get over gaps, dodge certain enemy attacks and to reach higher ground. If you jump to a ledge and you are close, your character will automatically grab onto the ledge.
+
+· Press  to jump up.
+· Use  and press  for a running jump.

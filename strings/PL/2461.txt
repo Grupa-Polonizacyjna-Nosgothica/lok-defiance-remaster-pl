@@ -1,0 +1,14 @@
+Introduced: Blood Omen: Legacy of Kain (1996)
+
+Chained humans are the pitiful victims of any number of maligned causes or creatures. At one time, they lived normal lives amongst their brethren, yet, through great misfortune, now lie helpless at the whim of their captors. Whether under the hold of a vampire, the Cenobites or normal yet nefarious humans, they serve only one purpose... as cattle. Raziel and Kain can use these helpless humans as fodder to feed their insatiable hungers for blood or soul. However, their long imprisonment has left their languished bodies and weakened minds vulnerable to demonic possession.
+
+CLASS STATISTICS
+
+Fatalized: Yes (Kain/Raziel)
+Thrown: No
+TK Throw: No
+TK Slow: No
+Burnable: No
+Possessable: Yes
+Encountered By: Kain/Raziel
+Plane: Material

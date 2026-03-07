@@ -1,0 +1,7 @@
+Vampire Hunter Sorceresses are able to cast powerful fireball attacks at their opponents. When enemies come close, Sorceresses have the ability to either teleport away from them, or use a radial blast attack to knock their opponents off their feet. For defense, Sorceresses have the ability to cast a protective glyph shield around themselves. These floating runes will absorb all damage until they are destroyed. In addition to these combat abilities, Sorceresses are able to support their comrades with spells, which enhance their abilities.
+
+Amplify Damage: Displayed as a red lightning bolt on the weapon, this causes attacks to do more damage in combat.
+
+Regeneration: The Sorceress has the ability to heal groups of allies. This appears as a gathering yellow glow around the affected ally.
+
+TK Shield: Protects one ally from the mental TK powers of their prey with this shield spell. It appears as a violet glow around the affected ally.

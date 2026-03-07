@@ -1,0 +1,1 @@
+Your Xbox doesn't have enough free blocks to save new games, but you can overwrite existing games. You need %d free blocks to create a new save game.

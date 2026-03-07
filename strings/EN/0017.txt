@@ -1,0 +1,1 @@
+This game requires a DirectX9 capable graphics card. Your card or driver does not support DirectX9 3D Acceleration.

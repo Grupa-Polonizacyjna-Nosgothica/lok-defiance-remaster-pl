@@ -1,0 +1,5 @@
+Use the various Reaver enhancements you've collected for different combat effects. When the Reaver is fully charged with its victims' energy, its potency is temporarily boosted.
+
+When the Reaver Gauge is completely full, it glows to indicate that a Reaver Spell has been armed. The spell's effect is determined by the selected Reaver enhancement, either inflicting damage on multiple enemies or temporarily embellishing the character's combat attributes in some way.
+
+· To launch a Reaver Spell, hold down and then release .

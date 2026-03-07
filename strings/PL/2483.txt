@@ -1,0 +1,7 @@
+The Sarafan Inquisitors support their brethren in battle with a variety of spells. These priests are empowered to call forth a mortar-like burst of holy projectiles to attack their opponents at a distance. In addition, they have the ability to initiate a radial blast attack which throws back foes who venture too close to them in combat.
+
+Heal: The caster can heal a single ally's serious wounds at will.
+
+Amplify Damage: This sorcery powers up the attacks of all allies affected by the spell, and manifests as a red lightning bolt on their weapons.
+
+Berserk Shield: An ally protected by the Berserk Shield will attack furiously and feel no pain when hit, although they will continue to take damage.

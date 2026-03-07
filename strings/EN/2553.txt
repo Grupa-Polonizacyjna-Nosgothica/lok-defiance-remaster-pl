@@ -1,0 +1,5 @@
+"This fractured symbol affords me the ability to store the energy the Reaver derives from its gorging, and, when properly charged, then release a wave of magical energy upon my unsuspecting quarry. It bears slots for four other fragments."
+
+Reaver Charge: More damage.
+
+Blood Wave (Reaver Spell): Splash damage surrounding enemies.

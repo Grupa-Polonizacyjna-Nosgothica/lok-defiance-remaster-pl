@@ -1,0 +1,7 @@
+THE HALL OF FAME
+
+This small museum-like hall - codenamed "mdlview1", but affectionately dubbed the "Hall of Fame" by Defiance Remastered tools and UI programmer Andrew Fradley - was originally a test room created by Defiance's art director, Daniel Cabuco, to preview 3D models.
+
+The textures seen here are largely reused from prior Legacy of Kain games, with the stained glass windows around the room perhaps familiar to players of Soul Reaver Remastered - these are the same window designs found at the heart of Kain's Mountain Retreat, another Lost Level from that game.
+
+The Defiance Remastered team found it an appropriate place to safekeep the various statues of the ancient Vampires. Feel free to examine their models in greater detail.

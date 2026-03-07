@@ -1,0 +1,5 @@
+Throughout the game there are special walls that Kain and Raziel can grab onto and climb up. These Wall Crawl surfaces have horizontal lines running through them to differentiate them from normal walls. To grab onto them, simply jump towards the wall and make contact with it. Once you are on the wall you can move in any direction. In addition to climbing you can also jump off the wall in the opposite direction.
+
+· Jump () onto a climbable wall surface to grab on.
+· Use  to maneuver.
+· Either climb to the top, or kick jump () off the wall.

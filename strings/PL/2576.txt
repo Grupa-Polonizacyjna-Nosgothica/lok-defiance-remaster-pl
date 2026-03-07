@@ -1,0 +1,4 @@
+Use  in combat mode to evade and move around enemies.
+
+· Use  to set a direction and press  to dodge.
+· To jump up while in combat mode, press  while standing still, or double-tap .

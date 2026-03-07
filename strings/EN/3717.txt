@@ -1,0 +1,5 @@
+A LABOR OF LOVE
+
+The Lost Levels represent a concerted preservation effort drawing from multiple disciplines. The levels were carefully salvaged and reassembled by Defiance Remastered tools and UI programmer Andrew Fradley, populated and scored by Defiance Remastered art director Monika Erősová, and carefully repaired and relit by environment art lead Laura Wen and technical art lead Elaine Tanaka. 2D lead artist Roli Dankó remastered textures for select areas. Programmer Kellin Latshaw and Andrew Fradley coded the vista interaction points. Design director Dylan Geraghty placed these vistas and curated texts.
+
+Given that they are ultimately incomplete vestiges of the original production, please note that the Lost Levels are liable to contain some traversal bugs and visual glitches. While the team has worked to mitigate these issues, we have also taken care not to modify the source material too greatly. If your progression becomes hindered while exploring, simply return to the title screen and re-enter the Lost Level.

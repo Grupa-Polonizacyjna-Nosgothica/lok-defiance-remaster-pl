@@ -1,0 +1,16 @@
+Both Kain and Raziel employ Telekinetic force to hurl enemies away or shatter obstacles.
+
+Initially, Kain's TK powers are much more developed than Raziel's. From the beginning, Kain can swiftly blast enemies away, or lift them into the air and hurl them in any direction. Early on, he acquires the ability to ignite or douse certain flammable objects using TK.
+
+Raziel's telekinetic powers are much weaker than Kain's at first. Though he can fire quick TK bursts to hurl enemies away or shatter obstacles, he cannot lift and throw enemies until later on.
+
+· Tap  to fire a quick blast of TK.
+· Use the environments to inflict damage. Blast enemies into hurtful or potentially deadly obstacles. Propel enemies into fire, breakable objects and solid terrain obstacles. Throw enemies onto spikes or hurl them from ledges for instant kills.
+· Hold down  to lift an enemy, use  to aim, and release  to complete the throw.
+
+You can manually aim your TK to target specific objects and solve puzzles.
+
+· Hold down  to display the targeting sight. While holding , move  to position the sight over the target object. Release  to unleash the TK blast.
+· Use TK to clear obstacles, shatter breakable objects, strike distant switches, and ignite or douse certain flammable objects.
+
+Each TK use expends some TK energy, shown by runes in the TK Meter. TK power regenerates gradually over time, but overuse depletes your energy reserves. You can augment your TK power by finding TK Runes to increase the capacity of the TK Meter.

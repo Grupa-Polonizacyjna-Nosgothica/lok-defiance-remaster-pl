@@ -1,0 +1,14 @@
+Introduced: Blood Omen: Legacy of Kain (1996)
+
+A monastic brotherhood of warrior-priests, the Sarafan are the current ruling class in Nosgoth. Dedicated to the annihilation of the vampire race, the Sarafan gain and hone their strength in battle with strong steadfast beliefs, faith and religious fervor. Far from benevolent, they have grown overconfident and self-assured that the cause they so willingly shed blood for is inherently good and just. This singular fact has led to corruption, opulence and the slow degradation of their personal and public morals. The Sarafan hoard riches inside their "religious" strongholds, and flaunt their wealth by adorning their armor and weapons with jewels and gold, while, just outside their golden walls, workers and peasants are left to struggle against the poverty that is so strongly furthered by their heavy-handed (and brutally-enforced) taxation. Perhaps the only benefit Nosgoth's humans actually receive from this militant order of corrupt knights stems from their virulent and commonly-practiced designs for the eradication of vampirism.
+
+CLASS STATISTICS
+
+Fatalized: Yes
+Thrown: Yes
+TK Throw: Yes
+TK Slow: No
+Burnable: Yes
+Possessable: No
+Encountered By: Kain
+Plane: Material

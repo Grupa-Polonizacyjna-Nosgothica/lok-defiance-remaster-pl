@@ -1,0 +1,5 @@
+"Within the bounds of the immaterial Spectral Realm, the Reaver loses its ability to conjoin with the many elemental influences and powers. It relinquishes little of its potency however, as the spiritual energy it feeds upon flows so freely there."
+
+Reaver Charge: More damage.
+
+Soul Blast (Reaver Spell): Splash damage to surrounding enemies.

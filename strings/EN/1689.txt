@@ -1,0 +1,1 @@
+Move in a direction and release  to throw enemy

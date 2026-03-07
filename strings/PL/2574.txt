@@ -1,0 +1,5 @@
+The combat system encourages the creative use of the characters' core attacks - slashes, lifts, slams, TK and dodging - enabling you to choreograph your own combo attacks and develop your own unique combat style.
+
+Kain and Raziel automatically enter combat mode when you press any attack button while enemies are present. While in combat mode, the character draws his weapon and adopts a combat stance while he moves. He remains in combat mode until all nearby enemies have been destroyed, or you manually exit combat mode by pressing .
+
+You can also manually enter combat mode by holding down  (though this is not required). The character remains in combat mode until you release the button.

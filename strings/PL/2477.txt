@@ -1,0 +1,14 @@
+Introduced: Legacy of Kain: Defiance (2003)
+
+Revenants are once-normal corpses that have been possessed by disconnected Hylden souls. Most typically, they emerge in the old and ruined corners of the world, where the ancient dead lie buried from forgotten battles. However, there are few places in Nosgoth which have gone free of conflict from one point or another. As with all Hylden-possessed beings, the Revenants' eyes glow a sickly shade of green. They fight with aggressive abandon, with the very rusted and broken weapons that failed to protect them in life.
+
+CLASS STATISTICS
+
+Fatalized: Yes
+Thrown: Yes
+TK Throw: Yes
+TK Slow: No
+Burnable: Yes
+Possessable: Yes
+Encountered By: Raziel
+Plane: Material

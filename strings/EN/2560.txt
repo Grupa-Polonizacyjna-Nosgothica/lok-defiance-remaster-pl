@@ -1,0 +1,5 @@
+"When wreathed in darkness, the Reaver is able to weave its abyssal twilight about my physical form. Beneath this cloak of night my presence is concealed, and my passing shrouded in shadows."
+
+Reaver Charge: Mini-shades spawn from hit target and damage other foes.
+
+Umbral Cloak (Reaver Spell): Temporary invisibility.

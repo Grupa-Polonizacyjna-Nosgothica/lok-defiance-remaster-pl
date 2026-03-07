@@ -1,0 +1,2 @@
+This option will restore all the graphic options to default as well as all your controller settings
+Are you sure you want to do this?

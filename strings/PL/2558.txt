@@ -1,0 +1,5 @@
+"At times, my magic extends into very exotic disciplines such as the manipulation of time. I am able to slow time down, so I can move about quick as a wolf, while all others move as though they were mired in mud!"
+
+Reaver Charge: Slow struck enemies.
+
+Slow Time (Reaver Spell): Slows the whole world down, but speeds Kain up.

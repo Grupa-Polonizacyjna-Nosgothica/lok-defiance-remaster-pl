@@ -1,0 +1,5 @@
+"Slicing apart the very fabric of space, this spell can create spatial distortions that burrow into my victims' flesh. Or even fold space itself and cut down multiple opponents in the blink of an eye... without ever taking a single step."
+
+Reaver Charge: More damage.
+
+Teleportation (Reaver Spell): Teleport and strike several enemies, then return to current position.

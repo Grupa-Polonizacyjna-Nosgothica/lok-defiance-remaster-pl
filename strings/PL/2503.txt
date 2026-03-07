@@ -1,0 +1,14 @@
+Introduced: Legacy of Kain: Defiance (2003)
+
+Guardian Statues were once merely normal edifices. However, through vampiric magic, they have been animated for various purposes. Generally, they are set as the protectors of important places or objects. In their inert state, they appear to be no more than ordinary sculptures, motionless and unreactive. However, once the proper state set by the enchantment is triggered (i.e. a creature approaching a valuable artifact or attempting to enter a forbidden area), the spell will take hold, animating the once-lifeless Statue and transforming it into a powerful defender. The form and function of Guardian Statues can vary from one type to another, but generally they can only be made vulnerable to attack at specific moments.
+
+CLASS STATISTICS
+
+Fatalized: No
+Thrown: No
+TK Throw: No
+TK Slow: Yes
+Burnable: No
+Possessable: No
+Encountered By: Kain/Raziel
+Plane: Material

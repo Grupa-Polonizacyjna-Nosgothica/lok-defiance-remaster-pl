@@ -1,0 +1,15 @@
+-- You must act quickly. 
+50 0
+But beware - an ancient evil dwells within, 
+150 0
+long 
+180 0
+Unspoken among our kind. 
+258 0
+Undoubtedly this is the source of the corruption 
+342 0
+that infects the Circle. 
+435 0
+If you are to succeed, 
+506 0
+you must resist its influence.

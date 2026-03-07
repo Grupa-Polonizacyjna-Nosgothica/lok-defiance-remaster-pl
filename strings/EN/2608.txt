@@ -1,0 +1,1 @@
+For vampires, immersion in water is deadly. Kain must be cautious around water obstacles. If he falls in, his health will be immediately depleted, and he will be reset to his last checkpoint.

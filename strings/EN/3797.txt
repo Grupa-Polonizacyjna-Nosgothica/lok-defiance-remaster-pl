@@ -1,0 +1,18 @@
+Introduced: Legacy of Kain: Defiance (2003)
+
+When the Hylden possessor is especially strong, and the host is sufficiently weak, the Hylden will completely transform their vessel into a grotesque beast of flesh. This creature has great strength, and the ability to grab and slam its enemies like rag dolls. These intense Hylden energies will eventually consume the unfortunate victim.
+
+CLASS STATISTICS
+
+Fatalized: Yes
+Thrown: No
+TK Throw: No
+TK Slow: No
+Burnable: No
+Possessable: No
+Encountered By: Raziel
+Plane: Material
+
+ABILITIES
+
+Grab/Throw: In addition to increased strength and the possibility of knocking away their victim when hit, the Hylden is capable of grabbing on to their opponent and throwing them directly, causing damage.

@@ -1,0 +1,5 @@
+"Dropping to sub-zero temperatures, the Water-infused Reaver chills the surrounding air with its unnatural grip. Upon striking, the whirlpool of pure elemental water freezes instantly, trapping foes helplessly in shackles of ice."
+
+Reaver Charge: Freeze enemies briefly.
+
+Icy Shackles (Reaver Spell): Ice blast that damages/freezes enemies in the surrounding area.

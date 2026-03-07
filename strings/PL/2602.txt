@@ -1,0 +1,4 @@
+When jumping or falling, Kain can slow his descent to land silently and with greater accuracy.
+
+· While in mid-air, hold down  to slow your descent.
+· Release  to resume a normal descent.

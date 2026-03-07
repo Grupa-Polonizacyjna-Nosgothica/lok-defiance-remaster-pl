@@ -1,0 +1,5 @@
+"Howling with all the might of a tempest, the Air-forged Reaver twists and swirls in upon itself, yearning for escape. When released, the maelstrom's currents blow and buffet my attackers into the air like helpless ragdolls."
+
+Reaver Charge: Enemies get spun around and can be thrown with combo.
+
+Rending Wind (Reaver Spell): Tornado that launches enemies away.

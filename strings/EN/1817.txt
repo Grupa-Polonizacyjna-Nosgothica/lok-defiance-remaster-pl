@@ -1,0 +1,9 @@
+This door 
+24 0
+had been equipped with a singular lock, 
+99 0
+requiring an unusual key. 
+187 0
+Somehow, 
+210 0
+I would find it.

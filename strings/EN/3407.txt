@@ -1,0 +1,515 @@
+CRYSTAL DYNAMICS
+GENERAL TERMS OF SERVICE
+
+Last Updated: 2023-01-31
+
+The following Crystal Dynamics General Terms of Service (“Terms of Service”) explain the conditions that apply when you use our games, software, products, services, websites, accounts, applications, online stores, features, content, and activities (the “Services,” and each a “Service”). These Terms of Service govern your use of any Service that posts or links to these Terms of Service or is owned, controlled, or published by or for Crystal Dynamics, Inc. or its subsidiaries (“Crystal Dynamics,” or “we,” “our,” or “us”). In addition to these Terms of Service, separate guidelines, rules, or terms of service or sale (“Additional Terms”) may apply to your use of a particular Service. Where applicable, these Additional Terms will be made available to you before you start using any Service for which they are relevant. To the extent there is a conflict between these Terms of Service and any Additional Terms, the Additional Terms will control unless expressly stated otherwise. Certain Services we offer are not governed by these Terms of Service, but rather by separate terms of service and other policies that shall be notified to you when you access or use such Services. In the absence of any notification that such alternative terms apply, these Terms of Service shall govern.
+
+Before using the Services, you must read and accept these Terms of Service and any Additional Terms, and you acknowledge that you have read and understand the Crystal Dynamics Privacy Notice at http://www.crystald.com/privacy-notice. If you do not agree to these Terms of Service or any Additional Terms, please uninstall and discontinue use of the Services.
+
+These Terms of Service apply if you are accessing the Services from any territory other than the European Economic Area, the United Kingdom, Switzerland, Andorra, Monaco, San Marino, or Canada (the “Excluded Territories“).  If you are located in one of the Excluded Territories, please see our Europe/Canada Terms of Service below.  Notwithstanding the foregoing, you may not use the Services if you are located in a territory in which use of the Services is prohibited by applicable law or these Terms of Service.
+
+MANY TYPES OF DISPUTES THAT MAY ARISE IN CONNECTION WITH YOUR ACCESS TO OR USE OF THE SERVICES MAY BE SUBJECT TO MANDATORY ARBITRATION. PLEASE READ THE ARBITRATION PROVISIONS IN SECTION 15 OF THESE TERMS OF SERVICE CAREFULLY BEFORE USING OUR SERVICES.
+
+1. Contracting Party 
+
+These Terms of Service are a contract between you and Crystal Dynamics, Inc. 
+
+2. Limited License
+
+Crystal Dynamics and its licensors own and reserve all rights, title, and interest in the Services and the associated intellectual property in the Services, including audio-visual elements and other copyrightable materials (such as the “look and feel” of the Services); trademarks, logos, trade names, service marks, and trade identities of Crystal Dynamics and our licensors; patentable subject matter; and any other forms of intellectual property. Subject to your continuing compliance with these Terms of Service, Crystal Dynamics grants you a limited, non-exclusive, cancellable, non-assignable, non-sublicensable, and non-transferable license to use the Services for your personal, non-commercial use. Crystal Dynamics may immediately suspend or terminate the availability of some or all of the Services for any reason, in Crystal Dynamics’s sole discretion, without advance notice or liability.
+
+3. Use Restrictions
+
+In order to use the Services, you must not do any of the following: (i) violate any applicable law or regulation; (ii) use the Services for commercial or political purposes; (iii) copy, scrape, reproduce, redisplay, reverse engineer, decompile, hack, exploit, or modify the Services, including any server or network used to provide the Services (except to the extent enforcement of the foregoing is prohibited by applicable law); (iv) access or attempt to access an Account (defined below) that does not belong to you; (v) interfere with another user’s use of the Services; (vi) cheat, use unauthorized exploits, or create an unfair advantage in the Services or any other Crystal Dynamics game or service; (vii) create, develop, modify, distribute, use, promote, advertise, sell, commercialize, or otherwise exploit any unauthorized software, service, tool, or scheme to cheat or create an advantage in any offline, online, or multiplayer modes of the Services or any other Crystal Dynamics game or service; (viii) interfere with any security feature of the Services; (ix) use an unauthorized server to emulate or access the Services; (x) intercept, mine, or collect information from the Services or its users without authorization; (xi) violate the intellectual property rights or other rights of Crystal Dynamics or others; (xii) remove any trademark, copyright, or other intellectual property notice; or (xiii) engage in any harassing or threatening activities or communications in or related to the Services. You are also prohibited from promoting or instructing others on how to engage in any of the foregoing activities. We may immediately suspend or terminate your access to the Services if you violate any of these restrictions, or if you otherwise violate these Terms of Service.
+
+4. Use of the Services by Children
+
+The Services are not directed to children under the age of 13, and Crystal Dynamics will not knowingly collect personal information from anyone under the age of 13 (or other applicable minimum age in your place of residence) without obtaining verifiable explicit parental consent as may be required by law. Children over the age of 13 (or other applicable minimum age in your place of residence) but under the age of 18 (or other applicable age of majority in your place of residence) must obtain consent from their parent or guardian before using the Services and, in such cases, these Terms of Service also apply to the child’s parent or guardian. Where applicable, interactive video games offered through the Services carry a voluntary or mandatory age rating identified on the packaging and in online information. You agree not to play, or to allow others to play, a particular game if doing so would violate the applicable minimum age rating in your jurisdiction. Parents and guardians of children under the age of 18 (or the applicable age of majority in your place of residence) should read these Terms of Service carefully before allowing children to use the Services, since these Terms of Service apply to such parents and guardians.
+
+5. Account Registration
+
+Some features of the Services may require you to register an account with Crystal Dynamics or one of its partners (“Account”). You are responsible for maintaining the security of your Account and for all activity that occurs on your Account. When registering an Account, you agree to the following: (i) you must not use a username or email address that impersonates or personally identifies another person or entity or that is offensive, harassing, or threatening; (ii) you must provide and maintain accurate information; and (iii) you must not sell or transfer your Account to a third party or let any other person use your Account. Crystal Dynamics may suspend or terminate your Account at any time and for any reason, including if Crystal Dynamics believes you have violated these Terms of Service. 
+
+If you have registered an Account and wish to terminate it, please contact customer support as provided below in Section 12. Upon termination of your Account for any reason, Crystal Dynamics reserves the right to delete the Account permanently.
+
+6. Virtual Credits
+
+Crystal Dynamics may allow you to use “Virtual Credits” to redeem certain digital items and online services. Virtual Credits may have different names, such as, “credits,” “units,” “gems,” “coins,” “points,” or “gold.” Virtual Credits may be used in certain of our Services to unlock access to certain in-game items or experiences.  Virtual Credits acquired for use in one Service generally cannot be transferred or used in connection with another Service; Virtual Credits acquired for use on one platform (e.g., Microsoft Xbox) generally cannot be used in connection with another platform (e.g., Sony PlayStation). 
+
+Virtual Credits are not currency or property and have no monetary value. Crystal Dynamics retains all ownership of Virtual Credits and has the absolute right to manage and change Virtual Credits and all licenses for digital items and services redeemed using Virtual Credits. Your use of Virtual Credits is subject to a personal, non-commercial, non-exclusive, non-assignable, non-sublicensable, non-transferable, and cancelable license. Except where explicitly authorized by Crystal Dynamics, selling, exchanging, seeking to exchange, or facilitating the exchanging of Virtual Credits or other virtual items for real-world money, virtual currnecies with real-world value (e.g., Bitcoin), or any other form of property is strictly forbidden and constitutes a breach of these Terms of Service.
+
+Where permitted by Crystal Dynamics, you may add Virtual Credits to an Account by using the applicable payment methods for the platform you are using to access the Services. Crystal Dynamics reserves the right to adjust the price for Virtual Credits at any time, in its sole discretion, without notice or reimbursement. You are responsible for the payment of any taxes or other charges relating to the purchase or redemption of Virtual Credits. Except as where may be required by law, you have no right to receive a refund for unused Virtual Credits.
+
+7. Purchases from Crystal Dynamics
+
+Crystal Dynamics does not typically sell products or services directly to customers; rather a customer purchases products and services from intermediaries like Microsoft, Sony, Nintendo, Valve, Google, Amazon, etc. However, if Crystal Dynamics does sell any products or services directly to you, the following terms shall apply to purchases you make directly from Crystal Dynamics. If you place an order with Crystal Dynamics, we may, solely in our discretion, reject your order or limit the quantity of products you may purchase. We may also require additional information from you before accepting your order. If we accept your order, we will email you a confirmation notice providing relevant details on the purchase and a binding contract will form between you and us. If we are unable to accept your order because a product is not available, we may notify you when it becomes available again (subject to your consent).
+
+Physical products are at your risk from the time of delivery, and download products are at your risk from the time the download completes. Subject to your local law, you may not cancel an order for a physical product after you receive an order confirmation, and may not cancel a digital product after you start downloading the product.
+
+8. Rights Management, Access to Services, and Changes to our Services
+
+Some Services might utilize digital rights management, which may restrict your ability to access, duplicate, transmit, or use the Service in some situations.  In order to access some online Services (including online multiplayer games), you may be required to install the newest version of the Service.  The Services might not be functional if you have not installed the newest drivers, operating systems, system software, patches, or updates.  Unless expressly stated otherwise, you cannot use a Service you purchased on or for use on one platform (e.g., Sony PlayStation) on another platform (e.g., Microsoft Xbox).  Services should only be downloaded to and installed on compatible devices. Please review all product descriptions before downloading or purchasing access to a Service to ensure that your device is compatible and meets all minimum requirements.
+
+Some of our Services are live services (e.g., certain online games) that are supplied or made accessible to you over a period of time. These services constantly evolve and can therefore be modified by us in order to provide you with new or different features, functions, and content to ensure an ongoing challenging experience or to otherwise modify the gameplay experience. During the lifetime of these services, we might therefore add, change, or remove features, functions, and other content. This might also involve digital content that you have purchased.
+
+9. User-Generated Content
+
+Crystal Dynamics may offer you the opportunity to upload, transmit, or otherwise make available on the Services content you have created (“User-Generated Content”). Subject to your local law, you grant Crystal Dynamics the unrestricted, worldwide, irrevocable, perpetual, and cost-free right to use, copy, modify, distribute, disclose, sell, sublicense, display, publicly perform, publish, broadcast, translate, make derivative works of, promote, and otherwise exploit your User-Generated Content without any compensation, notice, or attribution to you, and to allow other third parties to do the same. To the maximum extent permitted by your local law, you waive any moral rights you have in User-Generated Content.
+
+You are solely liable for your User-Generated Content and submit it at your own risk. When you submit User-Generated Content, you agree that: (a) you are the sole author and owner of the rights to the User-Generated Content and are able to grant such rights without creating any obligation or liability to Crystal Dynamics or any third party; (b) the User-Generated Content does not infringe any intellectual property right or other right (including rights of privacy or publicity) of any third party; (c) the User-Generated Content will not cause injury or harm to Crystal Dynamics or any third party; and (d) the User-Generated Content does not violate these Terms of Service.
+
+Crystal Dynamics may—but does not have an obligation to—delete, remove, edit, or refuse to post User-Generated Content in our sole discretion. We do not accept any liability for removing, or not removing, any User-Generated Content.
+
+10. Procedure for Alleging Copyright Infringement under the DMCA
+
+If you believe that any content available on the Services violates your copyright, you may notify Crystal Dynamics as set forth in the U.S. Digital Millennium Copyright Act of 1998. To do so, please send us a notice that includes the following information:
+
+– a legend or subject line that says “DMCA Copyright Infringement Notice”;
+
+– a description of the copyrighted work that you claim has been infringed or, if multiple copyrighted works are covered by a single notification, a list of such works;
+
+– a description of where the material that you claim is infringing or is the subject of infringing activity is located that is reasonably sufficient to permit us to locate the material;
+
+– your name, address, telephone number, and email address;
+
+– a statement by you that you have a good-faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law;
+
+– a statement by you, made under penalty of perjury, that all the information in your notice is accurate and that you are the copyright owner (or, if you are not the copyright owner, that you are authorized to act on behalf of the owner); and
+
+– your electronic or physical signature.
+
+All DMCA notices must be sent to:
+
+Crystal Dynamics, Inc.  
+Attn: Legal Department – DMCA Notice
+883 East San Carlos Avenue
+San Mateo, CA 94070, United States
+Email: DMCA[at]crystald.com 
+
+If we receive a notice of copyright infringement that complies with the notice requirements in this Section 10, we will respond in accordance with our requirements under the U.S. Digital Millennium Copyright Act of 1998 (or other laws, if applicable). Please note that we may share any information you provide in your notice with the allegedly infringing party. You may be liable if you knowingly misrepresent that material or activity is infringing.
+
+11. Community Guidelines
+
+You must comply with the following guidelines (“Community Guidelines”) when using our online communities, uploading content on the Services (including User-Generated Content), or interacting with other users on or in connection with the Services:
+
+– You must treat other people with respect. Cursing, harassing, stalking, threatening, and making insulting comments or personal attacks about other people is prohibited.
+
+– You must not use the Services to encourage hateful or illegal conduct, including crimes against humanity, acts of terrorism, exploitation of children, acts of violence against women or any other person or group, attacks against another’s human dignity, or hatred of others based on their race, religion, national origin, gender, sex, sexual preferences, or disabilities.
+
+– You must not use the Services to distribute any content that is obscene, pornographic, defamatory, hateful, or illegal, or that violates the intellectual property rights or other rights of any person or entity.
+
+– Respect others’ privacy. You must not reveal another person’s name, address, phone number, email address, date of birth, social security number, credit card number, medical information, financial information, likeness, or any other information that can be used to identify another person.
+
+– Do not impersonate another person or entity, misrepresent your identity or affiliation with another person or entity, or otherwise make statements that are false, fraudulent, or deceptive.
+
+If you discover any content or behavior that violates this section or these Terms of Service, or is otherwise illegal or infringing, please report it to us by contacting customer service as described in Section 12. Please note that we have the right, but not the obligation, to monitor the Services, and we accept no liability for content or behavior you encounter on the Services.
+
+12. Customer Service Requests
+
+For questions, customer service requests, and other communications contemplated by these Terms of Service, please contact Crystal Dynamics at:  http://support.crystald.com 
+
+All customer service queries should be directed to the website above.  For non-customer service queries, you may use the website listed above or you may contact us at Crystal Dynamics, Inc., 883 San Carlos Avenue, San Carlos, CA 94070, United States of America, TermsofService[at]crystald.com. 
+
+13. Dealings with Third Parties
+
+A.     Third-Party Software and Services. The Services may give you the option to access third-party websites, software, services, advertisements, or other third-party materials. We do not endorse or control such third-party materials and we are not responsible for your interactions with them. When accessing any third-party materials, you should carefully read any applicable terms of service and privacy policies.
+
+B.     Apple. If you are accessing or using an application that is operated or published by Crystal Dynamics and posts or links to these Terms of Service through an Apple device running iOS (“iOS App”), the following Additional Terms are applicable to you and are incorporated into these Terms of Service by this reference:
+
+(i) You acknowledge that these Terms of Service are concluded between you and Crystal Dynamics only, and that Crystal Dynamics, and not Apple, is responsible for providing the Services and any content thereof.
+
+(ii) You may only access an iOS App through Apple-branded products that you own or control and as permitted by the usage rules set forth in the App Store Terms of Service (currently available at http://www.apple.com/legal/itunes/uk/terms.html); provided that an iOS App may be accessed and used by other accounts associated with you via Family Sharing or volume purchasing.
+
+(iii) You acknowledge that Apple has no obligation to furnish any maintenance or support services to you with respect to any iOS App. To the extent that any maintenance or support is required under applicable law, Crystal Dynamics, and not Apple, is obligated to provide such maintenance and support.
+
+(iv) In the event a warranty obligation is not disclaimed under these Terms of Service or Additional Terms and/or cannot be disclaimed under applicable law, Crystal Dynamics, and not Apple, is responsible for providing such warranty. If an iOS App fails to conform to an applicable warranty, you may notify Apple, and Apple will refund the purchase price for the iOS App. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to an iOS App.
+
+(v) Notwithstanding anything to the contrary herein, you acknowledge that, solely as between Apple and Crystal Dynamics, Crystal Dynamics is responsible for addressing any claims you may have relating to the Services, including: (a) product liability claims; (b) any claim that the Services fail to conform to any applicable legal or regulatory requirement; and (c) claims arising under consumer protection, privacy or similar legislation.
+
+(vi) If the Services are alleged to infringe a third party’s intellectual property rights, Crystal Dynamics, and not Apple, is responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claims.
+
+(vii) You agree to comply with any third-party terms applicable to your use of an iOS App.
+
+(viii) You acknowledge and agree that Apple, and Apple’s subsidiaries, are third-party beneficiaries of these Terms of Service and that Apple has the right to enforce this Section 13(B) against you as a third-party beneficiary thereof.
+
+C.     Microsoft. If you are accessing or using the Services through a Microsoft video game platform or service (e.g., Xbox One, Xbox Series S|X, Xbox Live) the following Additional Terms are applicable to you and are incorporated into these Terms of Service by this reference:
+
+(i) To the maximum extent allowed by applicable law, Microsoft and its affiliates: (a) have no warranty obligations whatsoever with respect to the Services; and (b) have no liability to you for any claims or damages relating to the Services.
+
+(ii) Microsoft and its affiliates have no obligation to provide you with any support for the Services or with any other additional services.
+
+(iii) Nothing in these Terms of Service is intended to: (a) prevent or limit your access to any software product intended for use on a Microsoft video game platform, including with respect to any related updates or digital content; or (b) govern or change in any way your relationship with Microsoft under Microsoft’s applicable agreements with you, including the Xbox Live terms of use.
+
+D.     Sony. If you are accessing or using the Services through a PlayStation®4 or PlayStation®5 console, the following Additional Terms are applicable to you and are incorporated into these Terms of Service by this reference:
+
+(i) You acknowledge that these Terms of Service are a contract between you and Crystal Dynamics, and not an agreement between you and Sony Interactive Entertainment, Inc. or any of its affiliate companies (collectively “Sony”). Crystal Dynamics, and not Sony, is responsible for the Services.
+
+(ii) You are granted a limited license to use the Services only on a system that you own or control or that delivers the Services to you via PlayStation(TM)Network.
+
+(iii) Sony is considered a third-party beneficiary of Crystal Dynamics under these Terms of Service.
+
+(iv) For users in Brazil, Canada, Mexico, or the United States, the following additional terms apply: Purchase and use of items are subject to the Network Terms of Service and User Agreement. This online service has been sublicensed to you by Sony Interactive Entertainment America.
+
+(v) For users in Australia, Austria, Belgium, Croatia, the Czech Republic, Denmark, Finland, France, Germany, Greece, India, Ireland, Israel, Italy, Kuwait, Luxembourg, the Netherlands, New Zealand, Norway, Poland, Portugal, Russia, Saudi Arabia, Slovenia, South Africa, Spain, Sweden, Switzerland, Turkey, the United Arab Emirates, the United Kingdom, or Ukraine, the following additional terms apply: 
+
+Any content purchased in an in-game store will be purchased from Sony Interactive Entertainment Network Europe Limited (“SIENE”) and be subject to PlayStation(TM)Network Terms of Service and User Agreement which is available on the PlayStation(TM)Store. Please check usage rights for each purchase as these may differ from item to item. Unless otherwise shown, content available in any in-game store has the same age rating as the game.
+
+14. Wireless or Mobile Features
+
+The Services may allow you to access certain features via your wireless or mobile device, such as the ability to upload content to the Services, receive messages from the Services, or download applications. Please note that your carrier may charge messaging, data, and other fees to use such wireless or mobile features, and may also prohibit you from using certain features of the Services.
+
+15. Binding Arbitration and Waiver of Class Actions
+
+Except where otherwise prohibited by your local law, the following Section 15 shall apply to any controversy, allegation, or claim between you and Crystal Dynamics that arises out of or relates to the Terms of Use or your use of the Services (collectively, a “Dispute”). 
+
+In the event of a Dispute, the aggrieved party shall send the other party a written notice that includes the name, address, and contact information of the party giving notice, as well as a description of the Dispute and a proposed resolution. To notify Crystal Dynamics of a Dispute, please send a notice to the physical mailing address as set forth above in Section 12, with attention to the “Legal Department.” For a period of sixty (60) days following a party’s receipt of notice of a Dispute, Crystal Dynamics and you shall attempt to resolve the Dispute informally. If you and Crystal Dynamics cannot resolve the Dispute within sixty (60) days, then the aggrieved party may initiate binding arbitration as the sole means to resolve the Dispute. WITH ARBITRATION THERE IS NO JUDGE OR JURY, THE ARBITRATION IS SUBJECT TO CERTAIN CONFIDENTIALITY RULES, AND JUDICIAL REVIEW OF THE ARBITRATION OUTCOME IS LIMITED. Any arbitration proceeding shall be conducted by JAMS before one neutral arbitrator pursuant to JAMS’ Streamlined Arbitration Rules and Procedures and subject to the applicable law and venue for your region as set forth in Section 19(B) of these Terms of Service. The JAMS consumer arbitration minimum standards will apply if you are a “consumer” as defined by JAMS, which includes the right to an in-person hearing in your hometown area. Where permitted by the arbitrator, Crystal Dynamics agrees that you may appear at an arbitration proceeding by telephone. Discovery will be permitted pursuant to the applicable arbitration rules. All parties to the arbitration will have the right, at their own expense, to be represented by an attorney or other advocate of their choosing. You and Crystal Dynamics will pay the arbitration fees and other costs in accordance with the applicable arbitration rules. If applicable arbitration rules or laws require Crystal Dynamics to pay a greater portion of such fees and costs in order for this Section 15 to be enforceable, then Crystal Dynamics agrees to pay such fees and costs and proceed to arbitration.
+
+The arbitrator’s decision must consist of a written statement stating the disposition of each claim of the Dispute and must provide a statement of the essential findings and conclusions on which the award (if any) is based. Judgment on the arbitration decision and award (if any) may be entered in or by any court that has jurisdiction over the parties. This Section 15 does not preclude either party from seeking remedies in small claims court for Disputes within the scope of such court’s jurisdiction.
+
+This Section 15 does not apply to any legal action taken by Crystal Dynamics to seek an injunction or other equitable relief in connection with any actual or potential loss, cost, or damage relating to the Services. 
+
+DISPUTES WILL BE ARBITRATED ONLY ON AN INDIVIDUAL BASIS AND WILL NOT BE CONSOLIDATED WITH ANY OTHER ARBITRATION OR OTHER PROCEEDING THAT INVOLVES ANY CLAIM OR CONTROVERSY OF ANY OTHER PARTY. In the event this class action waiver is held to be illegal or unenforceable then our agreement to arbitrate will not apply and the Dispute must be brought exclusively in court on an individual basis, unless otherwise required by law.
+
+If the arbitration provisions of this Section 15 are found to be unenforceable for any reason, you agree that the venue for any Dispute between you and us shall be the applicable court in Section 19(B). 
+
+16. Disclaimer of Representations and Warranties
+
+YOUR USE OF THE SERVICES IS AT YOUR SOLE RISK. CRYSTAL DYNAMICS DISCLAIMS AND MAKES NO REPRESENTATIONS OR WARRANTIES AS TO THE SERVICES, INCLUDING WHETHER THE SERVICES: ARE FREE FROM VIRUSES OR OTHER MALICIOUS CONTENT; WILL INTEROPERATE OR BE COMPATIBLE WITH ANY THIRD-PARTY HARDWARE OR SOFTWARE; WILL BE ERROR FREE, UNINTERRUPTED OR AVAILABLE AT ALL TIMES; WILL MEET YOUR REQUIREMENTS; OR ARE LAWFUL IN ANY PARTICULAR JURISDICTION. TO THE MAXIMUM EXTENT PERMITTED BY LAW, CRYSTAL DYNAMICS DISCLAIMS ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+SOME JURISDICTIONS LIMIT OR DO NOT ALLOW THE DISCLAIMER OF IMPLIED OR OTHER WARRANTIES, IN WHICH CASE THE FOREGOING DISCLAIMERS MAY NOT APPLY TO YOU. IF YOU LIVE IN, HAVE BOUGHT, OR USE THE SERVICES IN A JURISDICTION THAT PROVIDES STATUTORY OR OTHER GUARANTEES UNDER APPLICABLE LAW, NOTHING IN THIS AGREEMENT IS INTENDED TO LIMIT THOSE RIGHTS.
+
+17. Limitations of Liability
+
+TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, CRYSTAL DYNAMICS AND ITS EMPLOYEES, DIRECTORS, OFFICERS, MANAGERS, SHAREHOLDERS, AGENTS, VENDORS, LICENSORS, LICENSEES, CONTRACTORS, REPRESENTATIVES, SUCCESSORS, AND ASSIGNS (THE “CRYSTAL DYNAMICS PARTIES”) ARE NOT RESPONSIBLE OR LIABLE FOR ANY LOSSES OR DAMAGES OF ANY KIND, INCLUDING DIRECT, INDIRECT, ECONOMIC, EXEMPLARY, SPECIAL, PUNITIVE, INCIDENTAL, OR CONSEQUENTIAL LOSSES OR DAMAGES THAT ARE THE RESULT OF OR RELATED TO: (I) YOUR USE OF OR INABILITY TO USE THE SERVICES OR THE PERFORMANCE OF THE SERVICES; (II) GAMES, PRODUCTS, CONTENT, USER-GENERATED CONTENT, OR ANY OTHER FUNCTIONS, FEATURES, ELEMENTS, OR INFORMATION ON, REFERENCED AT, OR LINKED OR MADE ACCESSIBLE THROUGH THE SERVICES; (III) ANY ACTION TAKEN IN CONNECTION WITH AN INVESTIGATION BY THE CRYSTAL DYNAMICS PARTIES OR LAW ENFORCEMENT AUTHORITIES REGARDING YOUR ACCESS TO OR USE OF THE SERVICES; (IV) ANY ACTION TAKEN IN CONNECTION WITH COPYRIGHT OR OTHER INTELLECTUAL PROPERTY OWNERS OR OTHER RIGHTS OWNERS; (V) ANY ERRORS OR OMISSIONS IN THE SERVICES’ TECHNICAL OPERATION; (VI) ANY DAMAGE TO YOUR OR ANOTHER PERSON’S DEVICE, HARDWARE, SOFTWARE, OR OTHER EQUIPMENT OR TECHNOLOGY, INCLUDING DAMAGE FROM ANY SECURITY BREACH, VIRUS, BUG, TAMPERING, FRAUD, ERROR, OMISSION, INTERRUPTION, DEFECT, DELAY IN OPERATION OR TRANSMISSION, COMPUTER LINE, NETWORK FAILURE, OR ANY TECHNICAL OR OTHER MALFUNCTION; OR (VII) YOUR INABILITY OR FAILURE TO COMPLY WITH THESE TERMS OF SERVICE FOR ANY REASON. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL THE CRYSTAL DYNAMICS PARTIES’ TOTAL LIABILITY TO YOU, FOR ALL POSSIBLE DAMAGES, LOSSES, AND CAUSES OF ACTION, EXCEED AN AMOUNT EQUAL TO THE AMOUNT YOU HAVE PAID CRYSTAL DYNAMICS OVER THE PRECEDING 12 MONTHS. NOTHING IN THESE TERMS AFFECTS YOUR LEGAL RIGHTS IN YOUR PLACE OF RESIDENCE. IN THE EVENT OF A CONFLICT BETWEEN YOUR RIGHTS UNDER APPLICABLE LOCAL LAW AND THESE TERMS OF SERVICE, YOUR RIGHTS UNDER APPLICABLE LOCAL LAW WILL PREVAIL.
+
+If you are located in a jurisdiction that does not allow the exclusion or limitation of incidental or consequential damages of the sort that are described in this Section 17, then such exclusions and limitations will not apply to you. Subject to this, in no event shall we be liable to you for any business losses, and any liability we do have for losses you suffer arising from any contract shall not, in respect of any 12-month period as calculated from the date of that contract, exceed the charges payable by you for the relevant Service in that 12-month period or include any losses that were not reasonably foreseeable. Losses are considered foreseeable where they could have been contemplated by you and us at the time we accepted your order.
+
+18. Waiver of Injunctive and Other Equitable Relief
+
+IF YOU CLAIM TO HAVE INCURRED ANY LOSSES, DAMAGES, OR INJURIES, THEY WILL NOT BE IRREPARABLE OR SUFFICIENT TO ENTITLE YOU TO AN INJUNCTION OR OTHER EQUITABLE RELIEF. THIS MEANS THAT, IN CONNECTION WITH YOUR CLAIM, YOU AGREE THAT YOU WILL NOT SEEK ANY COURT OR OTHER ACTION THAT MAY INTERFERE WITH OR PREVENT THE DEVELOPMENT OR EXPLOITATION OF ANY PRODUCT, GAME, SERVICE, OR OTHER INTELLECTUAL PROPERTY OWNED, LICENSED, USED, OR CONTROLLED BY CRYSTAL DYNAMICS.
+
+19. Additional Provisions
+
+A.     Updates to Terms of Service. Crystal Dynamics reserves the right to modify these Terms of Service at any time, including by posting updated terms on the Services (subject to applicable law). By continuing to use the Services after any such update you consent to the changes to the Terms of Service (subject to applicable law). You may also be asked to affirmatively consent to updates to these Terms of Service, and may be prevented from continuing to use the Services if you decline to accept such an update.
+
+B.     Applicable Law and Venue. Except as stated otherwise, these Terms of Service will be governed by the laws of the State of California, United States, subject to the exclusive jurisdiction of the state and federal courts located in San Mateo County, California, United States.
+
+C.     Indemnity. You agree to defend, indemnify, reimburse, and hold harmless the Crystal Dynamics Parties from and against any and all claims, demands, losses, liabilities, or expenses (including attorneys’ fees) incurred in connection with your User-Generated Content, use of the Services, violation of these Terms of Service, or violation of any person or entity’s intellectual property rights or other rights. We retain the exclusive right to assume the defense and control of any matter that is otherwise subject to indemnification by you under this paragraph, and you agree to cooperate with Crystal Dynamics in asserting any available defenses.
+
+D.     Export Controls. You will not export, re-export, or otherwise download or transfer the Services to any country, jurisdiction, or person if doing so would violate the export control laws of the United States or another country. You are responsible for complying with all applicable trade regulations, laws, and export controls. Without limiting the foregoing, you represent and warrant that: (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a “terrorist supporting” country; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.
+
+E.     Severability. If any provision of these Terms of Service is found to be invalid, unlawful, void, or unenforceable, then that provision will be deemed severable and its invalidity will not affect the validity or enforceability of the remainder of these Terms of Service.
+
+F.     Interpretation. To the extent permitted by applicable law, you waive any rights under applicable statutory or common law that may permit a contract to be construed against its drafter. Wherever the word “including” is used in these Terms of Service it is deemed to mean “including, without limitation.”  Whenever required by the context, a singular reference shall include the plural and vice-versa.
+
+G.     Cooperation with Law Enforcement. Subject to applicable law, Crystal Dynamics reserves the right to involve and cooperate with law enforcement authorities in investigating any matters at any time without notice to you and with or without the receipt of a formal subpoena, search warrant, or other legal process. You acknowledge and agree that Crystal Dynamics may provide your electronic communications and data, including emails and chat logs, to such law enforcement authorities without any liability to you or any third party, unless prohibited by law.
+
+H.     Survival. In the event these Terms of Service are terminated then any terms that by their nature apply after such termination shall survive, including the rights and licenses you grant to Crystal Dynamics, indemnities, releases, disclaimers, limitations of liability, and provisions regarding jurisdiction, choice of law, no class action (if applicable in your jurisdiction), and mandatory arbitration (if applicable in your jurisdiction).
+
+I.     Assignment. Crystal Dynamics may assign its rights and obligations under these Terms of Service, in whole or in part, to any person or entity at any time without notice to you. You may not assign these Terms of Service without our prior written consent.
+
+J.     No Waiver. No failure or delay by you or Crystal Dynamics in exercising any rights, powers, or remedies will operate as a waiver, and no waiver of any term of these Terms of Service will be effective unless in writing and signed by the party against whom the waiver is sought to be enforced.
+
+K.     Entire Agreement. These Terms of Service, together with the Privacy Notice, Additional Terms, and any other terms of use relevant to your use of the Services, constitute the entire understanding and agreement between the parties with respect to your use of the Services and supersede any and all prior or contemporaneous oral or written communications.
+
+L.     Third-Party Rights. Except as expressly indicated herein, these Terms of Service are not intended to confer any rights or remedies on any person other than the parties to these Terms of Service, except that any Crystal Dynamics Party may enforce any right or remedy expressly conferred on such Crystal Dynamics Party under these Terms of Service.
+
+M.     Plugin Licenses / Content Protection. The Services may incorporate third-party content that is subject to disclosure obligations.  These disclosures can be found either in the Services or at http://www.crystald.com/disclosures.
+
+
+
+
+
+CRYSTAL DYNAMICS
+EUROPE/CANADA TERMS OF SERVICE
+
+Last Updated: 2023-01-31
+
+The following Crystal Dynamics Europe/Canada Terms of Service (“Terms of Service”) explain the conditions that apply when you use our games, software, products, services, websites, accounts, applications, online stores, features, content, and activities (the “Services,” and each a “Service”). These Terms of Service govern your use of any Service that posts or links to these Terms of Service or is owned, controlled, or published by or for Crystal Dynamics, Inc. or its subsidiaries (“Crystal Dynamics,” or “we,” “our,” or “us”). In addition to these Terms of Service, separate guidelines, rules, or terms of service or sale (“Additional Terms”) may apply to your use of a particular Service. Where applicable, these Additional Terms will be made available to you before you start using any Service for which they are relevant. To the extent there is a conflict between these Terms of Service and any Additional Terms, the Additional Terms will control unless expressly stated otherwise. Certain Services we offer are not governed by these Terms of Service, but rather by separate terms of service and other policies that shall be notified to you when you access or use such Services. In the absence of any notification that such alternative terms apply, these Terms of Service shall govern.
+
+Before using the Services, you must read and accept these Terms of Service and any Additional Terms. For information on how we treat your personal data, please read our Privacy Notice at http://www.crystald.com/legal/privacy.  If you do not agree to these Terms of Service or any Additional Terms, please uninstall and discontinue use of the Services.
+
+These Terms of Service apply if you are accessing the Services from any territory in the European Economic Area, the United Kingdom, Switzerland, Andorra, Monaco, San Marino, or Canada.  If you are located in any other territory, please see our General Terms of Service.  Notwithstanding the foregoing, you may not use the Services if you are located in a territory in which use of the Services is prohibited by applicable law or these Terms of Service.
+
+1. Contracting Party 
+
+These Terms of Service are a contract between you and Crystal Dynamics, Inc.
+
+2. Limited License
+
+Crystal Dynamics and its licensors own and reserve all rights, title, and interest in the Services and the associated intellectual property in the Services, including audio-visual elements and other copyrightable materials (such as the “look and feel” of the Services); trademarks, logos, trade names, service marks, and trade identities of Crystal Dynamics and our licensors; patentable subject matter; and any other forms of intellectual property. Subject to your continuing compliance with these Terms of Service, Crystal Dynamics grants you a limited, non-exclusive, cancellable, non-assignable, non-sublicensable, and non-transferable license to use the Services for your personal, non-commercial use.
+
+3. Use Restrictions
+
+In order to use the Services, you must not do any of the following: (i) violate any applicable law or regulation; (ii) use the Services for commercial or political purposes; (iii) copy, scrape, reproduce, redisplay, reverse engineer, decompile, hack, exploit, or modify the Services, including any server or network used to provide the Services (except to the extent enforcement of the foregoing is prohibited by applicable law); (iv) access or attempt to access an Account (defined below) that does not belong to you; (v) interfere with another user’s use of the Services; (vi) cheat, use unauthorized exploits, or create an unfair advantage in the Services or any other Crystal Dynamics game or service; (vii) create, develop, modify, distribute, use, promote, advertise, sell, commercialize, or otherwise exploit any unauthorized software, service, tool, or scheme to cheat or create an advantage in any offline, online, or multiplayer modes of the Services or any other Crystal Dynamics game or services (viii) interfere with any security feature of the Services; (ix) use an unauthorized server to emulate or access the Services; (x) intercept, mine, or collect information from the Services or its users without authorization; (xi) violate the intellectual property rights or other rights of Crystal Dynamics or others; (xii) remove any trademark, copyright, or other intellectual property notice; or (xiii) engage in any harassing or threatening activities or communications in or related to the Services. You are also prohibited from promoting or instructing others on how to engage in any of the foregoing activities. We may immediately suspend or terminate your access to the Services if you violate any of these restrictions, or if you otherwise violate these Terms of Service. However, with the exception of severe or repeated violations of this provision, we will attempt to send you a warning at least 30 days before suspending or terminating your access to the Services.
+
+4. Use of the Services by Children
+
+The Services are not directed to children under the age of 13, and Crystal Dynamics will not knowingly collect personal information from anyone under the age of 13 (or other applicable minimum age in your place of residence) without obtaining verifiable explicit parental consent as may be required by law. Children over the age of 13 (or other applicable minimum age in your place of residence) but under the age of 18 (or other applicable age of majority in your place of residence) must obtain consent from their parent or guardian before using the Services. Where applicable, interactive video games offered through the Services carry a voluntary or mandatory age rating identified on the packaging and in online information. You agree not to play, or to allow others to play, a particular game if doing so would violate the applicable minimum age rating in your jurisdiction. Parents and guardians of children under the age of 18 (or the applicable age of majority in your place of residence) should read these Terms of Service carefully before allowing children to use the Services.
+
+5. Account Registration
+
+Some features of the Services may require you to register an account with Crystal Dynamics or one of its partners (“Account”). You are responsible for maintaining the security of your Account and for all activity that occurs on your Account. The following terms apply to your Account: (i) you must not use a username or email address that impersonates or personally identifies another person or entity or that is offensive, harassing, or threatening; (ii) you must provide and maintain accurate information; and (iii) you must not sell or transfer your Account to a third party or let any other person use your Account. Crystal Dynamics may suspend or terminate your Account if Crystal Dynamics believes you have violated these Terms of Service. However, with the exception of severe or repeated violations of this provision, we will attempt to send you a warning at least 30 days before suspending or terminating your access to the Services.
+
+If you have registered an Account and wish to terminate it, please contact customer support as provided below in Section 12. Upon termination of your Account for any reason, Crystal Dynamics reserves the right to delete the Account permanently. In this case we will attempt to send you a notice at least thirty (30) days before deleting your Account.
+
+6. Virtual Credits
+
+Crystal Dynamics may allow you to use “Virtual Credits” to redeem certain digital items and online services. Virtual Credits may have different names, such as, “credits,” “units,” “gems.” “coins,” “points,” or “gold.” Virtual Credits may be used in certain of our Services to unlock access to certain in-game items or experiences.  Virtual Credits acquired for use in one Service generally cannot be transferred or used in connection with another Service; Virtual Credits acquired for use on one platform (e.g., Microsoft Xbox) generally cannot be used in connection with another platform (e.g., Sony PlayStation). 
+
+Virtual Credits are not currency or property and have no monetary value. Your use of Virtual Credits is subject to a personal, non-commercial, non-exclusive, non-assignable, non-sublicensable, non-transferable, and cancelable license. Except where explicitly authorized by Crystal Dynamics, selling, exchanging, seeking to exchange, or facilitating the exchanging of Virtual Credits or other virtual items for real-world money, virtual currencies with real-world value (e.g., Bitcoin), or any other form of property is strictly forbidden and constitutes a breach of these Terms of Service.
+
+Where permitted by Crystal Dynamics, you may add Virtual Credits to an Account by using the applicable payment methods for the platform you are using to access the Services. You are responsible for the payment of any taxes or other charges relating to the purchase or redemption of Virtual Credits. Except as where may be required by law, you have no right to receive a refund for unused Virtual Credits, or redeem them against real-world money, virtual currencies with real-world value (e.g. Bitcoins) or any other form of property.
+
+7. Purchases from Crystal Dynamics, Consumer Rights and Right of Withdrawal
+
+A.      General. Crystal Dynamics does not typically sell products or services directly to customers; rather customer purchases products and services from intermediaries like Microsoft, Sony, Nintendo, Valve, Google, Amazon, etc. 
+
+However, if Crystal Dynamics does sell any products or services (including digital content) directly to you, the following terms shall apply to purchases you make directly from Crystal Dynamics. If you place an order with Crystal Dynamics, we may, solely in our discretion, reject your order or limit the quantity of products you may purchase. We may also require additional information from you before accepting your order. Before you place your order, we will provide you with the opportunity to review your order, allowing you to edit or correct it by using the relevant edit fields or buttons. 
+
+Depending on the destination, products may be subject to additional import duties, taxes, or levies, and you are responsible for the payment of all such charges. 
+
+If you purchase a downloadable product, you are responsible for any costs associated with downloading and accessing that product.
+
+If we accept your order, we will email you a confirmation notice providing relevant details on the purchase and a binding contract will form between you and us. The contract will be concluded in the language you selected and which is used during the ordering process.  If we are unable to accept your order because a product is not available, we may notify you when it becomes available again (subject to your consent).
+
+B. Statutory Consumer Rights. You have certain mandatory statutory warranty and consumer rights for purchases of goods and services, including for purchases of digital content, which are by no means restricted or limited by these Terms of Service and therefore remain unaffected.
+
+C. Subscriptions. If you have purchased a recurring subscription to one of our Services, Crystal Dynamics will process recurring payments automatically. Your subscription will continue to renew until you cancel your subscription. You can cancel your subscription at any time with effect within one month.
+
+D. Right of Withdrawal for Consumers from the European Economic Area or the UK
+
+For purchases of goods and services, including digital content (such as Virtual Credits) or subscriptions, the following statutory right of withdrawal applies:
+
+(i) Physical goods:
+
+Information concerning the exercise of the right of withdrawal
+
+Right of withdrawal
+
+You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the goods.
+
+To exercise the right of withdrawal, you must inform us by contacting us by the means described in Section 12 of your decision to withdraw from this contract by an unequivocal statement (e.g., a letter sent by post or email). You may use the attached model withdrawal form, but it is not obligatory. 
+
+To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.
+
+Effects of withdrawal
+
+If you withdraw from this contract, we shall reimburse to you all payments received from you, including the costs of delivery (with the exception of the supplementary costs resulting from your choice of a type of delivery other than the least expensive type of standard delivery offered by us), without undue delay and in any event not later than 14 days from the day on which we are informed about your decision to withdraw from this contract. We will carry out such reimbursement using the same means of payment as you used for the initial transaction, unless you have expressly agreed otherwise; in any event, you will not incur any fees as a result of such reimbursement. We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest. You shall send back the goods or hand them over to us without undue delay and in any event not later than 14 days from the day on which you communicate your withdrawal from this contract to us. The deadline is met if you send back the goods before the period of 14 days has expired. You will have to bear the direct cost of returning the goods. You are only liable for any diminished value of the goods resulting from handling them beyond what is necessary to establish the nature, characteristics and functioning of the goods.
+
+(ii) Digital content and services:
+
+Information concerning the exercise of the right of withdrawal
+
+Right of withdrawal
+
+You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day of the conclusion of the contract.
+
+To exercise the right of withdrawal, you must inform us by contacting us by the means described in Section 12 of your decision to withdraw from this contract by an unequivocal statement (e.g., a letter sent by post or email). You may use the attached model withdrawal form, but it is not obligatory. 
+
+To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.
+
+Effects of withdrawal
+
+If you withdraw from this contract, we shall reimburse to you all payments received from you, including the costs of delivery (with the exception of the supplementary costs resulting from your choice of a type of delivery other than the least expensive type of standard delivery offered by us), without undue delay and in any event not later than 14 days from the day on which we are informed about your decision to withdraw from this contract. We will carry out such reimbursement using the same means of payment as you used for the initial transaction, unless you have expressly agreed otherwise; in any event, you will not incur any fees as a result of such reimbursement. If you requested to begin the performance of services during the withdrawal period, you shall pay us an amount which is in proportion to what has been provided until you have communicated us your withdrawal from this contract, in comparison with the full coverage of the contract.
+
+Model withdrawal form
+
+(complete and return this form only if you wish to withdraw from the contract)
+
+Deliver it to us by the means described in Section 12):
+
+I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract of sale of the following goods (*) /for the provision of the following service (*),
+
+Ordered on (*) /received on (*),
+
+Name of consumer(s),
+
+Address of consumer(s),
+
+Signature of consumer(s) (only if this form is notified on paper),
+
+Date
+
+*delete as appropriate
+
+E. Loss of the Right of Withdrawal. The right of withdrawal for digital content, including Virtual Credits, will be lost if we have begun the performance of the contract and you have provided prior express consent to begin the performance during the right of withdrawal period and acknowledge that you thereby lose your right of withdrawal, and we also provided you with a confirmation of the contract concluded on a durable medium within a reasonable time.
+
+8. Rights Management, Access to Services, and Changes to our Services
+
+Some Services might utilize digital rights management, which may restrict your ability to access, duplicate, transmit, or use the Service in some situations.  In order to access some online Services (including online multiplayer games), you may be required to install the newest version of the Service.  The Services might not be functional if you have not installed the newest drivers, operating systems, system software, patches, or updates.  Unless expressly stated otherwise, you cannot use a Service you purchased on or for use on one platform (e.g., Sony PlayStation) on another platform (e.g., Microsoft Xbox).  Services should only be downloaded to and installed on compatible devices. Please review all product descriptions before downloading or purchasing access to a Service to ensure that your device is compatible and meets all minimum requirements.
+
+Some of our Services are live services (e.g., certain online games) that are supplied or made accessible to you over a period of time. These services constantly evolve and can therefore be modified by us in order to provide you with new or different features, functions, and content to ensure an ongoing challenging experience or to otherwise modify the gameplay experience. During the lifetime of these services, we might therefore add, change, or remove features, functions, and other content. This might also involve digital content that you have purchased. 
+
+9. User-Generated Content
+
+Crystal Dynamics may offer you the opportunity to upload, transmit, or otherwise make available on the Services content you have created (“User-Generated Content”). You grant Crystal Dynamics the unrestricted, worldwide, irrevocable, perpetual, and cost-free right to use, copy, modify, distribute, disclose, sell, sublicense, display, publicly perform, publish, broadcast, translate, make derivative works of, promote, and otherwise exploit your User-Generated Content without any compensation, notice, or attribution to you, and to allow other third parties to do the same. To the maximum extent permitted by your local law, you waive any moral rights you have in User-Generated Content.
+
+You are solely liable for your User-Generated Content and submit it at your own risk. When you submit User-Generated Content, you are responsible for ensuring that: (a) you are the sole author and owner of the rights to the User-Generated Content and are able to grant such rights without creating any obligation or liability to Crystal Dynamics or any third party; (b) the User-Generated Content does not infringe any intellectual property right or other right (including rights of privacy or publicity) of any third party; (c) the User-Generated Content will not cause injury or harm to Crystal Dynamics or any third party; and (d) the User-Generated Content does not violate these Terms of Service.
+
+Crystal Dynamics may—but does not have an obligation to—delete, remove, edit, or refuse to post User-Generated Content in our sole discretion. 
+
+10. Procedure for Alleging Copyright Infringement  
+
+If you believe that any content available on the Services violates your copyright, you may notify Crystal Dynamics. To do so, please send us a notice that includes the following information:
+
+– a legend or subject line that says “Copyright Infringement Notice”;
+
+– a description of the copyrighted work that you claim has been infringed or, if multiple copyrighted works are covered by a single notification, a list of such works;
+
+– a description of where the material that you claim is infringing or is the subject of infringing activity is located that is reasonably sufficient to permit us to locate the material;
+
+– your name, address, telephone number, and email address;
+
+– a statement by you that you have a good-faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law;
+
+– a statement by you, made under penalty of perjury, that all the information in your notice is accurate and that you are the copyright owner (or, if you are not the copyright owner, that you are authorized to act on behalf of the owner); and
+
+– your electronic or physical signature.
+
+All notices must be sent to:
+
+Crystal Dynamics, Inc.  
+
+Attn: Legal Department – Copyright Infringement Notice
+883 East San Carlos Avenue
+
+San Carlos, CA 94070, United States
+Email: DMCA[at]crystald.com 
+
+If we receive a notice of copyright infringement that complies with the notice requirements in this Section 10, we will respond in accordance with our requirements under the U.S. Digital Millennium Copyright Act of 1998 or other laws, if applicable. Please note that we may share any information you provide in your notice with the allegedly infringing party. You may be liable if you knowingly misrepresent that material or activity is infringing.
+
+11. Community Guidelines
+
+You must comply with the following guidelines (“Community Guidelines”) when using our online communities, uploading content on the Services (including User-Generated Content), or interacting with other users on or in connection with the Services:
+
+– You must treat other people with respect. Cursing, harassing, stalking, threatening, and making insulting comments or personal attacks about other people is prohibited.
+
+– You must not use the Services to encourage hateful or illegal conduct, including crimes against humanity, acts of terrorism, exploitation of children, acts of violence against women or any other person or group, attacks against another’s human dignity, or hatred of others based on their race, religion, national origin, gender, sex, sexual preferences, or disabilities.
+
+– You must not use the Services to distribute any content that is obscene, pornographic, defamatory, hateful, or illegal, or that violates the intellectual property rights or other rights of any person or entity.
+
+– Respect others’ privacy. You must not reveal another person’s name, address, phone number, email address, date of birth, social security number, credit card number, medical information, financial information, likeness, or any other information that can be used to identify another person.
+
+– Do not impersonate another person or entity, misrepresent your identity or affiliation with another person or entity, or otherwise make statements that are false, fraudulent, or deceptive.
+
+If you discover any content or behavior that violates this section or these Terms of Service, or is otherwise illegal or infringing, please report it to us by contacting customer service as described in Section 12. Please note that we have the right, but not the obligation, to monitor the Services.
+
+12. Customer Service and Other Requests
+
+For questions, customer service requests, and other communications contemplated by these Terms of Service, please contact Crystal Dynamics at:  http://support.crystald.com 
+
+All customer service queries should be directed to the website above.  For non-customer service queries, you may use the website listed above or you may contact us at Crystal Dynamics, Inc., 883 East San Carlos Avenue, San Carlos, CA 94070, United States of America, TermsofService[at]crystald.com.
+
+13. Dealings with Third Parties
+
+A.     Third-Party Software and Services. The Services may give you the option to access third-party websites, software, services, advertisements, or other third-party materials. We do not endorse or control such third-party materials and we are not responsible for your interactions with them. When accessing any third-party materials, you should carefully read any applicable terms of service and privacy policies.
+
+B.     Apple. If you are accessing or using an application that is operated or published by Crystal Dynamics and posts or links to these Terms of Service through an Apple device running iOS (“iOS App”), the following Additional Terms are applicable to you and are incorporated into these Terms of Service by this reference:
+
+(i) You acknowledge that these Terms of Service are concluded between you and Crystal Dynamics only, and that Crystal Dynamics, and not Apple, is responsible for providing the Services and any content thereof.
+
+(ii) You may only access an iOS App through Apple-branded products that you own or control and as permitted by the usage rules set forth in the App Store Terms of Service (currently available at http://www.apple.com/legal/itunes/uk/terms.html); provided that an iOS App may be accessed and used by other accounts associated with you via Family Sharing or volume purchasing.
+
+(iii) You acknowledge that Apple has no obligation to furnish any maintenance or support services to you with respect to any iOS App. To the extent that any maintenance or support is required under applicable law, Crystal Dynamics, and not Apple, is obligated to provide such maintenance and support.
+
+(iv) In the event a warranty obligation is not disclaimed under these Terms of Service or Additional Terms and/or cannot be disclaimed under applicable law, Crystal Dynamics, and not Apple, is responsible for providing such warranty. If an iOS App fails to conform to an applicable warranty, you may notify Apple, and Apple will refund the purchase price for the iOS App. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to an iOS App.
+
+(v) Notwithstanding anything to the contrary herein, you acknowledge that, solely as between Apple and Crystal Dynamics, Crystal Dynamics is responsible for addressing any claims you may have relating to the Services, including: (a) product liability claims; (b) any claim that the Services fail to conform to any applicable legal or regulatory requirement; and (c) claims arising under consumer protection, privacy or similar legislation.
+
+(vi) If the Services are alleged to infringe a third party’s intellectual property rights, Crystal Dynamics, and not Apple, is responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claims.
+
+(vii) You agree to comply with any third-party terms applicable to your use of an iOS App.
+
+(viii) You acknowledge and agree that Apple, and Apple’s subsidiaries, are third-party beneficiaries of these Terms of Service and that Apple has the right to enforce this Section 12(B)  against you as a third-party beneficiary thereof.
+
+C.     Microsoft. If you are accessing or using the Services through a Microsoft video game platform or service (e.g., Xbox One, Xbox Series S|X, Xbox Live) the following Additional Terms are applicable to you and are incorporated into these Terms of Service by this reference:
+
+(i) To the maximum extent allowed by applicable law, Microsoft and its affiliates: (a) have no warranty obligations whatsoever with respect to the Services; and (b) have no liability to you for any claims or damages relating to the Services.
+
+(ii) Microsoft and its affiliates have no obligation to provide you with any support for the Services or with any other additional services.
+
+(iii) Nothing in these Terms of Service is intended to: (a) prevent or limit your access to any software product intended for use on a Microsoft video game platform, including with respect to any related updates or digital content; or (b) govern or change in any way your relationship with Microsoft under Microsoft’s applicable agreements with you, including the Xbox Live terms of use.
+
+D.     Sony. If you are accessing or using the Services through a PlayStation®4 or PlayStation®5 console, the following Additional Terms are applicable to you and are incorporated into these Terms of Service by this reference:
+
+(i) You acknowledge that these Terms of Service are a contract between you and Crystal Dynamics, and not an agreement between you and Sony Interactive Entertainment, Inc. or any of its affiliate companies (collectively “Sony”). Crystal Dynamics, and not Sony, is responsible for the Services.
+
+(ii) You are granted a limited license to use the Services only on a system that you own or control or that delivers the Services to you via PlayStation(TM)Network.
+
+(iii) Sony is considered a third-party beneficiary of Crystal Dynamics under these Terms of Service.
+
+(iv) For users in Brazil, Canada, Mexico, or the United States, the following additional terms apply: Purchase and use of items are subject to the Network Terms of Service and User Agreement. This online service has been sublicensed to you by Sony Interactive Entertainment America.
+
+(v) For users in Australia, Austria, Belgium, Croatia, the Czech Republic, Denmark, Finland, France, Germany, Greece, India, Ireland, Israel, Italy, Kuwait, Luxembourg, the Netherlands, New Zealand, Norway, Poland, Portugal, Russia, Saudi Arabia, Slovenia, South Africa, Spain, Sweden, Switzerland, Turkey, the United Arab Emirates, the United Kingdom, or Ukraine, the following additional terms apply: 
+
+Any content purchased in an in-game store will be purchased from Sony Interactive Entertainment Network Europe Limited (“SIENE”) and be subject to PlayStation(TM)Network Terms of Service and User Agreement which is available on the PlayStation(TM)Store. Please check usage rights for each purchase as these may differ from item to item. Unless otherwise shown, content available in any in-game store has the same age rating as the game.
+
+14. Wireless or Mobile Features
+
+The Services may allow you to access certain features via your wireless or mobile device, such as the ability to upload content to the Services, receive messages from the Services, or download applications. Please note that your carrier may charge messaging, data, and other fees to use such wireless or mobile features, and may also prohibit you from using certain features of the Services.
+
+15. Dispute Resolution
+
+Crystal Dynamics does not participate in dispute resolution proceedings before consumer arbitration boards in Canada or the EU/EEA region.
+
+16. Disclaimer of Representations and Warranties (Applies to Users from Canada Only)
+
+YOUR USE OF THE SERVICES IS AT YOUR SOLE RISK. CRYSTAL DYNAMICS DISCLAIMS AND MAKES NO REPRESENTATIONS OR WARRANTIES AS TO THE SERVICES, INCLUDING WHETHER THE SERVICES: ARE FREE FROM VIRUSES OR OTHER MALICIOUS CONTENT; WILL INTEROPERATE OR BE COMPATIBLE WITH ANY THIRD-PARTY HARDWARE OR SOFTWARE; WILL BE ERROR FREE, UNINTERRUPTED OR AVAILABLE AT ALL TIMES; WILL MEET YOUR REQUIREMENTS; OR ARE LAWFUL IN ANY PARTICULAR JURISDICTION. TO THE MAXIMUM EXTENT PERMITTED BY LAW, CRYSTAL DYNAMICS DISCLAIMS ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+17. Limitations of Liability
+
+A.      All Territories Other than Germany. In all territories other than Germany, our liability is limited as follows:
+
+We are responsible for losses you suffer caused by us breaking this contract unless the loss is:
+
+(i) Unexpected: It was not obvious that it would happen and nothing you said to us before we accepted your order meant we should have expected it (so, in the law, the loss was unforeseeable).
+
+(ii) Caused by a delaying event outside our control: As long as we have contacted you as soon as possible to let you know and did what we could do to reduce the delay.
+
+(iii) Avoidable: Something you could have avoided by taking reasonable action. For example, damage to your own digital content or device, which was caused by digital content we supplied but which you could have avoided by following our advice to apply a free update or by correctly following the installation instructions or having the minimum system requirements advised by us.
+
+(iv) A business loss: It relates to your use of a product for the purposes of your trade, business, craft, or profession.
+
+B.      Germany.  In Germany, our liability is limited as follows:
+
+(i) Crystal Dynamics’ liability for damages caused by slight negligence, irrespective of its legal ground, shall be limited as follows: 
+
+(a) Crystal Dynamics shall be liable up to the amount of the foreseeable damages typical for this type of contract due to a breach of material contractual obligations; 
+
+(b) Crystal Dynamics shall not be liable due to a slightly negligent breach of any other duty of care applicable. 
+
+(ii) The aforesaid limitations of liability shall not apply to any mandatory statutory liability, in particular to liability under the German Product Liability Act (Produkthaftungsgesetz), and liability for culpably caused injuries of life, body, or health. In addition, such limitations of liability shall not apply if and to the extent Crystal Dynamics has assumed a specific guarantee.
+
+(iii) Sections (i) and (ii) shall apply accordingly to Crystal Dynamics’s liability for futile expenses.
+
+You are obliged to take adequate measures to avert and reduce damages.
+
+18. Additional Provisions
+
+A.     Updates to Terms of Service. Crystal Dynamics might modify these Terms of Service from time to time, including by posting updated terms on the Services (subject to applicable law).
+
+B.     Applicable Law and Venue (applies to users from Canada only). Except as, and to the extent, stated otherwise, these Terms of Service will be governed by the laws of the State of California, United States, subject to the exclusive jurisdiction of the state and federal courts located in San Mateo County, California, United States.
+
+C.     Indemnity (applies to users from Canada only). You agree to defend, indemnify, reimburse, and hold harmless Crystal Dynamics from and against any and all claims, demands, losses, liabilities, or expenses (including attorneys’ fees) incurred in connection with your User-Generated Content, use of the Services, violation of these Terms of Service, or violation of any person or entity’s intellectual property rights or other rights. We retain the exclusive right to assume the defense and control of any matter that is otherwise subject to indemnification by you under this paragraph, and you agree to cooperate with Crystal Dynamics in asserting any available defenses.
+
+D.     Export Controls. You will not export, re-export, or otherwise download or transfer the Services to any country, jurisdiction, or person if doing so would violate the export control laws of the United States or another country. You are responsible for complying with all applicable trade regulations, laws, and export controls. Without limiting the foregoing, you represent and warrant that: (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a “terrorist supporting” country; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.
+
+E.     Severability. If any provision of these Terms of Service is found to be invalid, unlawful, void, or unenforceable, then that provision will be deemed severable and its invalidity will not affect the validity or enforceability of the remainder of these Terms of Service.
+
+F.     Interpretation. Wherever the word “including” is used in these Terms of Service it is deemed to mean “including, without limitation.”  Whenever required by the context, a singular reference shall include the plural and vice-versa.
+
+G.     Choice of Language.  For residents of the Province of Quebec in Canada, you agree that it is your express wish that these Terms of Service and any Additional Terms, including all related documents, be drawn up and communicated to you in English only. For any residents of the Province of Quebec, these Terms of Service will be made available to you in French.  Vous convenez que vous souhaitez expressément que les présentes Conditions de service et toutes les Conditions supplémentaires, y compris tous les documents connexes, soient rédigées et vous soient communiquées en anglais uniquement. Pour les résidents de la province du Québec, les présentes conditions de service seront mises à votre disposition en français.
+
+H.     Survival. In the event these Terms of Service are terminated then any terms that by their nature apply after such termination shall survive, including the rights and licenses you grant to Crystal Dynamics, limitations of liability, provisions regarding jurisdiction (where applicable), and choice of law.
+
+I.     Assignment. Crystal Dynamics may assign its claims against you under these Terms of Service, in whole or in part, to any person or entity at any time without notice to you.
+
+J.     No Waiver. No failure or delay by you or Crystal Dynamics in exercising any rights, powers, or remedies will operate as a waiver, and no waiver of any term of these Terms of Service will be effective unless in writing and signed by the party against whom the waiver is sought to be enforced.
+
+K.     Entire Agreement. These Terms of Service, Additional Terms, and any other terms of use relevant to your use of the Services, constitute the entire understanding and agreement between the parties with respect to your use of the Services and supersede any and all prior or contemporaneous oral or written communications.
+
+L.     Third-Party Rights. Except as expressly indicated herein, these Terms of Service are not intended to confer any rights or remedies on any person other than the parties to these Terms of Service, except that any Crystal Dynamics Party may enforce any right or remedy expressly conferred on such Crystal Dynamics Party under these Terms of Service.
+
+M.     Plugin Licenses / Content Protection. The Services may incorporate third-party content that is subject to disclosure obligations.  These disclosures can be found either in the Services or at http://www.crystald.com/legal/disclosures

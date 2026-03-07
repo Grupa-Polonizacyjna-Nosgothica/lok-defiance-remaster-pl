@@ -1,0 +1,1 @@
+Markers are actived when you near them

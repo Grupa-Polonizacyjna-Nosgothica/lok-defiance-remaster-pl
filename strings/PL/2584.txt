@@ -1,0 +1,6 @@
+Use  to launch Telekinetic assaults during combat.
+
+· Tap  to quickly blast away an enemy. You can use Telekinesis as long as energy remains in the TK Meter.
+· When playing as Kain, hold down  to lift the enemy off the ground, then release it to throw the enemy. Use  before releasing  to hurl the enemy into deadly or damaging obstacles, or to pull the enemy toward Kain to set up a combo attack. Kain will lose his TK hold after a short time if he doesn't throw the enemy.
+· You can throw enemies onto spikes, into fire, into breakable objects, over ledges, and into architectural obstacles. Some of these targets will be fatal, others will inflict varying degrees of damage.
+· Some enemies are invulnerable to TK attacks.

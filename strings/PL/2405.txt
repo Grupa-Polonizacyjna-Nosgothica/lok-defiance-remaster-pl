@@ -1,0 +1,1 @@
+Please press the key you would like to map to %s. Press  to cancel or Backspace to clear the key mapping.
