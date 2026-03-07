@@ -10,6 +10,17 @@
 #include "BinaryUtils.hpp"
 
 enum class Locale { EN, FR, DE, IT, ES, JP, PT, CN, RU };
+inline std::map<Locale, std::string> LOCALE_NAMES = {
+    {Locale::EN, "EN"},
+    {Locale::FR, "FR"},
+    {Locale::DE, "DE"},
+    {Locale::IT, "IT"},
+    {Locale::ES, "ES"},
+    {Locale::JP, "JP"},
+    {Locale::PT, "PT"},
+    {Locale::CN, "CN"},
+    {Locale::RU, "RU"}
+};
 
 inline std::map<Locale, DataBlockInfo> KNOWN_BLOCKS = {
     {Locale::RU, DataBlockInfo(0x08B800, 0xA3800)},
@@ -19,7 +30,7 @@ inline std::map<Locale, DataBlockInfo> KNOWN_BLOCKS = {
     {Locale::ES, DataBlockInfo(0x27D000, 0x75800)},
     {Locale::DE, DataBlockInfo(0x2F2800, 0x76800)},
     {Locale::IT, DataBlockInfo(0x369000, 0x73800)},
-    {Locale::FR, DataBlockInfo(0x3DC800, 0x78800)},
+    {Locale::FR, DataBlockInfo(0x3DC800, 0x78804)},
     {Locale::EN, DataBlockInfo(0x455000, 0x6D000)},
 };
 
@@ -41,6 +52,7 @@ class LocaleHandler
 {
 public:
     LocaleHandler(const uint8_t* data, size_t fileSize);
+    void ExportBlock(Locale locale, const std::string& output_dir) const;
     void ExportBlocks(const std::string& output_dir) const;
 protected:
     const uint8_t* m_data;
@@ -50,6 +62,7 @@ protected:
     static std::array<uint8_t, 8> GetHeader(Locale locale);
     [[nodiscard]] std::vector<uint8_t> LoadBlock(const DataBlockInfo& block_info) const;
     [[nodiscard]] DataBlockInfo QuickSearch(Locale locale) const;
+    static std::vector<std::string> ExtractStrings(const std::vector<uint8_t>& block_data);
 };
 
 

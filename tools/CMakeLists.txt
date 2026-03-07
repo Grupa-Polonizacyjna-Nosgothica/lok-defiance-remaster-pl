@@ -9,6 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(LocaleExtractor
     MappedFile.cpp
     LocaleExtractor.cpp
+    LocaleHandler.cpp
 )
 
-target_include_directories(BigfileUtil PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(LocaleExtractor PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

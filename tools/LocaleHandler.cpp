@@ -1,6 +1,10 @@
 #include <algorithm>
+#include <filesystem>
 
 #include "LocaleHandler.hpp"
+
+#include <fstream>
+
 #include "Logger.hpp"
 
 LocaleHandler::LocaleHandler(const uint8_t* data, const size_t fileSize)
@@ -45,6 +49,44 @@ LocaleHandler::LocaleHandler(const uint8_t* data, const size_t fileSize)
                 Log("Failed to find block for locale " + std::to_string(static_cast<int>(locale)) + ".", LogLevel::Error);
             }
         }
+    }
+}
+
+void LocaleHandler::ExportBlock(Locale locale, const std::string& output_dir) const
+{
+    const auto it = m_loaded_blocks.find(locale);
+    if (it == m_loaded_blocks.end()) {
+        Log("No loaded block for locale " + std::to_string(static_cast<int>(locale)) + ".", LogLevel::Error);
+        return;
+    }
+
+    if (const std::vector<std::string> strings = std::move(ExtractStrings(it->second)); !strings.empty())
+    {
+        //export every string into a separate text file (UTF-8 without BOM) directly in the output directory
+        //with the filename being the string index in the vector (use 4 digits with leading zeros) and the extension .txt
+        const auto output_path = std::filesystem::path(output_dir);
+        for (size_t i = 0; i < strings.size(); i++)
+        {
+            const std::filesystem::path file_path = output_path / (std::to_string(i).insert(0, 4 - std::to_string(i).length(), '0') + ".txt");
+            std::ofstream file(file_path, std::ios::binary);
+            if (!file) {
+                Log("Failed to create file: " + file_path.string(), LogLevel::Error);
+                continue;
+            }
+            file.write(strings[i].data(), static_cast<std::streamsize>(strings[i].size()));
+        }
+    }
+
+    Log("Exported block for locale " + std::to_string(static_cast<int>(locale)) + " to directory: " + output_dir);
+}
+
+void LocaleHandler::ExportBlocks(const std::string& output_dir) const
+{
+    for(auto &[locale, locale_str] : LOCALE_NAMES)
+    {
+        const std::filesystem::path locale_path = std::filesystem::path(output_dir) / locale_str;
+        std::filesystem::create_directory(locale_path);
+        ExportBlock(locale, locale_path.string());
     }
 }
 
@@ -117,4 +159,36 @@ DataBlockInfo LocaleHandler::QuickSearch(const Locale locale) const
 
     const size_t block_size = pos > block_offset ? pos - block_offset : 0;
     return DataBlockInfo(block_offset, block_size);
+}
+
+std::vector<std::string> LocaleHandler::ExtractStrings(const std::vector<uint8_t>& block_data)
+{
+    std::vector<std::string> strings;
+
+    //read first 4 bytes into an uint32 to get the offset to the first string, then add this offset to the block start offset to get the actual position of the first string in the block
+    if (block_data.size() < 16) {
+        Log("Block data is too small to contain valid header and offset table.", LogLevel::Error);
+        return {};
+    }
+    size_t pos = read_u32_le(block_data.data() + 12);
+
+    // Every string is null-terminated and then the next string starts immediately after
+    // Puch them into the strings vector until two consecutive zero bytes are found, which indicates the end of the block
+    while (pos < block_data.size())
+    {
+        auto str_start = reinterpret_cast<const char*>(block_data.data() + pos);
+        size_t str_len = std::strlen(str_start);
+        if (str_len == 0) {
+            // Check for two consecutive zero bytes to confirm end of block
+            if (pos + 1 < block_data.size() && block_data[pos + 1] == 0) {
+                break; // End of block reached
+            }
+            pos++; // Move past the single zero byte
+            continue;
+        }
+        strings.emplace_back(str_start, str_len);
+        pos += str_len + 1; // Move to the start of the next string
+    }
+
+    return strings;
 }

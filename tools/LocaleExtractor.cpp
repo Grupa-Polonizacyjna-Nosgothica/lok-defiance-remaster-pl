@@ -5,13 +5,7 @@
 auto FILENAME = "bigfile.x64.dat";
 
 int main(const int argc, char* argv[]) {
-    if (argc < 2) {
-        Log("Usage: " + std::string(argv[0]) + " <output_directory> [input_file]", LogLevel::Error);
-        return -1;
-    }
-
-    const char* output_dir = argv[1];
-    const char* filename = argc > 2 ? argv[2] : FILENAME;
+    const char* filename = argc > 1 ? argv[1] : FILENAME;
 
     MappedFile file;
 
@@ -23,7 +17,7 @@ int main(const int argc, char* argv[]) {
     }
 
     const LocaleHandler locales(file.Data(), file.Size());
-    locales.ExportBlocks(output_dir);
+    locales.ExportBlock(Locale::EN, "output");
 
     return 0;
 }
