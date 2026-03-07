@@ -1,10 +1,8 @@
 #include <algorithm>
 #include <filesystem>
-
-#include "LocaleHandler.hpp"
-
 #include <fstream>
 
+#include "LocaleHandler.hpp"
 #include "Logger.hpp"
 
 LocaleHandler::LocaleHandler(const uint8_t* data, const size_t fileSize)
@@ -44,7 +42,7 @@ LocaleHandler::LocaleHandler(const uint8_t* data, const size_t fileSize)
                 auto block_data = LoadBlock(found_block_info);
                 m_loaded_blocks[locale] = std::move(block_data);
             }
-             else
+            else
             {
                 Log("Failed to find block for locale " + std::to_string(static_cast<int>(locale)) + ".", LogLevel::Error);
             }
@@ -106,7 +104,7 @@ std::vector<uint8_t> LocaleHandler::LoadBlock(const DataBlockInfo& block_info) c
         return {};
     }
 
-    return std::vector(m_data + block_info.offset(), m_data + block_info.end());
+    return { m_data + block_info.offset(), m_data + block_info.end() };
 }
 
 
@@ -133,7 +131,7 @@ DataBlockInfo LocaleHandler::QuickSearch(const Locale locale) const
     if (block_offset == 0) {
         Log("Quick search failed for locale " + std::to_string(static_cast<int>(locale)) +
             ". No valid block found.", LogLevel::Error);
-        return DataBlockInfo(0, 0);
+        return { 0, 0 };
     }
 
     // Determine block size by finding the next block or end of file
@@ -158,7 +156,7 @@ DataBlockInfo LocaleHandler::QuickSearch(const Locale locale) const
     }
 
     const size_t block_size = pos > block_offset ? pos - block_offset : 0;
-    return DataBlockInfo(block_offset, block_size);
+    return { block_offset, block_size };
 }
 
 std::vector<std::string> LocaleHandler::ExtractStrings(const std::vector<uint8_t>& block_data)
@@ -173,7 +171,7 @@ std::vector<std::string> LocaleHandler::ExtractStrings(const std::vector<uint8_t
     size_t pos = read_u32_le(block_data.data() + 12);
 
     // Every string is null-terminated and then the next string starts immediately after
-    // Puch them into the strings vector until two consecutive zero bytes are found, which indicates the end of the block
+    // Push them into the strings vector until two consecutive zero bytes are found, which indicates the end of the block
     while (pos < block_data.size())
     {
         auto str_start = reinterpret_cast<const char*>(block_data.data() + pos);
