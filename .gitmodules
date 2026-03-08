@@ -1,0 +1,3 @@
+[submodule "tools/deps/DDStractor"]
+	path = tools/deps/DDStractor
+	url = https://github.com/Nidrax/DDStractor.git

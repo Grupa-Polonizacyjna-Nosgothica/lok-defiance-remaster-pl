@@ -1,12 +1,12 @@
-— To osobliwe uczucie było mi znane,
+-- To osobliwe uczucie było mi znane,
 a komnata zdawała się nadgryziona zębem czasu…
 Przynajmniej pod tym względem
 wyrocznia zdawała się mówić prawdę.
-— Zgodnie z obietnicą, dostarczyłam cię
+-- Zgodnie z obietnicą, dostarczyłam cię
 do chwili, której pragnąłeś.
 Wiesz, co należy uczynić, Kainie.
 Jest tylko jeden sposób, by powstrzymać Raziela
 przed wyrządzeniem niewyobrażalnych szkód.
-— On nie jest mym wrogiem.
-— Ale ty
+-- On nie jest mym wrogiem.
+-- Ale ty
 jesteś jego…

@@ -1,1 +1,1 @@
-— Mam rozwiązanie.
+-- Mam rozwiązanie.

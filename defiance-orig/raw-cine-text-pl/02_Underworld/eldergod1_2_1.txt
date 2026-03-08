@@ -1,4 +1,4 @@
-— Poddaj się, Razielu.
+-- Poddaj się, Razielu.
 Porzuć tę żałosną rebelię.
 To ja Ciebie stworzyłem.
 Twoje życie dobiegło końca,
@@ -12,10 +12,10 @@ Przyjmij swe powołanie, Razielu.
 Porzuć te marne nadzieje.
 Porzuć swą wolę
 i żyw się.
-— Nie.
-— Cóż zyskasz tym buntem?
-— Czerpię ponurą satysfakcję z doprowadzania cię do szału.
-— Moja cierpliwość jest wieczna, Razielu.
+-- Nie.
+-- Cóż zyskasz tym buntem?
+-- Czerpię ponurą satysfakcję z doprowadzania cię do szału.
+-- Moja cierpliwość jest wieczna, Razielu.
 Ile eonów zdołasz
 tu jeszcze gnić?
 Koło Przeznaczenia musi się obracać;
@@ -27,7 +27,7 @@ do którego wszystkie dusze
 są nieodparcie przyciągane.
 Rola, którą pełnisz, jest
 konieczna i szlachetna, Razielu.
-— Dość tych kazań -
+-- Dość tych kazań -
 usiłujesz zmusić mnie do posłuszeństwa nużąc mnie na śmierć?
 W jakim celu mamy toczyć tę grę dalej?
 Obaj wiemy czym jesteś.
@@ -36,20 +36,20 @@ nienasyconym pasożytem
 ukrywającym swój apetyt
 pod fasadą prawości.
 Odmawiam spełniania twej woli.
-— Widzę w głąb
+-- Widzę w głąb
 twego serca, Razielu.
 To nie twoja wola
 lecz tchórzostwo
 cię tu trzyma.
-— Jakże to?
-— Wiesz jaki los cię czeka,
+-- Jakże to?
+-- Wiesz jaki los cię czeka,
 gdy opuścisz podziemie.
 Ta widmowa broń, którą dzierżysz
 jest tego ciągłym przypomnieniem, czyż nie?
 Miecz ciągle gdzieś tam na ciebie czeka,
 i czynisz wszystko, by odwlec
 moment waszego spotkania.
-— Nie mogłem temu zaprzeczyć.
+-- Nie mogłem temu zaprzeczyć.
 Dopóki pozostawałem tutaj,
 sprzeciwiając się memu więzicielowi,
 byłem w stanie odwlekać to,
@@ -60,13 +60,13 @@ Lecz ten wyrok wcale nie był gorszy
 od impasu, w którym teraz tkwiłem.
 Lepiej stawić czoła swemu przeznaczeniu,
 niżeli kryć się w strachu przed nim.
-— Uczyniłem cię żniwiarzem dusz
+-- Uczyniłem cię żniwiarzem dusz
 i wrócisz do pełnienia tej funkcji,
 mój aniele śmierci.
-— Dość.
+-- Dość.
 Niech będzie.
 Poddaję się.
-— Bardzo dobrze.
+-- Bardzo dobrze.
 Zaspokój swój głód.
 Tak…
 Przyjmij swe powołanie, Razielu.
@@ -74,4 +74,4 @@ Przekonasz się,
 że tak jak bunt niesie ze sobą konsekwencje,
 tak samo posłuszeństwo
 przynosi korzyści.
-— A poddaństwo nie zawsze jest tym, czym się wydaje.
+-- A poddaństwo nie zawsze jest tym, czym się wydaje.

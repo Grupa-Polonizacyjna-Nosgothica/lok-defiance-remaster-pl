@@ -1,30 +1,30 @@
-— Pod moją nieobecność żołnierze Moebiusa zdobyli posiadłość.
+-- Pod moją nieobecność żołnierze Moebiusa zdobyli posiadłość.
 Miałem nadzieję, że nie znaleźli jeszcze wejścia do krypty,
 ani nie odkryli ciała Janosa.
 Po Voradorze nie było śladu.
-— Raziel –
+-- Raziel -
 heroiczny zdobywca.
 Chyba powinniśmy
 ci pogratulować.
 Kain,
 nareszcie,
 jest martwy.
-— Zakładam, że oczekujesz podobnych gratulacji
+-- Zakładam, że oczekujesz podobnych gratulacji
 z powodu śmierci Voradora?
 Czy może zdołał ci umknąć?
-— Dopadliśmy go.
+-- Dopadliśmy go.
 Lecz nie obyło się
 bez przelewu krwi.
-— Z pewnością go ten fakt ucieszy.
-— Niechaj pokrzepia go ta myśl,
+-- Z pewnością go ten fakt ucieszy.
+-- Niechaj pokrzepia go ta myśl,
 póki głowa nie spadnie mu z karku,
 a każdy wampir w Nosgothcie
 nareszcie zginie.
-— A czy ta wiedza pokrzepi ciebie?
+-- A czy ta wiedza pokrzepi ciebie?
 Twa śmierć również się zbliża.
-— Dla prawdziwego sługi jedynego Boga,
+-- Dla prawdziwego sługi jedynego Boga,
 śmierć nigdy nie jest gorzka.
-Odejdę – ponownie –
+Odejdę - ponownie -
 w spokoju, ze świadomością,
 że odegrałem swą małą rolę
 w planach naszego pana.
@@ -44,10 +44,10 @@ A teraz,
 Kain nie żyje.
 Doprawdy,
 nie wiem, jak ci dziękować.
-— Wszystko więc zostało uknute,
+-- Wszystko więc zostało uknute,
 w najmniejszych detalach.
 A Kain sądził, że naprawdę mam wolną wolę.
-— Ależ tak,
+-- Ależ tak,
 masz ją.
 I to jest największy triumf ze wszystkich:
 skłonić jedynego gracza,
@@ -55,5 +55,5 @@ który mógł dokonać wyboru,
 by uczynił to, czego od niego wymagaliśmy.
 Dobra robota,
 wierny sługo.
-A teraz –
+A teraz -
 mam egzekucję do dopilnowania.
