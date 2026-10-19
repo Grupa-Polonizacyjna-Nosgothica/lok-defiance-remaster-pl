@@ -29,18 +29,4 @@ inline uint32_t bigfile_hash(const std::string& path) {
     return ~crc;
 }
 
-class DataBlockInfo
-{
-public:
-    DataBlockInfo(const size_t offset, const size_t size)
-        : m_offset(offset), m_size(size) {}
-
-    size_t offset() const { return m_offset; }
-    size_t size() const { return m_size; }
-    size_t end() const { return m_offset + m_size; }
-private:
-    size_t m_offset;
-    size_t m_size;
-};
-
 #endif //BINARY_UTILS_HPP_
