@@ -6,8 +6,9 @@
 
 ```
 cmake -S tools -B build && cmake --build build
-./build/PolishPatcher patch   <game>/bigfile.x64.dat <repo root>   # uses <root>/strings/PL, <root>/cinematic/PL and <root>/fonts
+./build/PolishPatcher patch   <game>/bigfile.x64.dat <repo root | polish.pak>
 ./build/PolishPatcher restore <game>/bigfile.x64.dat
+./build/PolishPatcher pack    <repo root> polish.pak
 ```
 
 `patch` first undoes an earlier patch, so it can be run repeatedly. It prints how many strings, subtitle records and language blocks it wrote, lists problems (first 20) and re-reads the file to verify `locals.bin`.
@@ -18,10 +19,14 @@ cmake -S tools -B build && cmake --build build
 |---|---|
 | `PCRussian\locals.bin` | A new block (English string IDs, `strings/PL` texts, Russian locale id) is appended at the end of the file, aligned to 0x800, and the index entry's size and offset are changed. No size limit. |
 | `TextEntry` records | The `lang_russian` body is replaced, the record appended, and every index slot with that hash re-pointed. No size limit. |
-| Fonts | `fonts/font1.raw`, `font2.raw` replace `PCEnglish\font1.raw`/`font2.raw`; `font1.txt`, `font2.txt` and `char_casing.txt` replace the files in `\SR3\image\` (all index slots). The atlases must keep the original header and size. See `docs/fonts.md`. |
+| Fonts | The font deltas of `fonts/` are applied to the user's own `PCEnglish\font1.raw`/`font2.raw`, `\SR3\image\font1.txt`/`font2.txt` and `char_casing.txt`, and the results appended (all index slots). See `docs/fonts.md`. |
 | Language blocks | Written in place into the Russian entry, **keeping the block length**. If the text is longer than the Russian slot, space is taken from other languages (never English), which get cut down to a single space. A block without a Russian entry reuses the largest other language and its digit becomes 8. |
 
 Trailing newlines in `cinematic/PL` files are dropped, and real line breaks become the literal `\n`. Internal strings (see `docs/locals-and-text-records.md`) are always kept as in English. Untranslated files (identical to EN) simply put English into the Russian slot.
+
+## The translation package
+
+`patch` reads either a directory laid out like the repository (`strings/PL`, `cinematic/PL`, `fonts`) or one `.pak` file. `pack` builds that file: it holds only our texts and the font deltas (27,172 files, about 2.4 MB), never any game data, and every entry has a CRC-32 that is checked when it is read. This is what the installer ships. Format: `"LOKPLPK1"`, u32 count, then per file u16 name length, name, u64 size, u32 CRC-32, bytes. A directory source and a package of it give byte-identical patched files (tested).
 
 ## Backup
 

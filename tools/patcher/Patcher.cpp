@@ -1,11 +1,13 @@
 #include <algorithm>
 #include <cstdio>
+#include <cstring>
 #include <fstream>
 #include <map>
 #include <set>
 #include <sstream>
 #include <stdexcept>
 
+#include "BinaryUtils.hpp"
 #include "CinematicFiles.hpp"
 #include "CrBlocks.hpp"
 #include "Locales.hpp"
@@ -21,15 +23,6 @@ namespace fs = std::filesystem;
 namespace
 {
     constexpr size_t MAX_REPORTED = 20;
-
-    std::string ReadFile(const fs::path& path)
-    {
-        std::ifstream in(path, std::ios::binary);
-        if (!in) throw std::runtime_error("Cannot read " + path.string());
-        std::ostringstream ss;
-        ss << in.rdbuf();
-        return ss.str();
-    }
 
     // Cinematic texts store line breaks as the two characters `\n`; editors add a final newline
     std::string ToInlineText(std::string text)
@@ -72,15 +65,15 @@ namespace
     }
 
     // The translated locals.bin: English layout, Polish strings, Russian locale id
-    LocalesBin LoadPolishLocals(const fs::path& stringsDir, const LocalesBin& en)
+    LocalesBin LoadPolishLocals(const TranslationSource& source, const LocalesBin& en)
     {
         LocalesBin pl;
         pl.localeId = LOCALE_IDS.at(Locale::RU);
         pl.idToString = en.idToString;
         for (size_t i = 0; i < en.strings.size(); i++) {
-            char name[16];
-            std::snprintf(name, sizeof(name), "%04zu.txt", i);
-            pl.strings.push_back(ReadFile(stringsDir / name));
+            char name[40];
+            std::snprintf(name, sizeof(name), "strings/PL/%04zu.txt", i);
+            pl.strings.push_back(source.Read(name));
         }
 
         // Internal names (music tracks, keys) have to stay as they are
@@ -97,82 +90,145 @@ namespace
                 "they had been changed in strings/PL.", LogLevel::Error);
         return pl;
     }
-}
 
-namespace
-{
-    // Game files replaced by the files of the fonts/ directory (name -> path in the archive)
-    std::vector<std::pair<std::string, std::string>> FontTargets()
+    // ---- fonts: the translation only holds a delta that is applied to the user's own files ----
+
+    uint32_t HeaderU32(const std::string& raw, const size_t index)
     {
-        std::vector<std::pair<std::string, std::string>> targets;
-        // Every language reads its font atlases from PCEnglish\ (see docs/fonts.md)
-        for (const int n : {1, 2}) {
-            targets.push_back({"font" + std::to_string(n) + ".raw", "PCEnglish\\font" + std::to_string(n) + ".raw"});
-            targets.push_back({"font" + std::to_string(n) + ".txt", "\\SR3\\image\\font" + std::to_string(n) + ".txt"});
-        }
-        targets.push_back({"char_casing.txt", "\\SR3\\image\\char_casing.txt"});
-        return targets;
+        return read_u32_le(reinterpret_cast<const uint8_t*>(raw.data()) + index * 4);
     }
 
-    size_t AddFontFiles(const uint8_t* data, const size_t fileSize, const BigfileIndex& index,
-                        const fs::path& fontDir, PatchPlan& plan)
+    // Sparse overlay of new glyph pixels: "PLGO", u32 width, u32 height, u32 count, then per rectangle
+    // u16 x, y, w, h and w*h bytes (top-down). Applied to the atlas (stored bottom-up) with max().
+    std::string ApplyOverlay(const std::string& atlas, const std::string& overlay, const std::string& what)
+    {
+        const auto* o = reinterpret_cast<const uint8_t*>(overlay.data());
+        if (overlay.size() < 16 || std::memcmp(o, "PLGO", 4) != 0) throw std::runtime_error(what + ": bad overlay file.");
+        if (atlas.size() < 128 || atlas.compare(0, 4, "!WAR") != 0 || HeaderU32(atlas, 8) != 8)
+            throw std::runtime_error(what + ": the game's atlas is not an 8 bit !WAR texture.");
+        const uint32_t w = HeaderU32(atlas, 5), h = HeaderU32(atlas, 6);
+        if (read_u32_le(o + 4) != w || read_u32_le(o + 8) != h || atlas.size() < 128 + static_cast<size_t>(w) * h)
+            throw std::runtime_error(what + ": the overlay does not match the size of the game's atlas.");
+
+        std::string out = atlas;
+        size_t pos = 16;
+        for (uint32_t i = 0, n = read_u32_le(o + 12); i < n; i++) {
+            if (pos + 8 > overlay.size()) throw std::runtime_error(what + ": overlay is truncated.");
+            const unsigned x = o[pos] | o[pos + 1] << 8, y = o[pos + 2] | o[pos + 3] << 8;
+            const unsigned rw = o[pos + 4] | o[pos + 5] << 8, rh = o[pos + 6] | o[pos + 7] << 8;
+            pos += 8;
+            if (pos + static_cast<size_t>(rw) * rh > overlay.size() || x + rw > w || y + rh > h)
+                throw std::runtime_error(what + ": overlay rectangle is out of range.");
+            for (unsigned row = 0; row < rh; row++) {
+                uint8_t* dst = reinterpret_cast<uint8_t*>(&out[128 + static_cast<size_t>(h - 1 - (y + row)) * w + x]);
+                for (unsigned col = 0; col < rw; col++) dst[col] = std::max(dst[col], o[pos + static_cast<size_t>(row) * rw + col]);
+            }
+            pos += static_cast<size_t>(rw) * rh;
+        }
+        return out;
+    }
+
+    std::vector<std::string> SplitLines(const std::string& text)
+    {
+        std::vector<std::string> lines;
+        std::istringstream in(text);
+        for (std::string line; std::getline(in, line);) {
+            if (!line.empty() && line.back() == '\r') line.pop_back();
+            if (!line.empty()) lines.push_back(line);
+        }
+        return lines;
+    }
+
+    // Tables with a count on the first line and `code,...` lines (font glyphs, char_casing.txt):
+    // adds the lines whose code is not in the table yet and returns it sorted by code, CR LF terminated.
+    std::string MergeTable(const std::string& original, const std::string& additions)
+    {
+        auto lines = SplitLines(original);
+        if (lines.empty()) throw std::runtime_error("Empty table in the game files.");
+        lines.erase(lines.begin());
+        std::set<long> codes;
+        for (const auto& l : lines) codes.insert(std::stol(l));
+        for (const auto& l : SplitLines(additions))
+            if (codes.insert(std::stol(l)).second) lines.push_back(l);
+        std::stable_sort(lines.begin(), lines.end(), [](const std::string& a, const std::string& b) { return std::stol(a) < std::stol(b); });
+        std::string out = std::to_string(lines.size()) + "\r\n";
+        for (const auto& l : lines) out += l + "\r\n";
+        return out;
+    }
+
+    std::string AssetFromArchive(const uint8_t* data, const size_t fileSize, const BigfileIndex& index,
+                                 const std::string& archivePath, std::vector<size_t>& slots)
+    {
+        slots = index.FindSlots(archivePath);
+        if (slots.empty()) throw std::runtime_error("Cannot find " + archivePath + " in the index.");
+        const BigfileEntry e = CheckedEntry(index, slots.front(), fileSize);
+        return std::string(reinterpret_cast<const char*>(data + e.offset), e.size);
+    }
+
+    void AddAppend(PatchPlan& plan, const BigfileIndex& index, const std::string& content, const std::vector<size_t>& slots)
+    {
+        plan.appends.push_back({std::vector<uint8_t>(content.begin(), content.end()), SlotsOf(index, slots)});
+    }
+
+    // Every language reads its fonts from PCEnglish\ (docs/fonts.md): add the Polish glyphs there
+    size_t AddFonts(const uint8_t* data, const size_t fileSize, const BigfileIndex& index,
+                    const TranslationSource& source, PatchPlan& plan)
     {
         size_t count = 0;
-        if (!fs::is_directory(fontDir)) {
-            Log("No " + fontDir.string() + " directory; fonts are left as they are (Polish letters will be missing).", LogLevel::Error);
-            return 0;
+        std::vector<size_t> slots;
+        for (const int n : {1, 2}) {
+            const std::string base = "fonts/font" + std::to_string(n);
+            if (!source.Exists(base + ".overlay")) continue;
+
+            const std::string rawPath = "PCEnglish\\font" + std::to_string(n) + ".raw";
+            AddAppend(plan, index, ApplyOverlay(AssetFromArchive(data, fileSize, index, rawPath, slots),
+                                                source.Read(base + ".overlay"), rawPath), slots);
+
+            const std::string txtPath = "\\SR3\\image\\font" + std::to_string(n) + ".txt";
+            AddAppend(plan, index, MergeTable(AssetFromArchive(data, fileSize, index, txtPath, slots),
+                                              source.Read(base + ".add.txt")), slots);
+            count += 2;
         }
-        for (const auto& [name, archivePath] : FontTargets()) {
-            const fs::path file = fontDir / name;
-            if (!fs::exists(file)) continue;
-            const auto slots = index.FindSlots(archivePath);
-            if (slots.empty()) throw std::runtime_error("Cannot find " + archivePath + " in the index.");
-            std::string content = ReadFile(file);
-            if (name.size() > 4 && name.compare(name.size() - 4, 4, ".raw") == 0) {
-                // A texture must keep the layout of the original: same header and same size
-                const BigfileEntry e = CheckedEntry(index, slots.front(), fileSize);
-                if (content.size() != e.size || content.compare(0, 128, std::string(reinterpret_cast<const char*>(data + e.offset), 128)) != 0)
-                    throw std::runtime_error(file.string() + " does not have the header or size of the original " + archivePath);
-            }
-            plan.appends.push_back({std::vector<uint8_t>(content.begin(), content.end()), SlotsOf(index, slots)});
+        if (source.Exists("fonts/char_casing.add.txt")) {
+            const std::string path = "\\SR3\\image\\char_casing.txt";
+            AddAppend(plan, index, MergeTable(AssetFromArchive(data, fileSize, index, path, slots),
+                                              source.Read("fonts/char_casing.add.txt")), slots);
             count++;
         }
+        if (count == 0)
+            Log("The translation has no font data; Polish letters will be missing in the game.", LogLevel::Error);
         return count;
     }
 }
 
-PatchPlan BuildPlan(const uint8_t* data, const size_t fileSize, const BigfileIndex& index, const fs::path& translationRoot)
+PatchPlan BuildPlan(const uint8_t* data, const size_t fileSize, const BigfileIndex& index, const TranslationSource& source)
 {
     PatchPlan plan;
     plan.indexSize = index.IndexSize();
 
     // 1. locals.bin
-    const fs::path stringsDir = translationRoot / "strings" / "PL";
     const LocalesBin en = LoadEnglish(data, fileSize, index);
-    const LocalesBin pl = LoadPolishLocals(stringsDir, en);
+    const LocalesBin pl = LoadPolishLocals(source, en);
     const auto ruSlots = index.FindSlots(LocalesPath(Locale::RU));
     if (ruSlots.empty()) throw std::runtime_error("Cannot find " + LocalesPath(Locale::RU) + " in the index.");
     plan.appends.push_back({pl.Build(), SlotsOf(index, ruSlots)});
     plan.localeStrings = pl.strings.size();
 
-    // 2. fonts: replacement atlases and glyph tables that add the Polish letters
-    plan.fontFiles = AddFontFiles(data, fileSize, index, translationRoot / "fonts", plan);
+    // 2. fonts
+    plan.fontFiles = AddFonts(data, fileSize, index, source, plan);
 
     // 3. cinematic texts
-    const fs::path cineDir = translationRoot / "cinematic" / "PL";
-    if (!fs::is_directory(cineDir)) {
-        Log("No " + cineDir.string() + " directory; cinematic texts are left as they are.", LogLevel::Error);
-        return plan;
-    }
-
     std::map<uint32_t, std::string> textEntries;
     std::map<uint32_t, std::map<size_t, std::string>> crBlocks;
-    for (const auto& dirEntry : fs::directory_iterator(cineDir)) {
-        const std::string name = dirEntry.path().filename().string();
+    for (const auto& name : source.List("cinematic/PL")) {
         if (const auto hash = CinematicFiles::ParseTextEntryName(name))
-            textEntries[*hash] = ReadFile(dirEntry.path());
+            textEntries[*hash] = source.Read("cinematic/PL/" + name);
         else if (const auto ref = CinematicFiles::ParseCrBlockName(name))
-            crBlocks[ref->hash][ref->k] = ReadFile(dirEntry.path());
+            crBlocks[ref->hash][ref->k] = source.Read("cinematic/PL/" + name);
+    }
+    if (textEntries.empty() && crBlocks.empty()) {
+        Log("The translation has no cinematic texts; they are left as they are.", LogLevel::Error);
+        return plan;
     }
 
     size_t reported = 0;
@@ -281,14 +337,14 @@ void ApplyPlan(const fs::path& bigfile, const PatchPlan& plan)
     if (!f) throw std::runtime_error("Failed to write to " + bigfile.string() + ". Run the restore command to undo.");
 }
 
-void VerifyPatch(const fs::path& bigfile, const fs::path& translationRoot)
+void VerifyPatch(const fs::path& bigfile, const TranslationSource& source)
 {
     MappedFile file;
     file.Open(bigfile.string().c_str());
     const BigfileIndex index(file.Data(), file.Size());
 
     const LocalesBin en = LoadEnglish(file.Data(), file.Size(), index);
-    const LocalesBin expected = LoadPolishLocals(translationRoot / "strings" / "PL", en);
+    const LocalesBin expected = LoadPolishLocals(source, en);
 
     const auto slots = index.FindSlots(LocalesPath(Locale::RU));
     if (slots.empty()) throw std::runtime_error("Verification failed: no Russian locals.bin.");

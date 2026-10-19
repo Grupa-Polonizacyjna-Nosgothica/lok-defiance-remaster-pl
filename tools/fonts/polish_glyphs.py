@@ -6,17 +6,16 @@ Background (see docs/fonts.md): the game draws text from bitmap atlases `PCEngli
 code,advance,x0,y0,x1,y1,u0,v0,u1,v1; x/y in em, u/v in atlas pixels from the top, half-pixel
 inset). Fonts 1 (Main) and 2 (Header) are Latin; ó and Ó already exist.
 
-This script builds the missing glyphs from existing ones (accents from ó/Ó, ogonek from the
-cedilla of ç/Ç, dot from the full stop, stroke drawn for ł/Ł), puts them in the free space at the
-bottom of the atlas and writes, for every font:
-    <out>/font<N>.png   upright atlas, the file to touch up by hand
-    <out>/font<N>.txt   glyph table including the new glyphs
-    <out>/font<N>.raw   atlas in the game's format
-and <out>/char_casing.txt with the new upper/lower pairs.
+Nothing of the game's own font data is stored in the repository. For every font the repository
+holds only the *delta*, which the patcher applies to the user's own files:
+    fonts/font<N>.overlay.png   atlas-sized image that is black except for the new glyphs (edit this)
+    fonts/font<N>.overlay       the same as a tiny binary the patcher reads (made by `build`)
+    fonts/font<N>.add.txt       glyph table lines of the new glyphs
+    fonts/char_casing.add.txt   new `code,lower,upper` lines
 
-    polish_glyphs.py generate <bigfile.x64.dat> <out_dir>     start from the original game data
-    polish_glyphs.py build    <out_dir>                       PNG -> RAW again after hand edits
-    polish_glyphs.py preview  <out_dir> "Zażółć gęślą jaźń" [font N]   render a sample line
+    polish_glyphs.py generate <bigfile.x64.dat> <fonts_dir>   build the deltas from the game data
+    polish_glyphs.py build    <fonts_dir>                     overlay PNG -> overlay binary
+    polish_glyphs.py preview  <bigfile.x64.dat> <fonts_dir> "Zażółć gęślą jaźń" [--font N]
 """
 import argparse, os, struct, sys
 import numpy as np
@@ -203,6 +202,7 @@ def generate_font(n, dat, out):
     hdr, atlas = load_atlas(raw)
     glyphs = parse_table(table)
     H, W = atlas.shape
+    overlay = np.zeros_like(atlas)
     donors = {"acute_lo": (glyphs[ord("ó")], glyphs[ord("o")]), "acute_up": (glyphs[ord("Ó")], glyphs[ord("O")]),
               "cedilla_lo": (glyphs[ord("ç")], glyphs[ord("c")]), "cedilla_up": (glyphs[ord("Ç")], glyphs[ord("C")])}
     # skip glyphs the font already has
@@ -218,7 +218,7 @@ def generate_font(n, dat, out):
             x, y, row_h = 0, y + row_h + 2, 0
         if y + h > H:
             raise SystemExit(f"font{n}: no room left in the atlas")
-        atlas[y:y + h, x:x + w] = bm.astype(np.uint8)
+        overlay[y:y + h, x:x + w] = bm.astype(np.uint8)
         g = Glyph(ord(ch), ",".join(["0"] * 10))
         g.adv = base.adv
         g.x0, g.x1 = base.x0 - lx / PX_PER_EM, base.x1 + rx / PX_PER_EM
@@ -228,63 +228,71 @@ def generate_font(n, dat, out):
         new_glyphs.append(g)
         x += w + 2
         row_h = max(row_h, h)
-    glyphs.update({g.code: g for g in new_glyphs})
-    write_font(n, out, hdr, atlas, table, new_glyphs)
+    write_delta(n, out, overlay, new_glyphs)
     print(f"font{n}: added {len(new_glyphs)} glyphs; atlas rows used up to {y + row_h} of {H}")
 
 
-def write_font(n, out, hdr, atlas, orig_table, new_glyphs):
+def write_delta(n, out, overlay, new_glyphs):
     os.makedirs(out, exist_ok=True)
-    Image.fromarray(atlas, "L").save(os.path.join(out, f"font{n}.png"))
-    lines = orig_table.replace("\r\n", "\n").split("\n")
-    body = [l for l in lines[1:] if l.strip()]
-    for g in new_glyphs:
-        body.append(g.line())
-    body.sort(key=lambda l: int(l.split(",")[0]))
-    with open(os.path.join(out, f"font{n}.txt"), "wb") as f:
-        f.write((str(len(body)) + "\r\n" + "\r\n".join(body) + "\r\n").encode())
-    with open(os.path.join(out, f"font{n}.hdr"), "wb") as f:
-        f.write(hdr)
-    write_raw(n, out)
+    Image.fromarray(overlay, "L").save(os.path.join(out, f"font{n}.overlay.png"))
+    with open(os.path.join(out, f"font{n}.add.txt"), "wb") as f:
+        f.write(("\r\n".join(g.line() for g in sorted(new_glyphs, key=lambda g: g.code)) + "\r\n").encode())
+    write_overlay_bin(n, out)
 
 
-def write_raw(n, out):
-    atlas = np.array(Image.open(os.path.join(out, f"font{n}.png")).convert("L"))
-    hdr = open(os.path.join(out, f"font{n}.hdr"), "rb").read()
-    with open(os.path.join(out, f"font{n}.raw"), "wb") as f:
-        f.write(hdr + atlas[::-1].tobytes())
+def write_overlay_bin(n, out):
+    """Binary the patcher reads: only the pixel rectangles of the glyphs listed in font<N>.add.txt.
+    "PLGO", u32 atlas width, u32 atlas height, u32 count, then per rectangle u16 x, y, w, h and w*h
+    bytes (top-down rows). Applied with max() onto the original atlas."""
+    img = Image.open(os.path.join(out, f"font{n}.overlay.png")).convert("L")
+    arr = np.array(img)
+    w, h = img.size
+    lines = open(os.path.join(out, f"font{n}.add.txt"), "rb").read().decode().split("\r\n")
+    rects = []
+    for l in lines:
+        if l.strip():
+            u0, v0, u1, v1 = Glyph(int(l.split(",")[0]), l).box()
+            rects.append((u0, v0, u1 - u0, v1 - v0))
+    covered = np.zeros_like(arr, dtype=bool)
+    body = b""
+    for x, y, rw, rh in rects:
+        covered[y:y + rh, x:x + rw] = True
+        body += struct.pack("<4H", x, y, rw, rh) + arr[y:y + rh, x:x + rw].tobytes()
+    if (arr[~covered] != 0).any():
+        raise SystemExit(f"font{n}.overlay.png has pixels outside the glyph cells of font{n}.add.txt")
+    with open(os.path.join(out, f"font{n}.overlay"), "wb") as f:
+        f.write(b"PLGO" + struct.pack("<3I", w, h, len(rects)) + body)
 
 
 def cmd_generate(args):
     for n in FONTS:
         generate_font(n, args.dat, args.out)
     text = read_asset("\\SR3\\image\\char_casing.txt", args.dat).decode()
-    lines = text.replace("\r\n", "\n").split("\n")
-    body = [l for l in lines[1:] if l.strip()]
-    have = {int(l.split(",")[0]) for l in body}
+    have = {int(l.split(",")[0]) for l in text.replace("\r\n", "\n").split("\n")[1:] if l.strip()}
+    add = []
     for lo, up in CASING:
         if ord(lo) not in have:
-            body.append(f"{ord(lo)},0,{ord(up)}")
-            body.append(f"{ord(up)},{ord(lo)},0")
-    body.sort(key=lambda l: int(l.split(",")[0]))
-    with open(os.path.join(args.out, "char_casing.txt"), "wb") as f:
-        f.write((str(len(body)) + "\r\n" + "\r\n".join(body) + "\r\n").encode())
+            add += [f"{ord(lo)},0,{ord(up)}", f"{ord(up)},{ord(lo)},0"]
+    with open(os.path.join(args.out, "char_casing.add.txt"), "wb") as f:
+        f.write(("\r\n".join(add) + "\r\n").encode())
 
 
 def cmd_build(args):
     for n in FONTS:
-        write_raw(n, args.out)
-        print(f"font{n}.raw rebuilt from font{n}.png")
+        write_overlay_bin(n, args.out)
+        print(f"font{n}.overlay rebuilt from font{n}.overlay.png")
 
 
 def cmd_preview(args):
     n = args.font
-    atlas = np.array(Image.open(os.path.join(args.out, f"font{n}.png")).convert("L"))
-    glyphs = parse_table(open(os.path.join(args.out, f"font{n}.txt"), "rb").read().decode())
-    scale = 2
+    _, atlas = load_atlas(read_asset(f"PCEnglish\\font{n}.raw", args.dat))
+    overlay = np.array(Image.open(os.path.join(args.fonts, f"font{n}.overlay.png")).convert("L"))
+    atlas = np.maximum(atlas, overlay)
+    table = read_asset(f"\\SR3\\image\\font{n}.txt", args.dat).decode()
+    table += "\r\n" + open(os.path.join(args.fonts, f"font{n}.add.txt"), "rb").read().decode()
+    glyphs = parse_table(table)
     img = Image.new("L", (1400, 120), 20)
-    px = 20.0
-    base_y = 80
+    px, base_y = 20.0, 80
     for ch in args.text:
         g = glyphs.get(ord(ch))
         if not g:
@@ -292,15 +300,12 @@ def cmd_preview(args):
             continue
         u0, v0, u1, v1 = g.box()
         bm = Image.fromarray(atlas[v0:v1, u0:u1], "L")
-        bm = bm.resize((bm.width * scale // 2 * 1, bm.height * scale // 2 * 1))
-        x = int(px + g.x0 * PX_PER_EM)
-        y = int(base_y + g.y0 * PX_PER_EM)
-        region = Image.fromarray(np.maximum(np.array(img.crop((x, y, x + bm.width, y + bm.height))), np.array(bm)), "L")
-        img.paste(region, (x, y))
+        x, y = int(px + g.x0 * PX_PER_EM), int(base_y + g.y0 * PX_PER_EM)
+        region = np.maximum(np.array(img.crop((x, y, x + bm.width, y + bm.height))), np.array(bm))
+        img.paste(Image.fromarray(region, "L"), (x, y))
         px += g.adv * PX_PER_EM
-    img = img.resize((img.width, img.height))
-    img.save(os.path.join(args.out, f"preview{n}.png"))
-    print("wrote", os.path.join(args.out, f"preview{n}.png"))
+    img.save(args.out)
+    print("wrote", args.out)
 
 
 def main():
@@ -308,8 +313,8 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("generate"); p.add_argument("dat"); p.add_argument("out"); p.set_defaults(fn=cmd_generate)
     p = sub.add_parser("build"); p.add_argument("out"); p.set_defaults(fn=cmd_build)
-    p = sub.add_parser("preview"); p.add_argument("out"); p.add_argument("text"); p.add_argument("--font", type=int, default=1)
-    p.set_defaults(fn=cmd_preview)
+    p = sub.add_parser("preview"); p.add_argument("dat"); p.add_argument("fonts"); p.add_argument("text")
+    p.add_argument("--font", type=int, default=1); p.add_argument("--out", default="preview.png"); p.set_defaults(fn=cmd_preview)
     args = ap.parse_args()
     args.fn(args)
 

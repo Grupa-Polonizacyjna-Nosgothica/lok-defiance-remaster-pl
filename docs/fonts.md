@@ -20,9 +20,22 @@ The game's Russian text works because the fonts contain Cyrillic glyphs. Polish 
 ## Tools
 
 - `tools/textures/war_textures.py list <dat> [--csv f]` lists every `!WAR` texture; `export <dat> <dir> [--path "PCEnglish\font1.raw"]` writes upright PNGs named by path hash. Use it to look at any texture of the game.
-- `tools/fonts/polish_glyphs.py generate <dat> fonts` builds the 16 missing glyphs for fonts 1 and 2 out of existing ones (acute from ó/Ó, dot from the full stop, a drawn bar for ł/Ł and a drawn hook for the ogonek) and writes the atlas PNG, the glyph table and the RAW. `build fonts` converts edited PNGs back to RAW; `preview` renders a test line.
+- `tools/fonts/polish_glyphs.py generate <dat> fonts` builds the 16 missing glyphs for fonts 1 and 2 out of existing ones (acute from ó/Ó, dot from the full stop, a drawn bar for ł/Ł and a drawn hook for the ogonek). `build fonts` regenerates the overlay binaries after hand edits; `preview <dat> fonts "text"` renders a test line using the game's own atlas plus the overlay.
 
-The results are committed in `fonts/`: `font1.png` and `font2.png` are the files to retouch by hand (draw the glyphs inside the cells listed in `font<N>.txt`), `*.raw` and `*.txt` are what the patcher writes into the game, `*.hdr` is the original 128 byte header, `preview*.png` shows the current look. The generated glyphs are a first version: the acutes and dots look right, the ogonek and the bar of ł are simple drawings worth redrawing.
+## What is stored in the repository: only a delta
+
+The repository must not contain the game's own font data, so `fonts/` holds only what we added:
+
+| File | Content |
+|---|---|
+| `font<N>.overlay.png` | atlas-sized image, black except for the new glyphs. **Edit this to redraw glyphs** (keep to the cells listed in `font<N>.add.txt`). |
+| `font<N>.overlay` | the same as a compact binary (pixel rectangles of the glyph cells), made by `build`; this is what the patcher reads. |
+| `font<N>.add.txt` | glyph table lines of the new glyphs (CR LF). |
+| `char_casing.add.txt` | new `code,lower,upper` lines. |
+
+The patcher takes the user's own `PCEnglish\font<N>.raw`, applies the overlay (pixel-wise maximum) and appends the added lines to the user's `font<N>.txt` and `char_casing.txt`. The result is byte-identical to what the first full-file version of this work produced.
+
+The generated glyphs are a first version: the acutes and dots look right, the ogonek and the bar of ł are simple drawings worth redrawing.
 
 ## Remaining work
 

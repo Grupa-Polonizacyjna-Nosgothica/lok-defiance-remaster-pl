@@ -1,3 +1,2 @@
 fonts/*.txt -text
-fonts/*.raw -text
-fonts/*.hdr -text
+fonts/*.overlay -text

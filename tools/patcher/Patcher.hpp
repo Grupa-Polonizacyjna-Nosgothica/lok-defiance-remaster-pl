@@ -7,6 +7,7 @@
 #include <vector>
 
 #include "BigfileIndex.hpp"
+#include "TranslationSource.hpp"
 
 // Everything a patch changes in bigfile.x64.dat, computed before anything is written.
 struct PatchPlan
@@ -43,15 +44,15 @@ struct PatchPlan
     size_t blocksTooLong = 0; // translation did not fit
 };
 
-// Reads the translation from <translationRoot>/strings/PL, cinematic/PL and the fonts in fonts/ and works
+// Reads the translation (strings/PL, cinematic/PL and the font deltas in fonts/) from `source` and works
 // out how to put it in the slots of the Russian language. Throws std::runtime_error on fatal problems.
 PatchPlan BuildPlan(const uint8_t* data, size_t fileSize, const BigfileIndex& index,
-                    const std::filesystem::path& translationRoot);
+                    const TranslationSource& source);
 
 // Backs up, then writes the plan into the game file. Throws on failure.
 void ApplyPlan(const std::filesystem::path& bigfile, const PatchPlan& plan);
 
 // Re-reads the patched file and checks that the Russian slots now hold the translation
-void VerifyPatch(const std::filesystem::path& bigfile, const std::filesystem::path& translationRoot);
+void VerifyPatch(const std::filesystem::path& bigfile, const TranslationSource& source);
 
 #endif //PATCHER_HPP_

@@ -14,10 +14,12 @@ namespace
     void Usage()
     {
         std::cout << "Usage:\n"
-                     "  PolishPatcher patch   [bigfile.x64.dat] [translation_root]\n"
-                     "  PolishPatcher restore [bigfile.x64.dat]\n\n"
-                     "patch writes the translation (translation_root/strings/PL, cinematic/PL and fonts) over the\n"
-                     "Russian texts of the game and keeps a backup next to the file; restore undoes it.\n";
+                     "  PolishPatcher patch   [bigfile.x64.dat] [translation]\n"
+                     "  PolishPatcher restore [bigfile.x64.dat]\n"
+                     "  PolishPatcher pack    <translation_dir> <out.pak>\n\n"
+                     "patch writes the translation (a directory laid out like the repository, or a .pak file)\n"
+                     "over the Russian texts of the game and keeps a backup next to the file; restore undoes it;\n"
+                     "pack makes the single-file package that is shipped to players.\n";
     }
 
     // Returns true if there was a patch to undo
@@ -35,6 +37,17 @@ int main(const int argc, char* argv[])
 {
     if (argc < 2) { Usage(); return 1; }
     const std::string command = argv[1];
+    if (command == "pack") {
+        if (argc < 4) { Usage(); return 1; }
+        try {
+            const auto source = OpenTranslationSource(argv[2]);
+            Log("Packed " + std::to_string(WritePackage(*source, argv[3])) + " files into " + argv[3]);
+            return 0;
+        } catch (const std::exception& e) {
+            Log(e.what(), LogLevel::Error);
+            return 2;
+        }
+    }
     const fs::path bigfile = argc > 2 ? argv[2] : "bigfile.x64.dat";
 
     try {
@@ -47,22 +60,22 @@ int main(const int argc, char* argv[])
         }
         if (command != "patch") { Usage(); return 1; }
 
-        const fs::path root = argc > 3 ? argv[3] : ".";
+        const auto source = OpenTranslationSource(argc > 3 ? argv[3] : ".");
         if (Restore(bigfile)) Log("Removed the previous patch first.");
 
         PatchPlan plan;
         {
             MappedFile file;
             file.Open(bigfile.string().c_str());
-            plan = BuildPlan(file.Data(), file.Size(), BigfileIndex(file.Data(), file.Size()), root);
+            plan = BuildPlan(file.Data(), file.Size(), BigfileIndex(file.Data(), file.Size()), *source);
         }
-        Log("Patching: " + std::to_string(plan.localeStrings) + " strings, " + std::to_string(plan.fontFiles) + " font files, "
+        Log("Patching from " + source->Describe() + ": " + std::to_string(plan.localeStrings) + " strings, " + std::to_string(plan.fontFiles) + " font files, "
             + std::to_string(plan.textEntries) + " subtitle records, "
             + std::to_string(plan.blocksPatched) + " language blocks ("
             + std::to_string(plan.blocksWithoutRussian) + " of them had no Russian entry; "
             + std::to_string(plan.blocksTooLong) + " too long, " + std::to_string(plan.blocksSkipped) + " skipped).");
         ApplyPlan(bigfile, plan);
-        VerifyPatch(bigfile, root);
+        VerifyPatch(bigfile, *source);
         Log("Done. Select Russian in the game launcher to play the Polish translation.");
     } catch (const std::exception& e) {
         Log(e.what(), LogLevel::Error);

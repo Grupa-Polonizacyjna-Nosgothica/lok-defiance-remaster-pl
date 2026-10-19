@@ -11,7 +11,7 @@ An unofficial Polish translation (by Grupa Polonizacyjna Nosgothica) of *Legacy 
 - `strings/EN/NNNN.txt`, `strings/PL/NNNN.txt`: UI/menu/game strings, one string per file, 3908 each, re-extracted from the current game build (`strings/PL` started as an exact copy of `strings/EN`). The 4-digit number is the string's index in the game's locale block, so EN and PL must stay index-aligned. These files are raw UTF-8 without BOM and usually have no trailing newline (the extractor writes bytes exactly as stored). Keep that when editing.
 - `defiance-orig/raw-cine-text-{en,pl}/<chapter>/<scene>.txt`: cinematic/dialogue text, grouped by chapter (`00_Intro` … `13_Avernus_Catacombs`, plus `Inventory` and `Miscellaneous`). The `en` and `pl` trees mirror each other file for file. Keep paths identical when adding or renaming.
 - `cinematic/EN`, `cinematic/PL`: texts of TextEntry records (`textentry_<hash>.txt`) and CR language blocks (`crblock_<hash>_<k>.txt`) extracted from `bigfile.x64.dat`; `PL` starts as a copy of `EN`. Raw text: `\n` stays two characters, files have no trailing newline, and each block's translation must fit the original byte space (see `docs/patching.md`).
-- `fonts/`: modified Latin font atlases and glyph tables with the Polish letters, written into the game by the patcher (see `docs/fonts.md`). Edit `font1.png`/`font2.png`, then `python3 tools/fonts/polish_glyphs.py build fonts`.
+- `fonts/`: only the *delta* of the Latin fonts (new glyph pixels and table lines for the Polish letters), applied by the patcher to the user's own files so no game data is stored here (see `docs/fonts.md`). Edit `font<N>.overlay.png`, then `python3 tools/fonts/polish_glyphs.py build fonts`.
 - `tools/`: C++17 tools built by `tools/CMakeLists.txt`: `common/` (index, locals.bin, TextEntry and language block code), `extractor/` (`LocaleExtractor`) and `patcher/` (`PolishPatcher`). `tools/bigfile/` holds the archive index notes and a Python index dumper, `tools/textures/` lists/exports the game's `!WAR` textures and `tools/fonts/` generates the Polish glyphs (both Python with Pillow and numpy).
 - `tools/deps/DDStractor`: git submodule (`Nidrax/DDStractor`). Run `git submodule update --init` to fetch it. It is not referenced by `tools/CMakeLists.txt` yet.
 - `installer/`: installer assets and `INSTALL.txt` (end-user instructions). The game's language is set to Russian because the translation replaces the RU locale.
@@ -24,7 +24,8 @@ Build both tools (CMake output dir `build` is gitignored):
 ```
 cmake -S tools -B build && cmake --build build
 ./build/LocaleExtractor [bigfile.x64.dat] [output_root]            # writes <root>/strings/EN and <root>/cinematic/EN
-./build/PolishPatcher patch|restore [bigfile.x64.dat] [repo_root]   # see docs/patching.md
+./build/PolishPatcher patch|restore [bigfile.x64.dat] [repo_root|polish.pak]   # see docs/patching.md
+./build/PolishPatcher pack <repo_root> polish.pak                   # the package shipped to players
 ```
 
 The extractor takes about 6 s on the real 11 GB file. Do not run `patch` on the only copy of your game files without knowing `restore` exists (a `.plbackup` is written next to the file).
@@ -40,3 +41,7 @@ The extractor takes about 6 s on the real 11 GB file. Do not run `patch` on the 
 How the old cinematic text maps to these strings (timing lines, markup characters) is described in `docs/cinematic-text-vs-strings.md`.
 
 The game is not expected to receive further updates, so string indices should stay stable.
+
+## Commit rules
+
+Keep the commit message brief and to the point. ***Use `Assisted-By` instead of `Co-Authored-By` when marking AI-assisted commits***, (e.g. `Assisted-By: Claude Sonnet 5.5 <noreply@anthropic.com>`).
