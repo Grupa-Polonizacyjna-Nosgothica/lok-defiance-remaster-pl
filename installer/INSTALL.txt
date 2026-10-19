@@ -1,13 +1,28 @@
-# LoK Defiance Remastered PL
+﻿# LoK Defiance Remastered PL
 
-Nieoficjalne spolszczenie napisów w grze `Legacy of Kain: Defiance Remastered` autorstwa Grupy Polonizacyjnej Nosgothica.
+Nieoficjalne spolszczenie napisów i tekstów w grze `Legacy of Kain: Defiance Remastered` autorstwa Grupy Polonizacyjnej Nosgothica.
+
+## Jak to działa
+
+Instalator nie zawiera plików gry. Znajduje twoją kopię gry (Steam lub GOG), a następnie modyfikuje na twoim komputerze plik `bigfile.x64.dat`: polskie teksty i czcionki trafiają na miejsce języka rosyjskiego. Przed zmianą tworzony jest plik kopii zapasowej `bigfile.x64.dat.plbackup` obok pliku gry, dzięki któremu dezinstalator przywraca oryginał.
+
+Instalator potrzebuje około 20 MB wolnego miejsca na dysku z grą i uprawnień administratora (gry często leżą w chronionych folderach).
 
 ## Instalacja
 
-1. Przejdź do głównego katalogu gry (opcja dostępna z poziomu używanego przez ciebie klienta Steam lub GoG).
-2. Wrzuć katalogi z paczki spolszczającej do katalogu głównego gry, podmieniając pliki
-3. Uruchom Launcher, wybierz grę i w jej opcjach zmień język wyświetlania na rosyjski.
+1. Zamknij grę i launcher.
+2. Uruchom instalator. Jeśli gra nie zostanie znaleziona automatycznie, wskaż jej główny folder (ten z plikiem `defiance.exe`).
+3. Po zakończeniu uruchom launcher, wybierz grę i w jej opcjach zmień język wyświetlania na **rosyjski** - gra wyświetli teksty polskie.
 
+Spolszczenie jest przygotowane dla wersji gry ze Steam. Jeśli instalator zgłosi nieobsługiwaną wersję, sprawdź integralność plików gry w kliencie Steam lub GOG i spróbuj ponownie.
+
+## Po aktualizacji lub sprawdzeniu plików gry
+
+Sprawdzenie integralności plików w Steam przywraca oryginalny plik gry i usuwa spolszczenie. Wystarczy wtedy uruchomić skrót **Zastosuj spolszczenie ponownie** z menu Start.
+
+## Odinstalowanie
+
+Dezinstalator przywraca oryginalny plik `bigfile.x64.dat`. Gra musi być wtedy zamknięta. Możesz też przywrócić oryginał, sprawdzając integralność plików gry w kliencie Steam lub GOG.
 
 ## Wspieraj nasze projekty
 

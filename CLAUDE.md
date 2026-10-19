@@ -14,7 +14,7 @@ An unofficial Polish translation (by Grupa Polonizacyjna Nosgothica) of *Legacy 
 - `fonts/`: only the *delta* of the Latin fonts (new glyph pixels and table lines for the Polish letters), applied by the patcher to the user's own files so no game data is stored here (see `docs/fonts.md`). Edit `font<N>.overlay.png`, then `python3 tools/fonts/polish_glyphs.py build fonts`.
 - `tools/`: C++17 tools built by `tools/CMakeLists.txt`: `common/` (index, locals.bin, TextEntry and language block code), `extractor/` (`LocaleExtractor`) and `patcher/` (`PolishPatcher`). `tools/bigfile/` holds the archive index notes and a Python index dumper, `tools/textures/` lists/exports the game's `!WAR` textures and `tools/fonts/` generates the Polish glyphs (both Python with Pillow and numpy).
 - `tools/deps/DDStractor`: git submodule (`Nidrax/DDStractor`). Run `git submodule update --init` to fetch it. It is not referenced by `tools/CMakeLists.txt` yet.
-- `installer/`: installer assets and `INSTALL.txt` (end-user instructions). The game's language is set to Russian because the translation replaces the RU locale.
+- `installer/`: the Inno Setup script `lokdp.iss`, `reapply.cmd`, `INSTALL.txt` (end-user instructions shown by the installer) and assets (see `docs/patching.md`). The player selects Russian in the launcher because the translation replaces the RU texts.
 - `GameData/` is gitignored. It is the local work dir for extracted game files.
 
 ## Commands

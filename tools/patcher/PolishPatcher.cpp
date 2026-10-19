@@ -77,9 +77,16 @@ namespace
             throw PreflightFailure(ExitCode::GameRunning, "The game is running. Close it (and its launcher) and try again.");
     }
 
+    // Reports everything and returns the exit code of the first problem found (0 if none), so that an
+    // installer can show a fitting message without parsing the text.
     int Check(const fs::path& bigfile)
     {
-        int problems = 0;
+        ExitCode result = ExitCode::Ok;
+        auto problem = [&result](const ExitCode code, const std::string& message) {
+            Log(message, LogLevel::Error);
+            if (result == ExitCode::Ok) result = code;
+        };
+
         const fs::path backupPath = PatchBackup::PathFor(bigfile);
         if (fs::exists(backupPath))
             Log(std::string("Game file state: ") + StateName(ClassifyFile(bigfile, PatchBackup::Load(backupPath))));
@@ -91,14 +98,15 @@ namespace
             file.Open(bigfile.string().c_str());
             CheckGameVersion(file.Data(), file.Size(), BigfileIndex(file.Data(), file.Size()));
             Log("Game build: supported");
+        } catch (const PreflightFailure& e) {
+            problem(e.Code(), e.what());
         } catch (const std::exception& e) {
-            Log(e.what(), LogLevel::Error);
-            problems++;
+            problem(ExitCode::Error, e.what());
         }
-        if (IsGameRunning()) { Log("The game is running.", LogLevel::Error); problems++; }
+        if (IsGameRunning()) problem(ExitCode::GameRunning, "The game is running.");
         try { CheckWritable(bigfile); Log("Game file: writable"); }
-        catch (const std::exception& e) { Log(e.what(), LogLevel::Error); problems++; }
-        return problems == 0 ? static_cast<int>(ExitCode::Ok) : static_cast<int>(ExitCode::Error);
+        catch (const PreflightFailure& e) { problem(e.Code(), e.what()); }
+        return static_cast<int>(result);
     }
 }
 

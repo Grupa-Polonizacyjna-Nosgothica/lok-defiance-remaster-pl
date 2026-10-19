@@ -56,6 +56,18 @@ Before the first write, `bigfile.x64.dat.plbackup` is saved next to the game fil
 
 `restore` writes the original bytes back and cuts the file to its original size. Tested on a copy of the real file: restore gave a byte-identical file. After a verification or reinstall through Steam/GOG the stale backup is recognised and dropped automatically, so nothing has to be deleted by hand.
 
+## The installer
+
+`installer/lokdp.iss` (Inno Setup 6) builds `LoKDR-PL-Setup-<version>.exe`. It contains only `PolishPatcher.exe`, `polish.pak` and a re-apply script, never game data.
+
+- **Finding the game:** Steam (registry, `libraryfolders.vdf`, `appmanifest_3747730.acf`) and GOG (registry key whose `gameName` contains "Defiance"); otherwise the user picks the folder, which must contain `bigfile.x64.dat` and `defiance.exe`.
+- **On the folder page** the patcher's `check` command runs and its exit code (3 build, 4 running game, 7 not writable) becomes a message, before anything is copied.
+- **After copying** it runs `PolishPatcher patch` (log in `LokDP-PL\patch.log`) and shows a message with the reason on failure, pointing to the Start menu shortcut "Zastosuj spolszczenie ponownie" (`reapply.cmd`, which asks for administrator rights and patches again).
+- **Uninstall** runs `restore` first; it cancels if the game is running and continues with a note if the file was changed by something else.
+- Installs into the game folder (`LokDP-PL\` subfolder, uninstaller there too), needs administrator rights, Polish and English texts. `installer/INSTALL.txt` is the text shown first.
+- Build locally: `ISCC.exe /DAppVersion=1.0.0 /DPatcherExe=..\dist\PolishPatcher.exe /DPackageFile=..\polish.pak installer\lokdp.iss`. CI builds it in the `installer` job and attaches it to tagged releases.
+- **Not compiled or run yet.** There was no Inno Setup on the development machine; the first CI run is the first compile, and the wizard flow still has to be tried on Windows with a real game folder.
+
 ## Tests and CI
 
 - `ctest --test-dir build` runs `PatcherTests`: it builds a small synthetic archive (index, English and Russian `locals.bin`, a text entry stored in two slots, a binary record with two language blocks, a font atlas and tables) and checks patching, in-place block edits, the font delta, restore (byte-identical), re-patching, the package (same result as a directory, corruption detected) and the backup states. It needs no game data, so it also runs on Windows in CI.
@@ -72,4 +84,4 @@ Before the first write, `bigfile.x64.dat.plbackup` is saved next to the game fil
 - Files in `strings/PL` must match the count of `strings/EN`. 
 - The Windows build, including the process check and the handling of the 11 GB file, is exercised only by CI, which has not run yet.
 - The free-disk-space check is written but could not be exercised on the test machine; the other checks were tested with real failures (wrong build, running process, read-only file, altered index, interrupted patch).
-- The installer text (`installer/INSTALL.txt`) still describes copying files and has to be updated for this flow.
+

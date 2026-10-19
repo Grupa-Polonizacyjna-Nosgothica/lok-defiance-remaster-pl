@@ -68,9 +68,33 @@ jobs:
           name: polish-package
           path: polish.pak
 
+  installer:
+    needs: [validate-translation, build]
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: PolishPatcher-Windows
+          path: dist
+      - uses: actions/download-artifact@v4
+        with:
+          name: polish-package
+          path: .
+      - name: Build the installer (Inno Setup is preinstalled on the runner)
+        shell: pwsh
+        run: |
+          $version = if ($env:GITHUB_REF -like 'refs/tags/v*') { $env:GITHUB_REF_NAME.TrimStart('v') } else { "0.0.0-dev" }
+          & "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" "/DAppVersion=$version" "/DPatcherExe=..\dist\PolishPatcher.exe" "/DPackageFile=..\polish.pak" installer\lokdp.iss
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installer
+          path: dist/LoKDR-PL-Setup-*.exe
+
   release:
     if: startsWith(github.ref, 'refs/tags/v')
-    needs: [validate-translation, build]
+    needs: [validate-translation, build, installer]
     runs-on: ubuntu-latest
     permissions:
       contents: write
