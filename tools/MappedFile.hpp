@@ -1,6 +1,9 @@
 #ifndef MAPPED_FILE_HPP_
 #define MAPPED_FILE_HPP_
 
+#include <cstddef>
+#include <cstdint>
+
 #ifdef _WIN32
     #define NOMINMAX
     #include <windows.h>

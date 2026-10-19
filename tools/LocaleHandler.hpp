@@ -1,9 +1,9 @@
 #ifndef LOCALE_HANDLER_HPP_
 #define LOCALE_HANDLER_HPP_
 
-#include <array>
 #include <cstdint>
 #include <map>
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -22,31 +22,35 @@ inline std::map<Locale, std::string> LOCALE_NAMES = {
     {Locale::RU, "RU"}
 };
 
-inline std::map<Locale, DataBlockInfo> KNOWN_BLOCKS = {
-    {Locale::RU, DataBlockInfo(0x08B800, 0xA3800)},
-    {Locale::PT, DataBlockInfo(0x12F000, 0x72000)},
-    {Locale::JP, DataBlockInfo(0x1A1000, 0x79800)},
-    {Locale::CN, DataBlockInfo(0x21A800, 0x62800)},
-    {Locale::ES, DataBlockInfo(0x27D000, 0x75800)},
-    {Locale::DE, DataBlockInfo(0x2F2800, 0x76800)},
-    {Locale::IT, DataBlockInfo(0x369000, 0x73800)},
-    {Locale::FR, DataBlockInfo(0x3DC800, 0x78804)},
-    {Locale::EN, DataBlockInfo(0x455000, 0x6D000)},
+// Language names as used by the game to build the "PC<Language>\locals.bin" path
+inline std::map<Locale, std::string> LOCALE_LANGUAGES = {
+    {Locale::EN, "English"},
+    {Locale::FR, "French"},
+    {Locale::DE, "German"},
+    {Locale::IT, "Italian"},
+    {Locale::ES, "Spanish"},
+    {Locale::JP, "Japanese"},
+    {Locale::PT, "Portuguese"},
+    {Locale::CN, "Chinese"},
+    {Locale::RU, "Russian"}
 };
 
-constexpr size_t MAX_SCAN_OFFSET = 0x7BFFF;
-constexpr uint8_t MAGIC_NUMBER[4] = {0x0B, 0x10, 0x00, 0x00};
-inline std::map<Locale, std::array<uint8_t, 4>> LOCALE_HEADERS = {
-    {Locale::EN, {0x00, 0x00, 0x00, 0x00}},
-    {Locale::FR, {0x01, 0x00, 0x00, 0x00}},
-    {Locale::DE, {0x02, 0x00, 0x00, 0x00}},
-    {Locale::IT, {0x03, 0x00, 0x00, 0x00}},
-    {Locale::ES, {0x04, 0x00, 0x00, 0x00}},
-    {Locale::JP, {0x05, 0x00, 0x00, 0x00}},
-    {Locale::PT, {0x06, 0x00, 0x00, 0x00}},
-    {Locale::CN, {0x09, 0x00, 0x00, 0x00}},
-    {Locale::RU, {0x0A, 0x00, 0x00, 0x00}}
+// First u32 of a locals.bin block
+inline std::map<Locale, uint32_t> LOCALE_IDS = {
+    {Locale::EN, 0},
+    {Locale::FR, 1},
+    {Locale::DE, 2},
+    {Locale::IT, 3},
+    {Locale::ES, 4},
+    {Locale::JP, 5},
+    {Locale::PT, 6},
+    {Locale::CN, 9},
+    {Locale::RU, 10}
 };
+
+// Layout of the bigfile index (see tools/bigfile/FORMAT.md):
+// u32 header (low 16 bits = entry count N), N sorted u32 name hashes, N entries of 0x18 bytes
+constexpr size_t BIGFILE_ENTRY_SIZE = 0x18;
 
 class LocaleHandler
 {
@@ -57,11 +61,11 @@ public:
 protected:
     const uint8_t* m_data;
     size_t m_fileSize;
+    uint32_t m_entryCount = 0;
     std::map<Locale, std::vector<uint8_t>> m_loaded_blocks;
 
-    static std::array<uint8_t, 8> GetHeader(Locale locale);
+    [[nodiscard]] std::optional<DataBlockInfo> FindFile(const std::string& path) const;
     [[nodiscard]] std::vector<uint8_t> LoadBlock(const DataBlockInfo& block_info) const;
-    [[nodiscard]] DataBlockInfo QuickSearch(Locale locale) const;
     static std::vector<std::string> ExtractStrings(const std::vector<uint8_t>& block_data);
 };
 

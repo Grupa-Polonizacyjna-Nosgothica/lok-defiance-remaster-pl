@@ -1,4 +1,4 @@
-#include <algorithm>
+#include <cstring>
 #include <filesystem>
 #include <fstream>
 
@@ -8,45 +8,35 @@
 LocaleHandler::LocaleHandler(const uint8_t* data, const size_t fileSize)
     : m_data(data), m_fileSize(fileSize)
 {
-    auto check_block = [&](const Locale locale, const DataBlockInfo block_info)
-    {
-        if (block_info.end() > m_fileSize)
-            return false;
+    if (m_fileSize < 4) {
+        Log("File is too small to contain a bigfile index.", LogLevel::Error);
+        return;
+    }
+    m_entryCount = read_u32_le(m_data) & 0xFFFF;
+    if (4 + static_cast<size_t>(m_entryCount) * (4 + BIGFILE_ENTRY_SIZE) > m_fileSize) {
+        Log("Bigfile index exceeds file size.", LogLevel::Error);
+        m_entryCount = 0;
+        return;
+    }
+    Log("Bigfile index has " + std::to_string(m_entryCount) + " entries.");
 
-        const auto header = GetHeader(locale);
-        if(std::memcmp(m_data + block_info.offset(), header.data(), 8) != 0)
-            return false;
-        //check if last block byte is a 0 and if the next byte is not a 0 to confirm block boundary
-        if (const auto end = block_info.end();
-            m_data[end - 1] !=0 || (end < m_fileSize && m_data[end] ==0))
-            return false;
-
-        return true;
-    };
-
-    Log("Checking known locale blocks...");
-    for (const auto& [locale, block_info] : KNOWN_BLOCKS) {
-        if (check_block(locale, block_info)) {
-            Log("Known block for locale " + std::to_string(static_cast<int>(locale)) + " is valid.");
-            auto block_data = LoadBlock(block_info);
-            m_loaded_blocks[locale] = std::move(block_data);
+    for (const auto& [locale, language] : LOCALE_LANGUAGES) {
+        const std::string path = "PC" + language + "\\locals.bin";
+        const auto block_info = FindFile(path);
+        if (!block_info) {
+            Log("Could not find " + path + " in the bigfile index.", LogLevel::Error);
+            continue;
         }
-        else
-        {
-            Log("Known block for locale " + std::to_string(static_cast<int>(locale)) + " is invalid.\n"
-                "Searching for it manually...");
-            if(const auto found_block_info = QuickSearch(locale); found_block_info.offset() != 0)
-            {
-                Log("Block for locale " + std::to_string(static_cast<int>(locale)) + " found at offset "
-                    + std::to_string(found_block_info.offset()) + " with size " + std::to_string(found_block_info.size()));
-                auto block_data = LoadBlock(found_block_info);
-                m_loaded_blocks[locale] = std::move(block_data);
-            }
-            else
-            {
-                Log("Failed to find block for locale " + std::to_string(static_cast<int>(locale)) + ".", LogLevel::Error);
-            }
+
+        auto block_data = LoadBlock(*block_info);
+        if (block_data.size() < 16 || read_u32_le(block_data.data()) != LOCALE_IDS.at(locale)) {
+            Log("Block " + path + " has an unexpected header.", LogLevel::Error);
+            continue;
         }
+
+        Log(path + " found at offset " + std::to_string(block_info->offset())
+            + " with size " + std::to_string(block_info->size()));
+        m_loaded_blocks[locale] = std::move(block_data);
     }
 }
 
@@ -88,13 +78,29 @@ void LocaleHandler::ExportBlocks(const std::string& output_dir) const
     }
 }
 
-std::array<uint8_t, 8> LocaleHandler::GetHeader(const Locale locale)
+std::optional<DataBlockInfo> LocaleHandler::FindFile(const std::string& path) const
 {
-    std::array<uint8_t, 8> header{};
-    const auto& locale_header = LOCALE_HEADERS.at(locale);
-    std::copy_n(locale_header.begin(), 4, header.begin());
-    std::copy_n(MAGIC_NUMBER, 4, header.begin() + 4);
-    return header;
+    const uint32_t hash = bigfile_hash(path);
+    const uint8_t* hashes = m_data + 4;
+
+    // Hashes are sorted; binary search for the first candidate
+    size_t lo = 0, hi = m_entryCount;
+    while (lo < hi) {
+        const size_t mid = lo + (hi - lo) / 2;
+        if (read_u32_le(hashes + mid * 4) < hash) lo = mid + 1;
+        else hi = mid;
+    }
+    if (lo >= m_entryCount || read_u32_le(hashes + lo * 4) != hash)
+        return std::nullopt;
+
+    // Entry: u64 size, u64 file offset, u64 unknown (always 0 so far)
+    const uint8_t* entry = hashes + static_cast<size_t>(m_entryCount) * 4 + lo * BIGFILE_ENTRY_SIZE;
+    const uint64_t size = read_u64_le(entry);
+    const uint64_t offset = read_u64_le(entry + 8);
+    if (size == 0 || offset == 0 || offset > m_fileSize || size > m_fileSize - offset)
+        return std::nullopt;
+
+    return DataBlockInfo(offset, size);
 }
 
 std::vector<uint8_t> LocaleHandler::LoadBlock(const DataBlockInfo& block_info) const
@@ -107,57 +113,6 @@ std::vector<uint8_t> LocaleHandler::LoadBlock(const DataBlockInfo& block_info) c
     return { m_data + block_info.offset(), m_data + block_info.end() };
 }
 
-
-DataBlockInfo LocaleHandler::QuickSearch(const Locale locale) const
-{
-    size_t block_offset = 0;
-    const size_t table_limit = std::min(MAX_SCAN_OFFSET, m_fileSize);
-
-    for (size_t table_pos = 0; table_pos + 4 <= table_limit; table_pos += 4) {
-        const uint32_t candidate_offset = read_u32_le(m_data + table_pos);
-
-        if (candidate_offset >= m_fileSize - 8)
-            continue;
-
-        if (const uint8_t* header = m_data + candidate_offset;
-            std::memcmp(header, LOCALE_HEADERS[locale].data(), 4) == 0 &&
-            std::memcmp(header + 4, MAGIC_NUMBER, 4) == 0)
-        {
-            block_offset = candidate_offset;
-            break;
-        }
-    }
-
-    if (block_offset == 0) {
-        Log("Quick search failed for locale " + std::to_string(static_cast<int>(locale)) +
-            ". No valid block found.", LogLevel::Error);
-        return { 0, 0 };
-    }
-
-    // Determine block size by finding the next block or end of file
-    // Right after the 8 byte header, there are 4 empty bytes, and then the internal offset table starts
-    // Take the first offset from this table and add it to the block start offset to get to the first string in the block
-    const size_t first_string_offset = block_offset + read_u32_le(m_data + block_offset + 12);
-
-    // Every string is null-terminated and then the next string starts immediately after
-    // So when first two consecutive zero bytes are found, this means we reached the beginning of the block padding
-    size_t pos = first_string_offset;
-    while (pos + 1 < m_fileSize) {
-        if (m_data[pos] == 0 && m_data[pos + 1] == 0) {
-            // Found padding - now continue seeking until a non-zero byte is found
-            pos += 2;
-            while (pos < m_fileSize && m_data[pos] == 0) {
-                pos++;
-            }
-            // pos now points to the first non-zero byte (end of block) or end of file
-            break;
-        }
-        pos++;
-    }
-
-    const size_t block_size = pos > block_offset ? pos - block_offset : 0;
-    return { block_offset, block_size };
-}
 
 std::vector<std::string> LocaleHandler::ExtractStrings(const std::vector<uint8_t>& block_data)
 {
