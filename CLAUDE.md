@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-An unofficial Polish translation (by Grupa Polonizacyjna Nosgothica) of *Legacy of Kain: Defiance Remastered*. It is mostly translation text plus C++ tools that extract the game's texts from `bigfile.x64.dat` and patch the translation back over the Russian language. There is no test suite or linter. The README's status note about patching being unsolved is out of date; patching is implemented but not yet tried in the game. Docs are written in Polish (and English in `README.md`).
+An unofficial Polish translation (by Grupa Polonizacyjna Nosgothica) of *Legacy of Kain: Defiance Remastered*. It is mostly translation text plus C++ tools that extract the game's texts from `bigfile.x64.dat` and patch the translation back over the Russian language. Tests: a synthetic-archive suite plus a translation validator (see Commands); there is no linter. Patching is implemented but not yet tried in the game. The README is bilingual (Polish, then English); the docs in `docs/` are in English.
 
 ## Layout
 
