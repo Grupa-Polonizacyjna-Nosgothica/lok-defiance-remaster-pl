@@ -19,11 +19,12 @@ a tłumaczenie tekstów remastera trzeba jeszcze przenieść i dokończyć.
 | Część | Stan |
 |---|---|
 | Dialogi i napisy z oryginalnej gry z 2003 roku (`defiance-orig/raw-cine-text-pl`) | ![100%](https://progress-bar.xyz/100?width=128) |
-| Przeniesienie dialogów do tekstów remastera (`cinematic/PL`, napisy w `strings/PL`) | _do zrobienia_ - pliki `PL` są na razie kopiami angielskich |
-| Interfejs, menu, opisy, galeria (`strings/PL`) | _do zrobienia_ |
+| Przeniesienie istniejącego tłumaczenia do tekstów remastera (`strings/PL`, `cinematic/PL`) - automatycznie, narzędziem `tools/port_translation.py` | ![83%](https://progress-bar.xyz/83?width=128) przeniesiono 22 614 z 27 167 tekstów (krótkie kwestie i napisy: 94%, teksty z `strings`: 13%) |
+| Do sprawdzenia ręcznie: teksty zmienione w remasterze, niejednoznaczne i z przestawionymi liniami (`port-report/close.md`) | 1046 tekstów |
+| Do przetłumaczenia od zera: interfejs, menu, opisy, galeria, nowe linie remastera (`port-report/unmatched.md`) | 3507 tekstów |
 | Bonusy i Mroczna Kronika | _TBA_ |
 
-Postęp zadań możesz sprawdzić na [Roadmapie](https://github.com/orgs/Grupa-Polonizacyjna-Nosgothica/projects/2). Stopień przetłumaczenia plików `PL` pokaże `python3 tools/validate_translation.py .`.
+Postęp zadań możesz sprawdzić na [Roadmapie](https://github.com/orgs/Grupa-Polonizacyjna-Nosgothica/projects/2). Stopień przetłumaczenia plików `PL` pokaże `python3 tools/validate_translation.py .`, a listy tekstów do sprawdzenia i przetłumaczenia powstają po uruchomieniu `python3 tools/port_translation.py . --dry-run` (katalog `port-report/`).
 
 ### Narzędzia i wydanie
 
@@ -67,18 +68,19 @@ As with our *Soul Reaver 1&2 Remastered* translation, we aim for natural, accura
 ## Status: **in progress, no release date**
 
 The remaster keeps all its data in one huge file (`bigfile.x64.dat`), so it cannot be translated by swapping files as in *Soul Reaver 1&2*. For a long time this blocked us completely.
-**The tools are now written but have not been tried in the game yet**, and the translation of the remaster's texts still has to be ported and finished.
+**The tools are now written but have not been tried in the game yet**. The existing translation has been ported to the remaster's texts automatically; what remains is checking the uncertain matches and translating the rest (mostly the interface).
 
 ### Translation
 
 | Part | State |
 |---|---|
 | Dialogue and subtitles of the original 2003 game (`defiance-orig/raw-cine-text-pl`) | 100% |
-| Porting the dialogue into the remaster's texts (`cinematic/PL`, subtitles in `strings/PL`) | to do - the `PL` files are copies of the English ones for now |
-| Interface, menus, descriptions, gallery (`strings/PL`) | to do |
+| Porting the existing translation into the remaster's texts (`strings/PL`, `cinematic/PL`), automatically with `tools/port_translation.py` | ![83%](https://progress-bar.xyz/83?width=128) 22,614 of 27,167 texts ported (short lines and subtitles: 94%, `strings` texts: 13%) |
+| To check by hand: texts the remaster changed, ambiguous ones and ones with re-wrapped lines (`port-report/close.md`) | 1,046 texts |
+| To translate from scratch: interface, menus, descriptions, gallery, new remaster lines (`port-report/unmatched.md`) | 3,507 texts |
 | Bonuses and the Dark Chronicle | TBA |
 
-Task progress is on the [Roadmap](https://github.com/orgs/Grupa-Polonizacyjna-Nosgothica/projects/2); `python3 tools/validate_translation.py .` reports how much of the `PL` files is translated.
+Task progress is on the [Roadmap](https://github.com/orgs/Grupa-Polonizacyjna-Nosgothica/projects/2); `python3 tools/validate_translation.py .` reports how much of the `PL` files is translated, and `python3 tools/port_translation.py . --dry-run` writes the lists of texts to check and to translate (`port-report/`).
 
 ### Tools and release
 
