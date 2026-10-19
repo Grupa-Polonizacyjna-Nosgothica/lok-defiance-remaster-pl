@@ -1,5 +1,5 @@
-"At times, my magic extends into very exotic disciplines such as the manipulation of time. I am able to slow time down, so I can move about quick as a wolf, while all others move as though they were mired in mud!"
+"This fractured symbol affords me the ability to store the energy the Reaver derives from its gorging, and, when properly charged, then release a wave of magical energy upon my unsuspecting quarry. It bears slots for four other fragments."
 
-Reaver Charge: Slow struck enemies.
+Reaver Charge: More damage.
 
-Slow Time (Reaver Spell): Slows the whole world down, but speeds Kain up.
+Blood Wave (Reaver Spell): Splash damage surrounding enemies.

@@ -1,5 +1,9 @@
-A religious autocracy, Avernus is the largest city in Nosgoth, presided over by its Matriarch, Azimuth the Planer - the sorceress representing the Pillar of Dimension. Avernus has been built around the central structure that dominates the center of town - the massive Avernus Cathedral.
+Vampire Hunter Sorceresses are able to cast powerful fireball attacks at their opponents. When enemies come close, Sorceresses have the ability to either teleport away from them, or use a radial blast attack to knock their opponents off their feet. For defense, Sorceresses have the ability to cast a protective glyph shield around themselves. These floating runes will absorb all damage until they are destroyed. In addition to these combat abilities, Sorceresses are able to support their comrades with spells, which enhance their abilities.
 
-In times previous, Avernus thrived, but during this period, the deranged Azimuth has unleashed a plague of demons upon the city, half-decimated by fire. Beneath the pristine exterior of the Cathedral run the warrens of the Catacombs, macabre dens of dark arts and blood sacrifices.
+Health: 925
 
-The hypocritically serene Cathedral above belies the dichotomous core of corruption within.
+Amplify Damage: Displayed as a red lightning bolt on the weapon, this causes attacks to do more damage in combat.
+
+Regeneration: The Sorceress has the ability to heal groups of allies. This appears as a gathering yellow glow around the affected ally.
+
+TK Shield: Protects one ally from the mental TK powers of their prey with this shield spell. It appears as a violet glow around the affected ally.

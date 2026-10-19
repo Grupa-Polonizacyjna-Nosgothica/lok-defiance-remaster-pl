@@ -1,1 +1,1 @@
-Configure Keyboard
+Configure Controller

@@ -1,5 +1,5 @@
-"The Soul Reaver, an ethereal symbiotic weapon, feeds upon the souls of my enemies, increasing its own influence and power. The soul energy it collects within the confines of its blade may be charged and then released in a formidable torrent of energy."
+"Howling with all the might of a tempest, the Air-forged Reaver twists and swirls in upon itself, yearning for escape. When released, the maelstrom's currents blow and buffet my attackers into the air like helpless ragdolls."
 
-Reaver Charge: More damage.
+Reaver Charge: Enemies get spun around and can be thrown with combo.
 
-Torrent of Energy (Reaver Spell): Splash damage to surrounding enemies.
+Rending Wind (Reaver Spell): Tornado that launches enemies away.

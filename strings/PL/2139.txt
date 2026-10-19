@@ -1,1 +1,1 @@
-Disabled
+This game requires a DirectX8 capable graphics card. Your card or driver does not support DirectX8 3D Acceleration.

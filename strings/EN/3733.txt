@@ -1,9 +1,42 @@
-THE EARLY SARAFAN STRONGHOLD
+INTRO TO THE LOST LEVELS
 
-In early production on Defiance, the Sarafan Stronghold adhered to a design much more akin to its Soul Reaver 2 (2001) incarnation.
+Legacy of Kain: Defiance tells a tale steeped in the wreckage of history. The long-forgotten ruins of Nosgoth's ancient civilizations perpetually serve to frame Kain and Raziel's intrepid journeys of discovery.
 
-This prior iteration of the Stronghold provides a ready touchpoint with Soul Reaver 2 not only in terms of its floor plan, but in its sense of scale. It features the first versions of several common landmarks carried over into the final level, such as the Bridge area and the Elder God Caverns, all much grander in size than the final, more compact vision of Defiance would support.
+Yet, unlike immortal vampires, the Defiance team could not afford to spend the whole of eternity perfecting their craft. And, unlike the pristine, purifying flames in which the legendary Reaver blade was forged, the real-world crucible of game development makes few allowances for perfection.
 
-This take on the Stronghold was constructed to accommodate not only Kain's first and third chapters, but also Raziel's, directly following on from the end of that game in the Chapter House room.
 
-Some versions of the scenario featured a return to the ruined Stronghold in the near-future era previously explored in Soul Reaver 2, which would involve Kain infiltrating its confines to recover the head of Vorador.
+LOST WORLDS, RESTORED
+
+Production realities ensure that the wanderings of imagination are tempered in the making, and wilder ambitions are curtailed.
+
+The finished article you now experience is the fruit of these inevitable cuts; ideated upon countless times, streamlined, ruthlessly but necessarily hammered into its final form.
+
+Yet not all that is lost is beyond all salvation. Concepts left unpursued, assets left unutilized, can still be resurrected to see a new unlife.
+
+A LABOR OF LOVE
+
+Here, those of us behind Defiance Remastered present to you a selection of less fully-forged adventures, half-sculpted pieces salvaged from the cutting room floor; more remnants of the past for Kain and Raziel to discover alongside you.
+
+These curated Lost Levels represent a love letter to the Legacy of Kain community.
+
+-- The Legacy of Kain: Defiance Remastered Team
+
+
+
+!!! SPOILER WARNING !!!
+
+Please note that the Lost Levels contain behind-the-scenes commentaries encompassing the entirely of Legacy of Kain: Defiance, and are thus filled with significant spoilers in relation to its plot and visuals.
+
+If you have not already experienced the main story of Defiance, we strongly recommend doing so before continuing your journey through the Lost Levels! These museum pieces are designed to enrich your understanding of the game and its world with greater context, but are best approached as a supper to enjoy upon devouring the main course.
+
+!!! SPOILER WARNING !!!
+
+Although roleplaying a pair of ravenous vampires may be the object of this game, do not be so swift to slake your thirst for knowledge without consuming the story.
+
+To accommodate more relaxed exploration, Kain and Raziel each come provided with all of the upgrades and abilities they would typically receive over the course of the main game. We have also scattered a little fodder throughout the levels for you to amuse yourself with along the way, but fear not - these enemies cannot harm you, for you are granted immunity to damage within these museums.
+
+THE HALL OF FAME
+
+This small museum-like hall - codenamed "mdlview1", but affectionately dubbed the "Hall of Fame" by Defiance Remastered programmer Andrew Fradley - was originally a test room created and decorated by Defiance's art director, Daniel Cabuco, for previewing models.
+
+The textures seen here are largely reused from prior Legacy of Kain games, with the stained glass windows around the room perhaps familiar to players of Soul Reaver Remastered - these are the same window designs found at the heart of Kain's Mountain Retreat, another Lost Level from that game.

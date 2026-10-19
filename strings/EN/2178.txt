@@ -1,1 +1,1 @@
-Your Xbox doesn't have enough free blocks to save the game. You need %d free blocks to create a new save game. Press  to continue.
+All graphics settings have been restored to their defaults.

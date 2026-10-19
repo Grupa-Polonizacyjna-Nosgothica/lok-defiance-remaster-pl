@@ -1,1 +1,1 @@
-Saving data.
+Save Failed! Data may be corrupted. Check memory card (PS2) in MEMORY CARD slot 1 and please try again.

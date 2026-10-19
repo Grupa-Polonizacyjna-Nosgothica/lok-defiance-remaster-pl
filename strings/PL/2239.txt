@@ -1,1 +1,1 @@
-You have reached the maximum number of save games. You can only overwrite existing games.
+left, right to view regions

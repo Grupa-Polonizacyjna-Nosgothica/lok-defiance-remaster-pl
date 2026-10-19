@@ -8,7 +8,7 @@ An unofficial Polish translation (by Grupa Polonizacyjna Nosgothica) of *Legacy 
 
 ## Layout
 
-- `strings/EN/NNNN.txt`, `strings/PL/NNNN.txt`: UI/menu/game strings, one string per file, 3855 each. The 4-digit number is the string's index in the game's locale block, so EN and PL must stay index-aligned. These files are raw UTF-8 without BOM and have no trailing newline (the extractor writes bytes exactly as stored). Keep that when editing.
+- `strings/EN/NNNN.txt`, `strings/PL/NNNN.txt`: UI/menu/game strings, one string per file, 3908 each, re-extracted from the current game build (`strings/PL` started as an exact copy of `strings/EN`). The 4-digit number is the string's index in the game's locale block, so EN and PL must stay index-aligned. These files are raw UTF-8 without BOM and usually have no trailing newline (the extractor writes bytes exactly as stored). Keep that when editing.
 - `defiance-orig/raw-cine-text-{en,pl}/<chapter>/<scene>.txt`: cinematic/dialogue text, grouped by chapter (`00_Intro` … `13_Avernus_Catacombs`, plus `Inventory` and `Miscellaneous`). The `en` and `pl` trees mirror each other file for file. Keep paths identical when adding or renaming.
 - `tools/`: the `LocaleExtractor` C++17 tool.
 - `tools/deps/DDStractor`: git submodule (`Nidrax/DDStractor`). Run `git submodule update --init` to fetch it. It is not referenced by `tools/CMakeLists.txt` yet.
@@ -34,4 +34,6 @@ The output goes to an `output/` directory relative to the current directory. It 
 
 `tools/bigfile/bigfile_index.py <dat>` dumps the whole index as CSV. Little-endian reads and the hash live in `BinaryUtils.hpp`.
 
-The current game build yields 3908 strings, while the committed `strings/EN` has 3855 from an older build (only the first 388 or so line up by index). Re-extracting over `strings/` would misalign `strings/PL`.
+How the old cinematic text maps to these strings (timing lines, markup characters) is described in `docs/cinematic-text-vs-strings.md`.
+
+The game is not expected to receive further updates, so string indices should stay stable.

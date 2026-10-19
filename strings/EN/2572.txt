@@ -1,16 +1,5 @@
-SINGLE AND COMBINATION ATTACKS
+"Dropping to sub-zero temperatures, the Water-infused Reaver chills the surrounding air with its unnatural grip. Upon striking, the whirlpool of pure elemental water freezes instantly, trapping foes helplessly in shackles of ice."
 
-Use ,  and  to perform single attacks. Create combos by linking different button presses in sequence.
+Reaver Charge: Freeze enemies briefly.
 
-SLASHING ATTACKS
-
-Use  for slashing attacks, which you can link in sequence to execute a three-attack combo on the ground or in mid-air.
-
-LIFT AND SLAM ATTACKS
-
-Use  for lift attacks from the ground.
-
-· Tap  to lift an enemy into the air.
-· Hold down  to lift the enemy and jump up to follow it.
-· While in mid-air, press  again for a powerful downward slam.
-· Use lift attacks to set enemies up for a TK blast () or mid-air slashing combos ().
+Icy Shackles (Reaver Spell): Ice blast that damages/freezes enemies in the surrounding area.

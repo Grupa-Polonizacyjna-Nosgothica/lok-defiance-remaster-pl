@@ -1,1 +1,1 @@
-Compass On
+Compass Off

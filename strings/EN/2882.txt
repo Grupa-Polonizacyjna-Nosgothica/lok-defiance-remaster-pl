@@ -1,3 +1,2 @@
-Where do you think you are going 
-51 0
-little soul?
+An error occured while writing to files in the '%s' folder!
+Please make sure you have the appropriate rights and that there is enough free disk space.

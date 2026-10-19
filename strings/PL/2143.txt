@@ -1,1 +1,1 @@
-Display Options
+The selected display mode is not supported by your graphics card

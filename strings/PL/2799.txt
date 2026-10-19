@@ -1,3 +1,1 @@
-Your settings have been reconfigured.
-Do you want to keep these settings?
-Reverting in %d seconds
+Spoken language: Japanese

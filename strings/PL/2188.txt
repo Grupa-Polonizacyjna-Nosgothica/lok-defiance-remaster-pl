@@ -1,1 +1,1 @@
-Invert mouse off
+Invert Mouse

@@ -1,7 +1,5 @@
-Through the ancient gate 
-37 0
-I could see the Pillars of Nosgoth in the distance. 
-136 0
-This was clearly my means of escape 
-201 0
-from this graveyard.
+While in the spirit world, 
+48 0
+I had no means to open this door. 
+128 0
+I had to seek another path.

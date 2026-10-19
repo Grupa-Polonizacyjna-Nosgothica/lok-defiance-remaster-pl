@@ -1,1 +1,1 @@
-At least 170KB is needed to save this game data. Do you want to start the game?
+You have reached the maximum number of save games. You can only overwrite existing games.

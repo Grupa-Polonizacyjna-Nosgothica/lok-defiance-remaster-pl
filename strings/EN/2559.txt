@@ -1,5 +1,5 @@
-"Howling with all the might of a tempest, the Air-forged Reaver twists and swirls in upon itself, yearning for escape. When released, the maelstrom's currents blow and buffet my attackers into the air like helpless ragdolls."
+"Slicing apart the very fabric of space, this spell can create spatial distortions that burrow into my victims' flesh. Or even fold space itself and cut down multiple opponents in the blink of an eye... without ever taking a single step."
 
-Reaver Charge: Enemies get spun around and can be thrown with combo.
+Reaver Charge: More damage.
 
-Rending Wind (Reaver Spell): Tornado that launches enemies away.
+Teleportation (Reaver Spell): Teleport and strike several enemies, then return to current position.

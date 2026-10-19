@@ -1,1 +1,3 @@
-Sarafan Templars
+The Sarafan Archer fights from the rear ranks of a group of Sarafan warriors. They employ burning arrows, causing great pain to their vampire enemies from a distance.
+
+Health: 800

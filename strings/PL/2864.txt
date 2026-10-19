@@ -1,1 +1,1 @@
-select driver
+Memory card (PS2) in MEMORY CARD slot 1 is unformatted.

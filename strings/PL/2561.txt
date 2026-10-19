@@ -1,5 +1,5 @@
-"Aligning the Reaver with immutable Earth, its unique reign of influence allows me the ability to walk beneath the waves, or to call out to the surrounding stone, summoning earthquakes that rock and tumble the very ground."
+"With this spell I can call upon the heavens to tear my enemies apart with its explosive power. Oh, how their bodies will rupture as the scything energy rips through them!"
 
-Reaver Charge: Attacks have a mirrored effect on enemies close by.
+Reaver Charge: Chain lightning.
 
-Seismic Impulse (Reaver Spell): A ground shattering earthquake that damages close-by opponents.
+Lightning Storm (Reaver Spell): Call forth lightning from the sky to strike each enemy.

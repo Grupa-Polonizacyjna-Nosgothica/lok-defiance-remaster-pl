@@ -1,5 +1,7 @@
-Kain can fly rapidly between distant locations by transforming into a swarm of bats. He must first concentrate his energy and mentally project himself toward his destination, visible on the horizon. For this reason, he can only employ bat flight from specific sites indicated by animated markers.
+Free will is an illusion in the Land of Nosgoth - the hand of fate steers Kain and Raziel in their explorations. The Foresight ability represents the unseen pull guiding them towards their destined paths.
 
-· While standing on a bat-flight marker, hold down  to gather Kain's energy.
-· Release  to transform into a flock of bats.
-· Kain also disperses into bats when his health is depleted, coalescing again at the last checkpoint he passed.
+Foresight is used to highlight points of the correct route toward an objective. It is especially useful in large areas, multi-level chambers, or any location where the path may branch or loop.
+
+· Hold  to activate Foresight.
+· While held, the camera will turn toward the next navigation point and a Foresight icon will appear above it.
+· Releasing the button returns the camera to normal control.

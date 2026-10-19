@@ -1,4 +1,5 @@
-Jumping is useful in and out of combat. Some of the best uses for jumping are to get over gaps, dodge certain enemy attacks and to reach higher ground. If you jump to a ledge and you are close, your character will automatically grab onto the ledge.
+Use the various Reaver enhancements you've collected for different combat effects. When the Reaver is fully charged with its victims' energy, its potency is temporarily boosted.
 
-· Press  to jump up.
-· Use  and press  for a running jump.
+When the Reaver Gauge is completely full, it glows to indicate that a Reaver Spell has been armed. The spell's effect is determined by the selected Reaver enhancement, either inflicting damage on multiple enemies or temporarily embellishing the character's combat attributes in some way.
+
+· To launch a Reaver Spell, hold down and then release .

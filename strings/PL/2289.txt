@@ -1,1 +1,1 @@
-pan right
+pan left

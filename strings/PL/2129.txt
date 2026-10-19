@@ -1,1 +1,1 @@
-data_corrupted
+Previous progress may be lost if you continue. Press  to continue, or  to go back.

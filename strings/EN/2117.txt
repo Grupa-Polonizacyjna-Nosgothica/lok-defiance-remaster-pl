@@ -1,1 +1,1 @@
-Control Options
+All control settings have been restored to their defaults.

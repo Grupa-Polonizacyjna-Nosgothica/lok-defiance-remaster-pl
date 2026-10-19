@@ -1,5 +1,5 @@
-"Within the bounds of the immaterial Spectral Realm, the Reaver loses its ability to conjoin with the many elemental influences and powers. It relinquishes little of its potency however, as the spiritual energy it feeds upon flows so freely there."
+"When wreathed in darkness, the Reaver is able to weave its abyssal twilight about my physical form. Beneath this cloak of night my presence is concealed, and my passing shrouded in shadows."
 
-Reaver Charge: More damage.
+Reaver Charge: Mini-shades spawn from hit target and damage other foes.
 
-Soul Blast (Reaver Spell): Splash damage to surrounding enemies.
+Umbral Cloak (Reaver Spell): Temporary invisibility.

@@ -1,1 +1,1 @@
-jump/swim
+Invert mouse on

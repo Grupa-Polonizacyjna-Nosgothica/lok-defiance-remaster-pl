@@ -1,5 +1,5 @@
-"Dropping to sub-zero temperatures, the Water-infused Reaver chills the surrounding air with its unnatural grip. Upon striking, the whirlpool of pure elemental water freezes instantly, trapping foes helplessly in shackles of ice."
+"The conflagration is a deadly weapon whose will to consume nearly matches that of the Reaver itself. Whether briefly uncoiling to light a simple sconce, or rupturing to devour flesh and bone, the flame's infernal hunger is ever-ravenous."
 
-Reaver Charge: Freeze enemies briefly.
+Reaver Charge: Enemies set on fire.
 
-Icy Shackles (Reaver Spell): Ice blast that damages/freezes enemies in the surrounding area.
+Consuming Blaze (Reaver Spell): Fire explosion that sends enemies running in flames.
