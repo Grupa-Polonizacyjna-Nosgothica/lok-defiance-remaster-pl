@@ -8,6 +8,7 @@
 cmake -S tools -B build && cmake --build build
 ./build/PolishPatcher patch   <game>/bigfile.x64.dat <repo root | polish.pak>
 ./build/PolishPatcher restore <game>/bigfile.x64.dat
+./build/PolishPatcher check   <game>/bigfile.x64.dat      # reports state, build, running game, write access; changes nothing
 ./build/PolishPatcher pack    <repo root> polish.pak
 ```
 
@@ -28,9 +29,32 @@ Trailing newlines in `cinematic/PL` files are dropped, and real line breaks beco
 
 `patch` reads either a directory laid out like the repository (`strings/PL`, `cinematic/PL`, `fonts`) or one `.pak` file. `pack` builds that file: it holds only our texts and the font deltas (27,172 files, about 2.4 MB), never any game data, and every entry has a CRC-32 that is checked when it is read. This is what the installer ships. Format: `"LOKPLPK1"`, u32 count, then per file u16 name length, name, u64 size, u32 CRC-32, bytes. A directory source and a package of it give byte-identical patched files (tested).
 
+## Checks before patching
+
+`patch` refuses to touch the file unless these pass (the exit code tells an installer which one failed; `--force` skips the first three and ignores a changed-file backup):
+
+| Check | Exit code |
+|---|---|
+| **Game build.** `bigfile.x64.dat` must have 18,802 index entries and an English `locals.bin` of 465,568 bytes with CRC-32 `0x51E16C91` (the Steam build we analysed). The patch never changes the English texts, so a patched file passes as well. | 3 |
+| **Game running.** No process named `defiance.exe` (Windows, or Proton/Wine on Linux). | 4 |
+| **Disk space.** Appended data, backup and a 16 MB margin must fit on the game's drive. | 5 |
+| **Changed file** (see below). | 6 |
+| **Write access** to the game file. | 7 |
+
+Other failures exit with 2, bad usage with 1.
+
 ## Backup
 
-Before the first write, `bigfile.x64.dat.plbackup` is saved next to the game file: original size, original index and the original bytes of every region patched in place. `restore` writes them back and cuts the file to its original size. Tested on a copy of the real file: restore gave a byte-identical file. If the game files are verified or reinstalled through Steam/GOG, delete the stale `.plbackup`.
+Before the first write, `bigfile.x64.dat.plbackup` is saved next to the game file: original size, original index and the original bytes of every region patched in place. When the patch is complete, the file size and a CRC-32 of the patched index are added to it. The backup is now checked against the file on every run:
+
+| State of the file | Meaning | `patch` / `restore` |
+|---|---|---|
+| matches the patched state | normal | restores, then patches again |
+| matches the original state | the game client already restored it (e.g. file verification) | drops the stale backup |
+| backup has no patched state | a patch was interrupted | restores the original |
+| anything else | the file was changed since (game update, another tool) | refuses (exit 6); `--force` drops the backup |
+
+`restore` writes the original bytes back and cuts the file to its original size. Tested on a copy of the real file: restore gave a byte-identical file. After a verification or reinstall through Steam/GOG the stale backup is recognised and dropped automatically, so nothing has to be deleted by hand.
 
 ## Limits and untested points
 
@@ -39,4 +63,5 @@ Before the first write, `bigfile.x64.dat.plbackup` is saved next to the game fil
 - Other languages' blocks lose their text when space is needed, which does not matter while the game runs in Russian.
 - Polish letters come from our modified Latin fonts (`docs/fonts.md`); the generated glyphs are a first version and nothing has been seen in the game yet.
 - Files in `strings/PL` must match the count of `strings/EN`. 
+- The free-disk-space check is written but could not be exercised on the test machine; the other checks were tested with real failures (wrong build, running process, read-only file, altered index, interrupted patch).
 - The installer text (`installer/INSTALL.txt`) still describes copying files and has to be updated for this flow.

@@ -335,6 +335,14 @@ void ApplyPlan(const fs::path& bigfile, const PatchPlan& plan)
     }
     f.flush();
     if (!f) throw std::runtime_error("Failed to write to " + bigfile.string() + ". Run the restore command to undo.");
+
+    // The patch is complete: remember how the file looks now, so that later runs can recognise it
+    f.seekg(0);
+    const std::vector<uint8_t> index = readAt(0, plan.indexSize);
+    backup.patchedSize = end;
+    backup.patchedIndexCrc = crc32_ieee(index.data(), index.size());
+    f.close();
+    backup.Save(PatchBackup::PathFor(bigfile));
 }
 
 void VerifyPatch(const fs::path& bigfile, const TranslationSource& source)
@@ -342,6 +350,15 @@ void VerifyPatch(const fs::path& bigfile, const TranslationSource& source)
     MappedFile file;
     file.Open(bigfile.string().c_str());
     const BigfileIndex index(file.Data(), file.Size());
+
+    // The index must still be sorted and every entry must lie inside the file
+    for (size_t slot = 0; slot < index.Count(); slot++) {
+        if (slot > 0 && index.Hash(slot) < index.Hash(slot - 1))
+            throw std::runtime_error("Verification failed: the index is no longer sorted.");
+        const BigfileEntry e = index.Entry(slot);
+        if (e.offset > file.Size() || e.size > file.Size() - e.offset)
+            throw std::runtime_error("Verification failed: entry " + std::to_string(slot) + " points outside the file.");
+    }
 
     const LocalesBin en = LoadEnglish(file.Data(), file.Size(), index);
     const LocalesBin expected = LoadPolishLocals(source, en);

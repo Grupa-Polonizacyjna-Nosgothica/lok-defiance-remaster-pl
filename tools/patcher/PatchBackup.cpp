@@ -6,7 +6,7 @@
 
 namespace
 {
-    constexpr char MAGIC[8] = {'L', 'O', 'K', 'P', 'L', 'B', 'K', '1'};
+    constexpr char MAGIC[8] = {'L', 'O', 'K', 'P', 'L', 'B', 'K', '2'};
 
     void PutU64(std::ostream& out, const uint64_t v)
     {
@@ -47,6 +47,8 @@ void PatchBackup::Save(const std::filesystem::path& file) const
         if (!out) throw std::runtime_error("Cannot create backup file " + tmp.string());
         out.write(MAGIC, sizeof(MAGIC));
         PutU64(out, originalSize);
+        PutU64(out, patchedSize);
+        PutU64(out, patchedIndexCrc);
         PutU64(out, originalIndex.size());
         out.write(reinterpret_cast<const char*>(originalIndex.data()), static_cast<std::streamsize>(originalIndex.size()));
         PutU64(out, regions.size());
@@ -72,6 +74,8 @@ PatchBackup PatchBackup::Load(const std::filesystem::path& file)
 
     PatchBackup backup;
     backup.originalSize = GetU64(in);
+    backup.patchedSize = GetU64(in);
+    backup.patchedIndexCrc = static_cast<uint32_t>(GetU64(in));
     GetBytes(in, backup.originalIndex, GetU64(in));
     const uint64_t regionCount = GetU64(in);
     for (uint64_t i = 0; i < regionCount; i++) {

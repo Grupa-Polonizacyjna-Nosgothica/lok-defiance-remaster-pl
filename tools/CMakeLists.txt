@@ -27,6 +27,7 @@ add_executable(PolishPatcher
     patcher/PatchBackup.cpp
     patcher/Patcher.cpp
     patcher/PolishPatcher.cpp
+    patcher/Preflight.cpp
     patcher/TranslationSource.cpp
 )
 target_link_libraries(PolishPatcher PRIVATE common)

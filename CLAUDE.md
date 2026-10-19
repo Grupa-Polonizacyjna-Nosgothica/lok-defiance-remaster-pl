@@ -25,6 +25,7 @@ Build both tools (CMake output dir `build` is gitignored):
 cmake -S tools -B build && cmake --build build
 ./build/LocaleExtractor [bigfile.x64.dat] [output_root]            # writes <root>/strings/EN and <root>/cinematic/EN
 ./build/PolishPatcher patch|restore [bigfile.x64.dat] [repo_root|polish.pak]   # see docs/patching.md
+./build/PolishPatcher check [bigfile.x64.dat]                       # state/build/running-game report, changes nothing
 ./build/PolishPatcher pack <repo_root> polish.pak                   # the package shipped to players
 ```
 

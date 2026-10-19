@@ -20,6 +20,9 @@ public:
     static std::filesystem::path PathFor(const std::filesystem::path& bigfile);
 
     uint64_t originalSize = 0;
+    // State right after patching, to tell later whether the file is still ours; 0 while a patch is unfinished
+    uint64_t patchedSize = 0;
+    uint32_t patchedIndexCrc = 0;
     std::vector<uint8_t> originalIndex; // bytes [0, indexSize) of the original file
     std::vector<Region> regions;
 

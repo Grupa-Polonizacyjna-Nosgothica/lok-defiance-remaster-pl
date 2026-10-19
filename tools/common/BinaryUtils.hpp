@@ -1,6 +1,7 @@
 #ifndef BINARY_UTILS_HPP_
 #define BINARY_UTILS_HPP_
 
+#include <cstddef>
 #include <cstdint>
 #include <string>
 
@@ -26,6 +27,22 @@ inline uint32_t bigfile_hash(const std::string& path) {
         for (int i = 0; i < 8; i++)
             crc = (crc & 0x80000000) ? (crc << 1) ^ 0x04C11DB7 : (crc << 1);
     }
+    return ~crc;
+}
+
+// Standard CRC-32 (IEEE 802.3, as in zip); `crc` continues a previous result
+inline uint32_t crc32_ieee(const uint8_t* data, const size_t size, uint32_t crc = 0) {
+    static const auto table = [] {
+        struct Table { uint32_t v[256]; } t{};
+        for (uint32_t i = 0; i < 256; i++) {
+            uint32_t c = i;
+            for (int k = 0; k < 8; k++) c = (c & 1) ? 0xEDB88320u ^ (c >> 1) : c >> 1;
+            t.v[i] = c;
+        }
+        return t;
+    }();
+    crc = ~crc;
+    for (size_t i = 0; i < size; i++) crc = table.v[(crc ^ data[i]) & 0xFF] ^ (crc >> 8);
     return ~crc;
 }
 
