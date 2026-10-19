@@ -1,3 +1,6 @@
 [submodule "tools/deps/DDStractor"]
 	path = tools/deps/DDStractor
 	url = https://github.com/Nidrax/DDStractor.git
+[submodule "docs/unLoKable-wiki"]
+	path = docs/unLoKable-wiki
+	url = https://github.com/SalsaGal/unLoKable.wiki.git
