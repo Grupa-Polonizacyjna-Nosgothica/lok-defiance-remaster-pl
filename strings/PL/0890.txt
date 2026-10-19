@@ -1,15 +1,15 @@
--- He is contained. 
+-- Jest przetrzymywany. 
 78 0
-In time, 
+Z czasem 
 115 0
-it may be safe to release him. 
+może będzie bezpiecznie go uwolnić. 
 193 0
-His destiny must be completed - 
+Jego przeznaczenie musi się dopełnić - 
 267 0
-he will enter the sword. 
+wstąpi do miecza. 
 351 0
-But until that time 
+Lecz do tego czasu 
 390 0
-he is dangerous -- 
+jest niebezpieczny - 
 447 0
-far more dangerous than you could understand.
+znacznie bardziej, niż zdołałbyś pojąć.

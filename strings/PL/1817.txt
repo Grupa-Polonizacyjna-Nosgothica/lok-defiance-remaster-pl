@@ -1,9 +1,9 @@
-This door 
+Te wrota 
 24 0
-had been equipped with a singular lock, 
+opatrzono osobliwym zamkiem, 
 99 0
-requiring an unusual key. 
+wymagającym niezwykłego klucza. 
 187 0
-Somehow, 
+Tak czy inaczej, 
 210 0
-I would find it.
+musiałem go odnaleźć.

@@ -1,5 +1,5 @@
--- This state 
+-- Ten stan 
 44 0
-is merely 
+jest jedynie 
 109 0
-atonement...
+pokutą…

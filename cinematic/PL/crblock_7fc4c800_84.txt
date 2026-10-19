@@ -1,1 +1,1 @@
--- And if I fail the test?
+-- A jeśli nie przejdę próby?

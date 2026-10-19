@@ -1,15 +1,15 @@
--- You must act quickly. 
+-- Musisz działać szybko. 
 50 0
-But beware - an ancient evil dwells within, 
+Lecz strzeż się -- w jego trzewiach czyha pradawne zło, 
 150 0
-long 
+od dawna 
 180 0
-Unspoken among our kind. 
+niewypowiadane wśród naszego rodu. 
 258 0
-Undoubtedly this is the source of the corruption 
+Bez wątpienia to jest źródłem skażenia, 
 342 0
-that infects the Circle. 
+które trawi Krąg. 
 435 0
-If you are to succeed, 
+Jeśli masz odnieść sukces, 
 506 0
-you must resist its influence.
+musisz oprzeć się jego wpływowi.

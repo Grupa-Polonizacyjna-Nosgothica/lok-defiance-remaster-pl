@@ -1,11 +1,11 @@
--- You have no choice. 
+-- Nie masz wyboru. 
 54 0
-Your task is fulfilled. 
+Twoje zadanie zostało wypełnione. 
 144 0
-Kain has been cleared from the board, 
+Kain został zmieciony z planszy, 
 201 0
-and this chamber made ready 
+a ta komnata przygotowana 
 240 0
-for my more malleable servants. 
+pod moich bardziej podatnych sług. 
 330 0
-There is nothing more for you to do.
+Nic więcej już nie możesz zrobić.

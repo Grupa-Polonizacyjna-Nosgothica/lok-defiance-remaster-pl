@@ -1,9 +1,9 @@
-This door would only open when fitted with 
+Te wrota otworzą się jedynie, 
 72 0
-an appropriate artifact. 
+gdy zostaną opatrzone właściwym artefaktem. 
 144 0
-But to use such an object, 
+Lecz aby użyć takiego przedmiotu, 
 213 0
-I would first have to find a way back 
+musiałem wpierw znaleźć drogę powrotną 
 288 0
-into the Material Realm.
+do świata materialnego.
