@@ -27,7 +27,7 @@ The unit is the **line**. A remaster text becomes a list of lines (a timed subti
 
 Rules that prevent wrong matches:
 
-- An interface text that is not a subtitle (no timing lines), e.g. `Kain` or `Close`, is only accepted when it is the **whole** of an original file (item names and the like). The same words inside a longer dialogue are listed as close instead.
+- An interface text that is not a subtitle (no timing lines), e.g. `Kain` or `Close`, is matched against whole original files (item names and the like) first. When the same words occur only as a line inside a longer original, the translation of that line is still applied, at level `deduced`, and listed in `summary.md` under "deduced from a longer original text" for review. Several different translations stay in `close.md`.
 - An empty Polish line next to a non-empty English one counts as missing, not as a translation.
 - Files whose line counts differ are aligned by character length (one English line for two Polish ones and the reverse); only up to two such changes per file, otherwise the file is left for manual work (`10_Avernus/rvm_missing_01.txt`).
 - Subtitle records with `\(seconds)` markers (`textentry_*`) are never applied automatically: their timing has to be set by hand. The report names the original they resemble.

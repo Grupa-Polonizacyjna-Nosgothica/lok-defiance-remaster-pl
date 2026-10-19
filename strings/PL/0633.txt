@@ -1,5 +1,5 @@
 
 54 0
-- the outer chamber has been opened. 
+komnata zewnętrzna została otwarta. 
 130 0
-It appears events are already in motion.
+Wydaje się, że bieg zdarzeń został już wprawiony w ruch.

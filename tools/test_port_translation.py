@@ -87,12 +87,13 @@ class PortTranslationTest(unittest.TestCase):
 
     def test_uncertain_cases_are_left_alone(self):
         self.run_tool()
-        for name in ("0002", "0003", "0005"):
+        for name in ("0003", "0005"):
             self.assertEqual(self.pl("strings", f"{name}.txt"), self.strings[name], name)
         self.assertEqual(self.pl("cinematic", "crblock_00000001_00.txt"), "Get him!")  # two translations
         text = self.read("report", "close.md")
         self.assertIn("2 different translations", text)
-        self.assertIn("longer original texts", text)
+        self.assertEqual(self.pl("strings", "0002.txt"), "Zamknij")  # a line inside a longer original, deduced
+        self.assertIn("deduced from a longer original text", self.read("report", "summary.md"))
         self.assertIn("merges these lines", text)
         self.assertIn("Something that never occurred", self.read("report", "unmatched.md"))
 

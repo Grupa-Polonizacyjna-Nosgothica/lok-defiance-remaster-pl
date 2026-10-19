@@ -1,11 +1,11 @@
 
 40 0
--- Your efforts are wasted, Raziel. 
+-- Twoje wysiłki są daremne, Razielu. 
 126 0
-That weapon you bear, 
+Ta broń, którą dzierżysz, 
 168 0
-however endowed, 
+obdarzona jakąkolwiek mocą, 
 216 0
-remains only a wraith blade. 
+pozostaje jedynie widmowym ostrzem. 
 300 0
-It cannot touch me.
+Nie może mnie tknąć.

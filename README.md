@@ -19,9 +19,9 @@ a tłumaczenie tekstów remastera trzeba jeszcze przenieść i dokończyć.
 | Część | Stan |
 |---|---|
 | Dialogi i napisy z oryginalnej gry z 2003 roku (`defiance-orig/raw-cine-text-pl`) | ![100%](https://progress-bar.xyz/100?width=128) |
-| Przeniesienie istniejącego tłumaczenia do tekstów remastera (`strings/PL`, `cinematic/PL`) - automatycznie, narzędziem `tools/port_translation.py` | ![83%](https://progress-bar.xyz/83?width=128) przeniesiono 22 614 z 27 167 tekstów (krótkie kwestie i napisy: 94%, teksty z `strings`: 13%) |
-| Do sprawdzenia ręcznie: teksty zmienione w remasterze, niejednoznaczne i z przestawionymi liniami (`port-report/close.md`) | 1046 tekstów |
-| Do przetłumaczenia od zera: interfejs, menu, opisy, galeria, nowe linie remastera (`port-report/unmatched.md`) | 3507 tekstów |
+| Przeniesienie istniejącego tłumaczenia do tekstów remastera (`strings/PL`, `cinematic/PL`) - automatycznie, narzędziem `tools/port_translation.py` | ![86%](https://progress-bar.xyz/86?width=128) przeniesiono 23 282 z 27 167 tekstów (krótkie kwestie i napisy: 97%, teksty z `strings`: 20%) |
+| Do sprawdzenia ręcznie: teksty zmienione w remasterze, niejednoznaczne i z przestawionymi liniami (`port-report/close.md`) | 159 tekstów |
+| Do przetłumaczenia od zera: interfejs, menu, opisy, galeria, nowe linie remastera (`port-report/unmatched.md`) | 3378 tekstów |
 | Bonusy i Mroczna Kronika | _TBA_ |
 
 Postęp zadań możesz sprawdzić na [Roadmapie](https://github.com/orgs/Grupa-Polonizacyjna-Nosgothica/projects/2). Stopień przetłumaczenia plików `PL` pokaże `python3 tools/validate_translation.py .`, a listy tekstów do sprawdzenia i przetłumaczenia powstają po uruchomieniu `python3 tools/port_translation.py . --dry-run` (katalog `port-report/`).
@@ -75,9 +75,9 @@ The remaster keeps all its data in one huge file (`bigfile.x64.dat`), so it cann
 | Part | State |
 |---|---|
 | Dialogue and subtitles of the original 2003 game (`defiance-orig/raw-cine-text-pl`) | 100% |
-| Porting the existing translation into the remaster's texts (`strings/PL`, `cinematic/PL`), automatically with `tools/port_translation.py` | ![83%](https://progress-bar.xyz/83?width=128) 22,614 of 27,167 texts ported (short lines and subtitles: 94%, `strings` texts: 13%) |
-| To check by hand: texts the remaster changed, ambiguous ones and ones with re-wrapped lines (`port-report/close.md`) | 1,046 texts |
-| To translate from scratch: interface, menus, descriptions, gallery, new remaster lines (`port-report/unmatched.md`) | 3,507 texts |
+| Porting the existing translation into the remaster's texts (`strings/PL`, `cinematic/PL`), automatically with `tools/port_translation.py` | ![86%](https://progress-bar.xyz/86?width=128) 23,282 of 27,167 texts ported (short lines and subtitles: 97%, `strings` texts: 20%) |
+| To check by hand: texts the remaster changed, ambiguous ones and ones with re-wrapped lines (`port-report/close.md`) | 159 texts |
+| To translate from scratch: interface, menus, descriptions, gallery, new remaster lines (`port-report/unmatched.md`) | 3,378 texts |
 | Bonuses and the Dark Chronicle | TBA |
 
 Task progress is on the [Roadmap](https://github.com/orgs/Grupa-Polonizacyjna-Nosgothica/projects/2); `python3 tools/validate_translation.py .` reports how much of the `PL` files is translated, and `python3 tools/port_translation.py . --dry-run` writes the lists of texts to check and to translate (`port-report/`).

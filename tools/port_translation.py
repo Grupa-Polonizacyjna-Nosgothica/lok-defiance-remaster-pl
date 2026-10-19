@@ -183,7 +183,8 @@ class Target:
             return []
         if self.kind == "crblock":
             return [self.en]
-        return [l for l in self.en.split("\n") if not TIMING.match(l)]
+        # in a timed text the empty lines are only spacing around the timing lines
+        return [l for l in self.en.split("\n") if not TIMING.match(l) and not (self.timed and not l.strip())]
 
     def comparable(self):
         return [l for l in self.lines]
@@ -194,7 +195,7 @@ class Target:
             return pl_lines[0].strip()
         out, k = [], 0
         for l in self.en.split("\n"):
-            if TIMING.match(l):
+            if TIMING.match(l) or (self.timed and not l.strip()):
                 out.append(l)
             else:
                 lead = l[:len(l) - len(l.lstrip())]
@@ -253,16 +254,16 @@ def match_all(targets, index):
             continue
         for lvl in (0, 1):
             hits = index.find(t.lines, lvl)
+            deduced = False
             if hits and t.kind == "strings" and not t.timed:
-                # An interface text ("Kain", "Close") may also be a line inside some dialogue; only
-                # accept a match that is a whole original file (item names, short standalone texts)
+                # An interface text ("Kain", "Close") may also be a line inside some dialogue. A whole
+                # original file is a safe match; a line inside a longer text is applied too, but logged
+                # as deduced so that it gets reviewed
                 whole = [(o, i) for o, i in hits if len(o.en) == len(t.lines)]
-                if not whole:
-                    r.status, r.level = "close", LEVEL_NAMES[lvl]
-                    r.reason = "the same words occur only inside longer original texts; probably a different text"
-                    r.candidates = [(o, i, 1.0) for o, i in hits]
-                    break
-                hits = whole
+                if whole:
+                    hits = whole
+                else:
+                    deduced = True
             if hits:
                 status, hit, reason = decide(t, hits)
                 r.level = LEVEL_NAMES[lvl]
@@ -270,7 +271,9 @@ def match_all(targets, index):
                 if status == "ok":
                     r.status, r.source = "applied", hit
                     r.pl_lines = list(pl_window(hit[0], hit[1], len(t.lines)))
-                    if any(k in hit[0].by_length for k in range(hit[1], hit[1] + len(t.lines))):
+                    if deduced:
+                        r.level = "deduced"
+                    elif any(k in hit[0].by_length for k in range(hit[1], hit[1] + len(t.lines))):
                         r.level = "length-aligned"
                 else:
                     r.status, r.reason = "close", reason
@@ -370,6 +373,28 @@ def fuzzy(results, originals, min_ratio):
             r.status, r.level = "close", "similar"
             r.reason = f"similar text, best ratio {cands[0][3]:.2f}"
             r.candidates = cands
+            join_rewrapped(r)
+
+
+def join_rewrapped(r):
+    """The remaster has one line where the original wrapped the same words over several. When every
+    original with those words (at least two) has the same Polish text, take it as one line."""
+    if r.target.kind == "textentry" or len(r.target.lines) != 1:
+        return
+    exact = [c for c in r.candidates if len(c) == 4 and c[3] >= 0.9999]
+    if len({c[0].name for c in exact}) < 2:
+        return
+    texts = set()
+    for o, start, length, _ in exact:
+        window = o.pl_for[start:start + length]
+        if None in window:
+            return
+        texts.add(" ".join(l.strip() for l in window))
+    if len(texts) == 1:
+        r.status, r.level = "applied", "joined"
+        r.source = (exact[0][0], exact[0][1])
+        r.pl_lines = [texts.pop()]
+        r.reason = ""
 
 
 def fuzzy_textentries(results, originals, min_ratio):
@@ -414,6 +439,18 @@ def apply_results(root, results, strict, force, dry):
     return applied, skipped
 
 
+def skip_translated(root, results, force):
+    """Move close/unmatched texts whose PL file already differs from EN out of those reports."""
+    if force:
+        return
+    for r in results.values():
+        if r.status not in ("close", "unmatched"):
+            continue
+        pl_path = os.path.join(root, r.target.name.replace("{L}", "PL"))
+        if os.path.exists(pl_path) and read_file(pl_path) != r.target.en:
+            r.status, r.reason = "skipped", "the PL file is already translated"
+
+
 def short(text, n=110):
     text = text.replace("\n", " | ")
     return text if len(text) <= n else text[:n - 3] + "..."
@@ -433,13 +470,19 @@ def write_reports(out, results, originals, applied_total):
         f.write("# Porting the original translation: summary\n\n")
         f.write(f"{len(results)} remaster texts examined.\n\n| Result | Count | Of which |\n|---|---|---|\n")
         for status, level, label in (("applied", "exact", "applied, exact match"), ("applied", "normalized", "applied, case/punctuation differences only"),
-                                     ("applied", "context", "applied, chosen by the neighbouring lines"), ("skipped", "exact", "skipped (already translated)"),
+                                     ("applied", "context", "applied, chosen by the neighbouring lines"),
+                                     ("applied", "deduced", "applied, deduced from a longer original text (please review)"),
+                                     ("applied", "joined", "applied, original wrapped over several lines (joined)"), ("skipped", "exact", "skipped (already translated)"),
                                      ("close", None, "listed in close.md"), ("unmatched", None, "listed in unmatched.md")):
             rs = [r for (s, l), v in by.items() if s == status and (level is None or l == level) for r in v] if level is None \
                 else by.get((status, level), [])
             if status == "skipped":
                 rs = [r for r in results.values() if r.status == "skipped"]
             f.write(f"| {label} | {len(rs)} | {kinds(rs)} |\n")
+        f.write("\n## Applied, deduced from a longer original text (please review)\n\n")
+        for r in sorted((r for r in results.values() if r.status == "applied" and r.level == "deduced"), key=lambda r: r.target.name):
+            o, i = r.source
+            f.write(f"- `{r.target.name.replace('{L}', 'PL')}`: {short(' / '.join(r.target.lines), 60)}  ->  {short(' / '.join(r.pl_lines), 60)}  (`{o.name}` line {i + 1} of {len(o.en)})\n")
         f.write("\n## Applied with case/punctuation differences only (please skim)\n\n")
         norm = sorted((r for r in results.values() if r.status == "applied" and r.level == "normalized"), key=lambda r: r.target.name)
         for r in norm[:300]:
@@ -514,9 +557,10 @@ def main():
     targets = load_targets(root)
     print(f"{len(originals)} original files, {len(targets)} remaster texts")
     results = match_all(targets, Index(originals))
-    apply_results(root, results, args.strict, args.force, args.dry_run)
     fuzzy(results, originals, args.min_ratio)
     fuzzy_textentries(results, originals, args.min_ratio)
+    apply_results(root, results, args.strict, args.force, args.dry_run)
+    skip_translated(root, results, args.force)
     write_reports(report, results, originals, 0)
 
     counts = collections.Counter((r.status, r.level) for r in results.values())

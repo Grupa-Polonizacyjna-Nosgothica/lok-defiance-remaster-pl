@@ -1,9 +1,9 @@
--- To kill me? 
+-- By mnie zabić? 
 54 0
-Again? 
+Po raz kolejny? 
 102 0
-Your only solution, 
+Jedyne znane ci rozwiązanie 
 150 0
-for every problem: 
+każdego problemu: 
 215 0
-kill -
+zabić…
