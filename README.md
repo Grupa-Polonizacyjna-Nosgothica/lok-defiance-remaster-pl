@@ -44,6 +44,7 @@ W launcherze trzeba będzie wybrać język **rosyjski** - w jego miejsce gra pok
 - Edytujemy tylko pliki `PL`; numery plików muszą pozostać bez zmian.
 - Zasady (linie z czasami `60 0`, znaczniki `\(1.8)`, ciągi `\n`, nazwy techniczne typu `Sarafan_battle_01`, limit miejsca dla krótkich kwestii) opisuje
   [docs/cinematic-text-vs-strings.md](docs/cinematic-text-vs-strings.md) i [docs/locals-and-text-records.md](docs/locals-and-text-records.md). Błędy wychwytuje `python3 tools/validate_translation.py .` (działa też w CI).
+- Przenoszenie istniejącego tłumaczenia z oryginału z 2003 r. do tekstów remastera: `python3 tools/port_translation.py .` (opis i raporty: [docs/porting.md](docs/porting.md)).
 - Budowanie narzędzi: `cmake -S tools -B build && cmake --build build`, testy: `ctest --test-dir build`.
 - Dokumentacja techniczna: [pliki gry i formaty tekstów](docs/locals-and-text-records.md), [czcionki](docs/fonts.md), [wgrywanie tłumaczenia, instalator, testy i CI](docs/patching.md),
   [format indeksu archiwum](tools/bigfile/FORMAT.md). Wskazówki dla asystentów AI: [CLAUDE.md](CLAUDE.md).
@@ -97,6 +98,7 @@ and the game will show the Polish texts in its place. Details: [docs/patching.md
 - `strings/EN`, `strings/PL` hold interface texts and long subtitles (3908 files, one text per file); `cinematic/EN`, `cinematic/PL` hold short subtitles and lines. Only edit the `PL` files and keep the file numbers unchanged.
 - The rules (timing lines like `60 0`, `\(1.8)` markers, `\n` sequences, technical names such as `Sarafan_battle_01`, the space limit for short lines) are in [docs/cinematic-text-vs-strings.md](docs/cinematic-text-vs-strings.md)
   and [docs/locals-and-text-records.md](docs/locals-and-text-records.md). `python3 tools/validate_translation.py .` catches mistakes (it also runs in CI).
+- Porting the existing translation of the 2003 game into the remaster texts: `python3 tools/port_translation.py .` (description and reports: [docs/porting.md](docs/porting.md)).
 - Build the tools: `cmake -S tools -B build && cmake --build build`, run the tests: `ctest --test-dir build`.
 - Technical docs: [game files and text formats](docs/locals-and-text-records.md), [fonts](docs/fonts.md), [applying the translation, installer, tests and CI](docs/patching.md), [archive index format](tools/bigfile/FORMAT.md).
   Notes for AI assistants: [CLAUDE.md](CLAUDE.md).

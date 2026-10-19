@@ -82,3 +82,7 @@ _codeql_detected_source_root/
 
 # --- Game Data
 GameData/
+
+# --- Output of tools/port_translation.py (regenerate with it)
+port-report/
+__pycache__/

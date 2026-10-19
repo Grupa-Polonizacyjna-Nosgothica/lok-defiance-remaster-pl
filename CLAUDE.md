@@ -29,7 +29,7 @@ cmake -S tools -B build && cmake --build build
 ./build/PolishPatcher pack <repo_root> polish.pak                   # the package shipped to players
 ```
 
-Tests: `ctest --test-dir build` (synthetic archive, no game data). Translation consistency: `python3 tools/validate_translation.py .`. CI: `.github/workflows/build.yml`.
+Port the 2003 translation into the remaster texts: `python3 tools/port_translation.py . [--dry-run]` (see `docs/porting.md`; reports go to `port-report/`, ignored by git). Tests: `ctest --test-dir build`, `python3 -m unittest discover -s tools` (synthetic archive, no game data). Translation consistency: `python3 tools/validate_translation.py .`. CI: `.github/workflows/build.yml`.
 
 The extractor takes about 6 s on the real 11 GB file. Do not run `patch` on the only copy of your game files without knowing `restore` exists (a `.plbackup` is written next to the file).
 
