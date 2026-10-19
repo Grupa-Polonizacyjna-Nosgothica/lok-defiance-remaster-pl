@@ -1,11 +1,11 @@
--- We are within the ancient Citadel 
+-- Znajdujemy się wewnątrz prastarej 
 60 0
-of the Vampire race, 
+cytadeli rodu Wampirów, 
 111 0
-long ago defiled and abandoned. 
+zbezczeszczonej i porzuconej przed wiekami. 
 192 0
-This fortress 
+Ta twierdza 
 219 0
-endured through centuries of war 
+przetrwała stulecia wojen 
 285 0
-against our great enemy -
+z naszym wielkim wrogiem…

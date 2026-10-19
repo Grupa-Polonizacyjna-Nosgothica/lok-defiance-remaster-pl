@@ -1,9 +1,9 @@
--- I was summoned. 
+-- Zostałem wezwany. 
 110 0
-There was darkness, 
+Była ciemność 
 153 0
-and great hunger. 
+i wielki głód. 
 210 0
-And then I was... 
+A potem zostałem… 
 279 0
-found.
+odnaleziony.

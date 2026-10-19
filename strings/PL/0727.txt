@@ -1,7 +1,7 @@
---this 
+to 
 30 0
-is the end - 
+jest koniec -- 
 84 0
-the final turn 
+ostatni obrót 
 132 0
-of your Wheel. 
+twego Koła. 

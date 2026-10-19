@@ -1,9 +1,9 @@
--- The answers are plain 
+-- Odpowiedzi są oczywiste, 
 51 0
-if you know where to look. 
+jeśli wiesz, gdzie szukać. 
 122 0
-Go west of the Pillars - 
+Udaj się na zachód od Filarów - 
 180 0
-there you will find a testament 
+tam odnajdziesz świadectwo 
 243 0
-written in stone.
+wyryte w kamieniu.

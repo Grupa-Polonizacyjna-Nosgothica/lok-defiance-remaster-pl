@@ -1,9 +1,9 @@
-This key 
+Ten klucz 
 45 0
-will open your way to Avernus. 
+otworzy ci drogę do Avernus. 
 129 0
-But be advised, 
+Lecz wiedz, 
 174 0
-there are dark sorceries at work in the Cathedral. 
+że w Katedrze działają mroczne czary. 
 269 0
-You must be on your guard.
+Musisz mieć się na baczności.
