@@ -35,6 +35,7 @@ struct PatchPlan
     std::vector<InPlace> inPlace;
 
     size_t localeStrings = 0;
+    size_t fontFiles = 0;
     size_t textEntries = 0;
     size_t blocksPatched = 0;
     size_t blocksWithoutRussian = 0; // patched by reusing another language's slot
@@ -42,7 +43,7 @@ struct PatchPlan
     size_t blocksTooLong = 0; // translation did not fit
 };
 
-// Reads the translation from <translationRoot>/strings/PL and <translationRoot>/cinematic/PL and works
+// Reads the translation from <translationRoot>/strings/PL, cinematic/PL and the fonts in fonts/ and works
 // out how to put it in the slots of the Russian language. Throws std::runtime_error on fatal problems.
 PatchPlan BuildPlan(const uint8_t* data, size_t fileSize, const BigfileIndex& index,
                     const std::filesystem::path& translationRoot);

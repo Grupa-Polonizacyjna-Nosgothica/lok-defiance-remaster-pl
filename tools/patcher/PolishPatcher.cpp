@@ -16,7 +16,7 @@ namespace
         std::cout << "Usage:\n"
                      "  PolishPatcher patch   [bigfile.x64.dat] [translation_root]\n"
                      "  PolishPatcher restore [bigfile.x64.dat]\n\n"
-                     "patch writes the translation (translation_root/strings/PL and cinematic/PL) over the\n"
+                     "patch writes the translation (translation_root/strings/PL, cinematic/PL and fonts) over the\n"
                      "Russian texts of the game and keeps a backup next to the file; restore undoes it.\n";
     }
 
@@ -56,7 +56,7 @@ int main(const int argc, char* argv[])
             file.Open(bigfile.string().c_str());
             plan = BuildPlan(file.Data(), file.Size(), BigfileIndex(file.Data(), file.Size()), root);
         }
-        Log("Patching: " + std::to_string(plan.localeStrings) + " strings, "
+        Log("Patching: " + std::to_string(plan.localeStrings) + " strings, " + std::to_string(plan.fontFiles) + " font files, "
             + std::to_string(plan.textEntries) + " subtitle records, "
             + std::to_string(plan.blocksPatched) + " language blocks ("
             + std::to_string(plan.blocksWithoutRussian) + " of them had no Russian entry; "

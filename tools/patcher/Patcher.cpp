@@ -99,6 +99,48 @@ namespace
     }
 }
 
+namespace
+{
+    // Game files replaced by the files of the fonts/ directory (name -> path in the archive)
+    std::vector<std::pair<std::string, std::string>> FontTargets()
+    {
+        std::vector<std::pair<std::string, std::string>> targets;
+        // Every language reads its font atlases from PCEnglish\ (see docs/fonts.md)
+        for (const int n : {1, 2}) {
+            targets.push_back({"font" + std::to_string(n) + ".raw", "PCEnglish\\font" + std::to_string(n) + ".raw"});
+            targets.push_back({"font" + std::to_string(n) + ".txt", "\\SR3\\image\\font" + std::to_string(n) + ".txt"});
+        }
+        targets.push_back({"char_casing.txt", "\\SR3\\image\\char_casing.txt"});
+        return targets;
+    }
+
+    size_t AddFontFiles(const uint8_t* data, const size_t fileSize, const BigfileIndex& index,
+                        const fs::path& fontDir, PatchPlan& plan)
+    {
+        size_t count = 0;
+        if (!fs::is_directory(fontDir)) {
+            Log("No " + fontDir.string() + " directory; fonts are left as they are (Polish letters will be missing).", LogLevel::Error);
+            return 0;
+        }
+        for (const auto& [name, archivePath] : FontTargets()) {
+            const fs::path file = fontDir / name;
+            if (!fs::exists(file)) continue;
+            const auto slots = index.FindSlots(archivePath);
+            if (slots.empty()) throw std::runtime_error("Cannot find " + archivePath + " in the index.");
+            std::string content = ReadFile(file);
+            if (name.size() > 4 && name.compare(name.size() - 4, 4, ".raw") == 0) {
+                // A texture must keep the layout of the original: same header and same size
+                const BigfileEntry e = CheckedEntry(index, slots.front(), fileSize);
+                if (content.size() != e.size || content.compare(0, 128, std::string(reinterpret_cast<const char*>(data + e.offset), 128)) != 0)
+                    throw std::runtime_error(file.string() + " does not have the header or size of the original " + archivePath);
+            }
+            plan.appends.push_back({std::vector<uint8_t>(content.begin(), content.end()), SlotsOf(index, slots)});
+            count++;
+        }
+        return count;
+    }
+}
+
 PatchPlan BuildPlan(const uint8_t* data, const size_t fileSize, const BigfileIndex& index, const fs::path& translationRoot)
 {
     PatchPlan plan;
@@ -113,7 +155,10 @@ PatchPlan BuildPlan(const uint8_t* data, const size_t fileSize, const BigfileInd
     plan.appends.push_back({pl.Build(), SlotsOf(index, ruSlots)});
     plan.localeStrings = pl.strings.size();
 
-    // 2. cinematic texts
+    // 2. fonts: replacement atlases and glyph tables that add the Polish letters
+    plan.fontFiles = AddFontFiles(data, fileSize, index, translationRoot / "fonts", plan);
+
+    // 3. cinematic texts
     const fs::path cineDir = translationRoot / "cinematic" / "PL";
     if (!fs::is_directory(cineDir)) {
         Log("No " + cineDir.string() + " directory; cinematic texts are left as they are.", LogLevel::Error);
