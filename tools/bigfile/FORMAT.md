@@ -62,7 +62,7 @@ Most game assets (meshes, textures, audio, level files) are loaded by paths buil
 - `PCEnglish\locals.bin` is at 0x489800 in `bigfile.x64.dat` (465568 bytes); `tex.map` is at 0x2492EC000 (269956 bytes) and `misc/noise3d.bin` at 0x24922C000 (786432 bytes) in `bigfilehd.dat`.
 - Entry field +0x10 and both extra header bytes are 0 in every entry.
 - 24 hashes in `bigfile.x64.dat` occur 9 times each with identical size and offset (e.g. `artifacts.ini`, `font.ini`, `char_casing.txt`). The count of 9 matches the number of locales, so the index probably has one copy per language. That is an inference. `bigfilehd.dat` has no duplicates.
-- The English `locals.bin` starts `00 00 00 00 87 10 00 00`: locale id 0 followed by magic `0x1087`, while `tools/LocaleHandler.hpp` expects `0B 10 00 00`. The extractor's hardcoded block offsets (e.g. EN at 0x455000) also do not match this build (that offset now holds other text), so it was probably written for an older build.
+- The English `locals.bin` starts `00 00 00 00 87 10 00 00`: locale id 0 followed by `0x1087`. The older extractor expected `0B 10 00 00` there and used hardcoded block offsets that no longer match this build, so it was probably written for an older build. `tools/extractor` now locates the blocks through the index instead.
 
 ## Not yet done
 
