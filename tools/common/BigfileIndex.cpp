@@ -4,7 +4,7 @@
 #include "BinaryUtils.hpp"
 
 BigfileIndex::BigfileIndex(const uint8_t* data, const size_t fileSize)
-    : m_data(data), m_fileSize(fileSize)
+    : m_data(data)
 {
     if (fileSize < 4)
         throw std::runtime_error("File is too small to contain a bigfile index.");

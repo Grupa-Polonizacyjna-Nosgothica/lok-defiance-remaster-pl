@@ -1,0 +1,85 @@
+name: Build, test and package
+
+on:
+  push:
+    branches: [trunk]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate-translation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check strings/PL and cinematic/PL against the EN originals
+        run: python3 tools/validate_translation.py .
+
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure
+        run: cmake -S tools -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build --config Release
+
+      - name: Test (synthetic archive, no game data needed)
+        run: ctest --test-dir build -C Release --output-on-failure
+
+      - name: Smoke test of the executable (no arguments prints the usage and exits with 1)
+        shell: bash
+        run: |
+          exe=build/PolishPatcher
+          [ "$RUNNER_OS" = "Windows" ] && exe=build/Release/PolishPatcher.exe
+          set +e
+          "$exe"
+          [ $? -eq 1 ]
+
+      - name: Collect the executables
+        shell: bash
+        run: |
+          mkdir -p dist
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            cp build/Release/PolishPatcher.exe dist/
+          else
+            cp build/PolishPatcher dist/PolishPatcher-linux-x86_64
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PolishPatcher-${{ runner.os }}
+          path: dist/*
+
+      # The package holds only our texts and the font deltas; it is identical on every platform
+      - name: Build the translation package
+        if: runner.os == 'Linux'
+        run: ./build/PolishPatcher pack . polish.pak
+
+      - uses: actions/upload-artifact@v4
+        if: runner.os == 'Linux'
+        with:
+          name: polish-package
+          path: polish.pak
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [validate-translation, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: release
+          merge-multiple: true
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" release/* --repo "$GITHUB_REPOSITORY" --generate-notes

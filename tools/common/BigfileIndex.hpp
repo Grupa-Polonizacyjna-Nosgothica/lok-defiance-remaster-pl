@@ -39,7 +39,6 @@ public:
 
 private:
     const uint8_t* m_data;
-    size_t m_fileSize;
     uint32_t m_count = 0;
 };
 

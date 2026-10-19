@@ -56,6 +56,13 @@ Before the first write, `bigfile.x64.dat.plbackup` is saved next to the game fil
 
 `restore` writes the original bytes back and cuts the file to its original size. Tested on a copy of the real file: restore gave a byte-identical file. After a verification or reinstall through Steam/GOG the stale backup is recognised and dropped automatically, so nothing has to be deleted by hand.
 
+## Tests and CI
+
+- `ctest --test-dir build` runs `PatcherTests`: it builds a small synthetic archive (index, English and Russian `locals.bin`, a text entry stored in two slots, a binary record with two language blocks, a font atlas and tables) and checks patching, in-place block edits, the font delta, restore (byte-identical), re-patching, the package (same result as a directory, corruption detected) and the backup states. It needs no game data, so it also runs on Windows in CI.
+- `python3 tools/validate_translation.py` checks `strings/PL` and `cinematic/PL` against the EN originals: same files, unchanged timing lines and `\(seconds)` markers, same format placeholders, internal names untouched, valid UTF-8 without BOM, no real line breaks in language blocks. It also prints how much is translated.
+- `.github/workflows/build.yml` runs the validator, then builds, tests and smoke-tests `PolishPatcher` on Windows (MSVC, static runtime, no redistributable needed) and Linux, builds `polish.pak` and uploads everything as artifacts. Pushing a tag `v*` also publishes them as a GitHub release.
+- The CI has not run yet (nothing pushed); the Windows build in particular has never been compiled.
+
 ## Limits and untested points
 
 - **Not tested in the game.** The patched file was checked structurally only (index, parsing, in-place diffs, restore). The idea that the game accepts relocated records comes from the third-party tool.
@@ -63,5 +70,6 @@ Before the first write, `bigfile.x64.dat.plbackup` is saved next to the game fil
 - Other languages' blocks lose their text when space is needed, which does not matter while the game runs in Russian.
 - Polish letters come from our modified Latin fonts (`docs/fonts.md`); the generated glyphs are a first version and nothing has been seen in the game yet.
 - Files in `strings/PL` must match the count of `strings/EN`. 
+- The Windows build, including the process check and the handling of the 11 GB file, is exercised only by CI, which has not run yet.
 - The free-disk-space check is written but could not be exercised on the test machine; the other checks were tested with real failures (wrong build, running process, read-only file, altered index, interrupted patch).
 - The installer text (`installer/INSTALL.txt`) still describes copying files and has to be updated for this flow.
